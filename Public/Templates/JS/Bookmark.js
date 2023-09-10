@@ -3847,9 +3847,15 @@ function cancelDelete() {
 // function for deleting the bookmarks
 
 function deleteEntry() {
+  document.getElementById("delete-confirm-box").style.display = "none";
 
+  document.getElementById("deleteMesssage").style.display = "none";
 
-  document.querySelector("#delete-confirm-box").style.display = "none";
+  for(let i = 0; i < checkArray.length; i++) {
+
+    checkArray[i].checked = false;
+    
+  }
 
 }
 
@@ -3862,7 +3868,7 @@ window.addEventListener("click", e => {
  if(e.target == elem) {
 
   document.querySelector("#delete-confirm-box").style.display = "none";
-  
+
  }
 
 })
