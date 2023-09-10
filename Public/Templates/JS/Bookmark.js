@@ -3824,3 +3824,46 @@ function closeDelete() {
 
  }
 }
+
+
+// function for confirming delete
+
+function confirmDelete() {
+
+  document.querySelector("#delete-confirm-box").style.display = "flex";
+
+}
+
+// for canceling the deeting process
+
+function cancelDelete() {
+
+  
+  document.querySelector("#delete-confirm-box").style.display = "none";
+
+
+}
+
+// function for deleting the bookmarks
+
+function deleteEntry() {
+
+
+  document.querySelector("#delete-confirm-box").style.display = "none";
+
+}
+
+// for exiting the delete box
+
+window.addEventListener("click", e => {
+
+ let elem = document.querySelector("#delete-confirm-box");
+  
+ if(e.target == elem) {
+
+  document.querySelector("#delete-confirm-box").style.display = "none";
+  
+ }
+
+})
+
