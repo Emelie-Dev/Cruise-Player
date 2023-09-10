@@ -1,0 +1,97 @@
+
+<h3>MX Player</h3>  
+
+
+Version 1.57.3 (ARMv8 NEON)
+Copyright (c) J2 Interactive 2011, 2020. All rights reserved.
+
+Terms & Privacy
+
+By using MX Player, you agree to MX Player's Terms and Privacy.
+
+Support
+
+Please leave questions, bug reports, or comments on the forum. Alternatively, you can reach us at support@mxplayer.in.
+
+Home - https://mx.j2inter.com
+FAQ - https://support.mxplayer.in
+Forum - https://forum.xda-developers.com/f/mx-player.3096
+Translations - http://crowdin.net/project/mx-video-player/invite
+
+Thanks to
+
+CDBbrian, Thirumalaisamy.K, Josuearisty, XDA Developers - User support.
+
+David Pérez-Villamil - English proofreading.
+Азат Афлитонов, Андрей Зябко (a@zyabko.ru), Timon, Nikita Titov - Russian translation.
+factorymarks, Ryunosuke Tanaka - Japanese translation.
+Felix Baumann, Dieter Matissek, IrealiTY, Kevin Pang - German translation.
+Thomas Michiels, Jules Seigneur - French translation.
+Niko Strijbol, Joost Hermans, Redah Bening, Rijk van Geijtenbeek, adri3650, Rik Demeyer - Dutch translation.
+Michał Gałężewski, godlesplay - Polish translation.
+Hadi Susanto, Ananto Bambang - Indonesian translation.
+Walter Pisano, Rocco Casadei (Roccobot), Vladi69, 7Dragon - Italian translation.
+Martin Martinov, Dimitar Andonov - Bulgarian translation.
+Kevin Wang, Misha Kruezhev, Mack Zhang, Guangyang LI - Simplified Chinese translation.
+Ondřej Zima, Petr Škaloud, Jakub Dvořák, R3gi, Cebreus - Czech translation.
+Laszlo Tamas, Hevesi János, takraj - Hungarian translation.
+Mateus Eduardo Araujo da Silva, Leandro Sousa, Henrique Baldy, omartins - Portuguese translation.
+David Pérez-Villamil - Spanish translation.
+Spyros - Greek translation.
+Florin Ungureanu, Viorel Cindea Ginju - Romanian translation.
+Fatih Fırıncı, H. Ender AKAR, Can Yıldız - Turkish translation.
+Rostik ZHukoff, Олександр Сенін, Victor - Ukrainian translation.
+Misha Kruezhev, Zon-Wen Deng, 李冠樺 - Chinese Traditional translation.
+NCAA, Rasmussch, Johan Mayner Petersen, Boinkjumper - Danish translation.
+Alex Trav., Elyashiv Sabach - Hebrew translation.
+Peter Kováč, Martin - Slovak translation.
+TheCreator-no, JokkeTheValentin - Norwegian translation.
+Modar Soos, Azzaminho, Mohammed Qubati - Arabic translation.
+Uroš Jaušovec, Andrej Poženel - Slovenian translation.
+Reza Carrow, شاهین احمدی, Ariarman - Persian translation.
+Rancher - Serbian translation.
+Leif Larsson, FirePhoenix, PeterSweden, Andreas Wallin - Swedish translation.
+ئېلىي رۇزىھېيىت, AlghaBiz (alghabiz@live.com, Abdiryim Hairulla), ئېلىي شاش - Uyghur translation.
+gtdcomputer, Nguyễn Thanh Tài, Nguyễn Trung Hậu, HungNHD - Vietnamese translation.
+Nickinuse, mg2011, Mārtiņš Mežciems - Latvian translation.
+Ziniman, Aapo Kinnunen, Janne Vallioniemi, Juha Kuitunen, Kepe - Finnish translation.
+Daan, Evaldas Viskontas, Artūras Čerškus, Mykolaspanavas - Lithuanian translation.
+Goran Gharib (KuRa KuRd) - Kurdish translation.
+David Aguilera - Catalan translation.
+Kumaraguru - StarsSoft, Kumar, Praveenindia - Tamil translation.
+Aftabuzzaman Ullah, Rajwanur, Saimoom Safayet Akash - Bangla translation.
+हिमांशू पाटील - Marathi translation.
+Tarapitha, Rivo Zängov - Estonian translation.
+AG008, Dragan Bošnjak - Croatian translation.
+Ирек Хаҗиев - Tatar translation.
+dirk777, Sakkie Theron, Michiel Bester - Afrikaans translation.
+क्षणिक पौडेल, सुमन्त अधिकारी, Bibek Kumar Shah - Nepali translation.
+Artan Muzhaqi, Bujar Tafili - Albanian translation.
+Zakhar Zhauniak - Belarusian translation.
+Dinsyamsuddin, Naszrul Azreen BADARUDIN, Mohd Nurfitri, あゆちゃん (♡˙︶˙♡), Peaceang - Malay translation.
+Pradyumna J, Abhinav Sreenivas, Rajashekar Bagi, Snehith A Shenoy - Kannada translation.
+蘇鵬宇 - Chinese Traditional, Hong Kong translation.
+Xabier Aramendi - Basque translation.
+M Sateesh - Telugu translation.
+potter Lnw, benjalak Bandon, soisiam, NS-Zero, Makin Jaipa - Thai translation.
+elnur.musayev.777 - Azerbaijani translation.
+JamHeads, Phoenix Eve C. Aspacio, Alain Mateo - Tagalog translation.
+plasplas13, bonehtutkhaung14, thethtinaung, NYEIN CHAN, heinmynn, zawminlwinggw - Burmese translation.
+नित्यानंद शर्मा, ISRAR AHMED, Abhinav Jha, Prasun - Hindi translation.
+Jobin Jose Lukose, Sebinthampi, Bipin Sadasivan - Malayalam translation.
+MIT PANDYA, Gourinath Diojode, Hirenvasani, Aashrut Vaghani - Gujarati translation.
+DöThävisâk Luangxay - Lao translation.
+Waqar Ahmed, Sakhawat Jameel, Ahmedabdullahpb, Moeenanwar, Jaaneahsan45, Muhammad Bilal - Urdu translation.
+Döwlet-Turkmensoft - Turkmen translation.
+Akhilesh Jha, Arti, Anupama, Naresh Yadav - Maithili translation.
+Heogeon - Korean translation.
+Prasanta Hembram, Prakash Baski, Bodi Baski, Bijendra Hansda - Santali translation.
+Krishna Kabi - Odia translation.
+
+￼
+
+And all who supports this product.
+
+Open source licenses
+
+This product uses various open source softwares. Tap here to see copyright notices.
