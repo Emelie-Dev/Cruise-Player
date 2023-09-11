@@ -113,22 +113,45 @@ function closeIn() {
   document.getElementById("sign-in-page").style.display = "none";
 }
 
+let signInmodal = document.getElementById("sign-in-page");
+
+let signUpmodal = document.getElementById("sign-up-page");
+
+document.documentElement.addEventListener("click", event =>  {
+  if (event.target == signInmodal) {
+    document.getElementById("sign-in-page").style.display = "none";
+  }
+
+  if (event.target == signUpmodal) {
+    document.getElementById("sign-up-page").style.display = "none";
+  }
+
+});
+
+
+window.addEventListener("keypress", (event) => {
+
+let disp = String(getComputedStyle(document.getElementById("sign-in-page")).getPropertyValue("display")).toLowerCase() == "flex" ? true : String(getComputedStyle(document.getElementById("sign-up-page")).getPropertyValue("display")).toLowerCase() == "flex" ? true : false;
+
+  if(disp) {
+
+  if (event.which === 13 || event.keyCode == 13) {
+
+    event.preventDefault();
+
+  }
+
+
+} else {
+  return;
+}
+});
+
+
 function signIn() {
+
   document.getElementById("sign-in-page").style.display = "flex";
 
-  var modal = document.getElementById("sign-in-page");
-
-  document.documentElement.onclick = (event) => {
-    if (event.target == modal) {
-      document.getElementById("sign-in-page").style.display = "none";
-    }
-  };
-
-  window.addEventListener("keypress", (event) => {
-    if (event.which === 13 || event.keyCode == 13) {
-      event.preventDefault();
-    }
-  });
 }
 
 function showPassword() {
@@ -151,21 +174,9 @@ function closeUp() {
 }
 
 function signUp() {
-  document.getElementById("sign-up-page").style.display = "block";
+  document.getElementById("sign-up-page").style.display = "flex";
 
-  var modal = document.getElementById("sign-up-page");
 
-  document.documentElement.onclick = (event) => {
-    if (event.target == modal) {
-      document.getElementById("sign-up-page").style.display = "none";
-    }
-  };
-
-  window.addEventListener("keypress", (event) => {
-    if (event.which === 13 || event.keyCode == 13) {
-      event.preventDefault();
-    }
-  });
 }
 
 function showPassword1() {

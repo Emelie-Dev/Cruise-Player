@@ -372,19 +372,22 @@ left: 15px;
     }
 
     #sign-in-page {
+
       background-color: rgba(0,0,0,0.6);
       height: 100%;
-   position: fixed;
-   z-index: 1; 
-      width: 100%;
-      position: absolute;
+      position: fixed;
+      left: 0;
       top: 0;
+      z-index: 1; 
+      width: 100%; 
       display: none; 
       animation-name: sign-in;
       animation-duration: 0.5s;
-      justify-content: center;
-       align-items: center;
        cursor: pointer;
+       overflow: auto;
+        align-items: flex-start;
+        justify-content: center;
+
     }
 
     #close {
@@ -407,14 +410,12 @@ background : white;
 
     #sign-in-form {
       background : linear-gradient(springgreen, magenta);
-      width: 30%;
+      width: 30%; 
        border-radius: 10px;
       padding: 30px;
-      height: 70%;
       position: relative; 
       font-family: cooper;
-       position: fixed;
-       z-index: 1;
+       margin: 7% 0;
     }
 
     #label {
@@ -567,6 +568,8 @@ cursor: pointer;
 
    
    #sign-up-page {
+
+      
       background-color: rgba(0,0,0,0.6);
       height: 100%;
    position: fixed;
@@ -577,10 +580,11 @@ cursor: pointer;
       display: none; 
       animation-name: sign-in;
       animation-duration: 0.5s;
-     
        cursor: pointer;
        overflow: auto;
-       padding-top: 10px;
+       align-items: flex-start;
+       justify-content: center;
+
     }
 
     #close1 {
@@ -602,15 +606,14 @@ background : white;
     }
 
     #sign-up-form {
-      background : linear-gradient(springgreen, magenta);
+       background : linear-gradient(springgreen, magenta);
       width: 50%;
        border-radius: 10px;
-      margin: auto;
       padding: 30px;
       padding-left: 20px;
       position: relative; 
       font-family: cooper;
-    margin-bottom: 20px;
+      margin: 2.5% 0;
         
     }
 
@@ -1273,7 +1276,7 @@ background: rgba(0,0,0,0.6);
     position: absolute;
     bottom: 10%;
     right: 5%;
-    
+    outline: none;
 }
 
 #cancel-button {
@@ -1285,6 +1288,7 @@ background: rgba(0,0,0,0.6);
     border-radius: 5px;
     color: indigo;
     margin-right: 5px;
+    outline: none;
 }
 
 
@@ -1297,6 +1301,7 @@ background: rgba(0,0,0,0.6);
     border-radius: 5px;
     color: white;
   border: none;
+  outline: none;
 }
 
 #remove-button:hover, #cancel-button:hover {
@@ -1796,7 +1801,7 @@ border-radius: 5px;
         position: absolute;
         bottom: 10%;
         right: 5%;
-        
+        outline: none;
     }
     
     #cancel-button2 {
@@ -1808,6 +1813,7 @@ border-radius: 5px;
         border-radius: 5px;
         color: indigo;
         margin-right: 5px;
+        outline: none;
     }
     
     
@@ -1820,6 +1826,7 @@ border-radius: 5px;
         border-radius: 5px;
         color: white;
       border: none;
+      outline: none;
     }
     
     #remove-button2:hover, #cancel-button2:hover {
