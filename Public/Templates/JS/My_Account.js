@@ -2795,3 +2795,149 @@ async function getLocation() {
 }
 
 getLocation();
+
+
+// function to show tab contents
+
+ function showAccountNameContent(id) {
+
+let elem = document.querySelector(`#${id}`);
+
+ let disp = String(getComputedStyle(elem.nextElementSibling).getPropertyValue("display")).toLowerCase();
+
+ let closedSvg = elem.querySelector(".closed-arrow-svg");
+
+let openendSvg = elem.querySelector(".opened-arrow-svg");
+
+if(disp == "none") {
+    
+  elem.nextElementSibling.style.display = "block";
+  openendSvg.style.display = "inline";
+  closedSvg.style.display = "none";
+
+} else {
+
+  elem.nextElementSibling.style.display = "none";
+  openendSvg.style.display = "none";
+  closedSvg.style.display = "inline";
+
+}
+
+
+}
+
+
+function checkName(event) {
+
+  let { data } = event;
+
+  let param = /\W/;
+
+  let name  = String(event.target.value).replace(/\W/gim, "");
+
+  if (param.test(data)) {
+    event.target.value = name;
+  }
+}
+
+
+// for the account name authentication code
+
+let authCodeArray = [...document.querySelectorAll(".authentication-code")];
+
+
+
+authCodeArray.forEach((el,index) => {
+  
+  el.addEventListener("input", e => {
+
+  if(/\d/.test(e.data)) {
+
+  el.value = parseInt(String(el.value)[0]);
+
+  el.readOnly = true;
+
+  if(index !== (authCodeArray.length - 1)) {
+ 
+  authCodeArray[index + 1].focus();
+    
+  }
+
+  } else {
+   
+  el.value = "";
+
+  }
+
+})
+
+})
+
+
+authCodeArray.forEach((el,index) => {
+  
+el.addEventListener("click", e => {
+
+if(el.value !== "") {
+
+  for(let i = index; i < authCodeArray.length; i++) {
+
+    if(!authCodeArray[i].readOnly) {
+    
+      authCodeArray[i].focus();
+    
+      break;
+    
+    }
+    } 
+
+} else {
+
+  
+for(let i = 0; i < index; i++) {
+
+if(!authCodeArray[i].readOnly) {
+
+  authCodeArray[i].focus();
+
+  break;
+
+}
+} 
+
+  }
+  
+  
+
+})
+
+})
+
+
+
+authCodeArray.forEach((el,index) => {
+  
+  el.addEventListener("keydown", e => {
+
+let key = String(e.key).toLowerCase().trim();
+
+ if(key === "backspace") {
+
+  if(index !== 0) {
+
+  let elemArray = authCodeArray.filter(elem => elem.value !== "");
+
+  let lastElem = elemArray[elemArray.length - 1];
+
+  let lastIndex = authCodeArray.indexOf(lastElem);
+
+  lastElem.value = "";
+
+  lastElem.readOnly = false;
+
+  authCodeArray[lastIndex].focus();
+
+ }
+} 
+  })
+})

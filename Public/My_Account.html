@@ -179,7 +179,113 @@
 
     <div id="main" onscroll="scrollUp()">
 
-           
+      
+  <div id="account-head">My Account</div>
+  
+<!-- Account Content -->
+
+   <div id="account-content">
+
+
+   <!-- Change Name --> 
+
+  <div class="account-settings">
+
+    <div class="account-headers" id="account-name" onclick="showAccountNameContent(this.id)">Change Account Name
+
+      <span>
+         <svg class="closed-arrow-svg"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+      </span>
+
+      <span >
+
+         <svg class="opened-arrow-svg"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+       </svg>
+ 
+        </span>
+
+    </div>
+
+  <div id="account-name-content" class="account-contents">
+<br>
+
+<!-- New name -->
+
+    <div class="account-name-child">
+
+      <span class="account-name-text">New Name</span>
+      <input type="text"  id="account-name-value" maxlength="30"  oninput="checkName(event)">
+
+    </div>
+
+<!-- Account password  -->
+
+    <div class="account-name-child">
+
+      <span class="account-name-text">Enter Password</span>
+      <input type="password" class="account-password">
+
+    </div>
+
+    <!-- Authentication Method -->
+
+  <div class="account-name-child" id="account-name-method-div">
+
+      <span class="account-name-text">Authentication Method</span>
+      <select id="authentication-select">
+        <option  title="The authentication code will be sent to your email." selected>Email</option>
+        <option title="The authentication code will be sent to you through SMS.">SMS</option>
+
+      </select>
+
+    </div>
+
+     <!-- Authentication button -->
+
+  <div class="account-name-child" id="account-name-btn-div">
+
+    <button class="authentication-btn">Send Code</button>
+
+
+  </div>
+
+    <!-- Authentication code-->
+    
+  <div class="account-name-child">
+
+    <span class="account-name-text">Authentication Code</span>
+
+    <span id="authentication-code-box">
+    <input type="number"  class="authentication-code" >
+    <input type="number"  class="authentication-code" >
+    <input type="number"  class="authentication-code" >
+    <input type="number"  class="authentication-code" >
+    <input type="number"  class="authentication-code" >
+    <input type="number"  class="authentication-code" >
+   
+   </span>
+
+
+  </div>
+  
+   <!-- Change name button  -->
+
+   <div class="account-name-child">
+
+    <button id="change-name-btn">Change Name</button>
+
+
+  </div>
+
+  </div>
+
+  </div>
+
+ 
+   </div>
+  
     </div>
 
 
@@ -232,7 +338,6 @@
 
 
  <!--Sign up-->
-
 
  
  <div id="sign-up-page">

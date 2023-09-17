@@ -2235,7 +2235,7 @@ function general() {
   } else {
     arrow[0].innerHTML = secondArrow;
     doc.style.display = "block";
-    document.getElementById("gen-text").scrollIntoView();
+   document.getElementById("gen-text").scrollIntoView();
   }
 }
 

@@ -24,6 +24,7 @@ body {
     height: 100vh;
     margin: 0;
    overflow-x: hidden;
+  
 }
  
 #head {
@@ -1006,13 +1007,189 @@ display: none;
   left: 10%;
 position: absolute;
    }
+
+
+   #account-head {
+
+      color: indigo;
+      font-size: 2.5rem;
+      margin-top: 0;
+      font-family: 'Times New Roman', Times, serif;
+      margin: 10px;
+      margin-left: 5px;
+      margin-bottom: 30px;
+      text-shadow: 0px 0px 0px black;
+   }
+   
+    
+   .account-headers {
+         border : 2px dotted white;
+         display: block;
+         border-radius: 5px;
+         padding: 5px;
+         font-size: 1.6rem;
+        
+      }
+   
+      .account-headers:hover {
+         cursor: pointer; 
+          box-shadow: 2px 2px 10px black;
+         }
+
+      .account-contents {
+
+         margin-left: 5px;
+         display: none;
+         
+      }
+
+ 
+    
+     .closed-arrow-svg, .opened-arrow-svg {
+   
+      width: 20px;
+      height: 20px;
+      float: right;
+      cursor: pointer;
+      transform: translateY(2px);
+   
+     } 
+
+     .opened-arrow-svg {
+      display: none;
+
+     }
+  
+     .account-name-child {
+   
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+     }
+   
+     .account-name-text {
+   
+      text-shadow: 1px 1px 10px black;
+      color: white;
+      font-size: 1.45rem;
+      font-family:'Times New Roman', Times, serif;
+      margin-right: auto;
+     }
+   
+     #account-name-value {
+      text-shadow: 1px 1px 5px black;
+      margin-left: auto;
+      border: none;
+      outline: none;
+      background: none;
+      border-bottom: 2px solid white;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: normal;
+      font-family: 'Times New Roman', Times, serif;
+     }
+   
+  .account-password {
+   
+   margin-left: auto;
+   border: none;
+   outline: none;
+   background: none;
+   border-bottom: 2px solid white;
+   color: white;
+   font-size: 1.3rem;
+   font-weight: normal;
+  }
+   
+ #authentication-select {
+
+   background: indigo;
+   color: white;
+   font-size: 1.2rem;
+   padding: 5px;
+   border-radius: 5px;
+   font-family: 'Times New Roman', Times, serif;
+    outline: none;
+    border: none;
+    cursor: pointer;
+ }
+
+ #account-name-method-div {
+
+   margin-bottom: 20px;
+
+ }
+
+ #account-name-btn-div {
+   display: flex;
+   
+ }
+
+ .authentication-btn, #change-name-btn {
+
+    margin-left: auto;
+    background: indigo;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+ }
+
+ .authentication-btn:hover, #change-name-btn:hover {
+  
+   box-shadow: -1px -1px 1px 2px black;
+ }
+
+ #authentication-code-box {
+
+   margin-left: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+ }
+
+ .authentication-code {
+   user-select: none;
+   margin: 1.5px;
+   outline: none;
+   border: 1px solid indigo;
+   width: 2.3rem;
+   height: 2.2rem;
+   border-radius: 5px;
+   font-size: 1.7rem;
+   padding: 8px;
+   padding-left: 10px;
+   color: indigo;
+   font-family: 'Times New Roman', Times, serif;
+   caret-color: white;
+   
+ }
  /* For the Animation */
+
+ @keyframes accordion {
+
+   from {
+
+    max-height: 0;
+
+   } to {
+
+  max-height: 300px;
+   }
+   
+ }
   
 @-o-keyframes loadAnim {
     0% {
          
       
-        text-shadow: 3px 3px 6px   magenta; 
+        text-shadow: 3px 3px 6px magenta; 
     }
     25% {
        text-shadow: 3px 3px 6px  white;
@@ -1173,8 +1350,6 @@ height: 0;
             }
             
             }
-  
-
 #head1 {
 
     -o-animation: loadAnim 2.2s ease-in-out 0s infinite alternate;
@@ -1289,9 +1464,9 @@ height: 0;
 }
 
 ::-webkit-scrollbar-thumb {
-   background: linear-gradient(magenta, springgreen);
+   background: linear-gradient(springgreen, magenta);
    border-radius: 10px;
-    
+   
 }
 
 ::-webkit-scrollbar-track { 
