@@ -886,7 +886,6 @@ box-shadow: 0.5px 0.5px 5px 0.5px white;
    padding: 10px;
    border: none;
  border-left: 1px ridge white;
-  
  border-right: 1px ridge white;
  margin-top: 2px;
  margin-right: 5px;
@@ -899,6 +898,8 @@ color: white;
 text-shadow: 3px 3px 8px black;
 font-size: 1.3rem;
 letter-spacing: 0.2rem;
+
+
  }
  
 
@@ -1008,6 +1009,17 @@ display: none;
 position: absolute;
    }
 
+  #empty-div {
+
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+z-index: 3;
+}
+
 
    #account-head {
 
@@ -1021,6 +1033,10 @@ position: absolute;
       text-shadow: 0px 0px 0px black;
    }
    
+   .account-settings {
+
+      margin-bottom: 35px;
+   }
     
    .account-headers {
          border : 2px dotted white;
@@ -1040,7 +1056,7 @@ position: absolute;
 
          margin-left: 5px;
          display: none;
-         
+         padding-top: 35px;
       }
 
  
@@ -1060,48 +1076,393 @@ position: absolute;
 
      }
   
-     .account-name-child {
+     .account-profile-child {
    
       display: flex;
       align-items: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
      }
+
+     #account-profile-image-div {
+
+      justify-content: center;
+
+     }
+
+     #account-profile-image {
+
+      border-radius: 50%;
+      outline: none;
+      border: 1px solid magenta;
+      width: 12rem;
+      height: 12rem;
+     cursor: pointer;
+     object-fit: cover;
+     transition: all 0.3s;
+     z-index: 0;
+     }
+
+     
+ #account-profile-image:hover {
+
+   box-shadow: 1px 1px 5px 1px magenta;
+ }
    
-     .account-name-text {
+     #account-profile-image-box {
+
+     position: relative;
+
+     }
+
+     #camera-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+     
+
+     }
+
+     #camera-icon-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 10px;
+      right: 6%;
+      z-index: 5;
+      background: magenta;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      transition: all 0.1s;
+      z-index: 5;
+     }
+
+     #camera-icon-box:hover {
+
+      box-shadow:inset 3px 3px 1px 1px rgba(0,0,0,0.6);
+     }
+
+     #account-profile-image-options-list {
+
+      position: absolute;
+      z-index: 6;
+      list-style-type: none;
+      top: 20%;
+      right: -90%;
+      background: white;
+      padding-left: 0;
+      box-shadow: 2px 2px 30px 2px black;
+      border-radius: 5px;
+      display: none;
+
+     }
+
+
+
+     .account-profile-image-options-list-child {
+      
+      display: flex;
+      align-items: center;
+      color: magenta;
+      padding: 15px;
+      font-size: 1.3rem;
+      font-family: 'Times New Roman', Times, serif;
+      cursor: pointer;
+      border: none;
+      border-bottom: 1px solid magenta;
+      text-shadow: 3px 3px 7px black;
+      transition: all 0.3s;
+     }
+
+     .account-profile-image-options-list-child:first-child {
+
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+     }
+
+
+     .account-profile-image-options-list-child:last-child {
+
+      border: none;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+     }
+
+     .account-profile-image-options-list-child:hover {
    
-      text-shadow: 1px 1px 10px black;
+      background: magenta;
       color: white;
-      font-size: 1.45rem;
+     }
+
+
+     
+     .account-profile-image-options-list-child:nth-child(2):hover #account-profile-image-options-list-gallery {
+   
+   
+         fill: magenta;
+         color: white;
+   
+        }
+     
+     .account-profile-image-options-list-child:last-child:hover  #account-profile-image-options-list-delete {
+
+      fill:  white;
+      color: white;
+
+     }
+
+     #account-profile-image-options-list-camera {
+
+      width: 2rem;
+      height: 2rem;
+      fill: magenta;
+      color: white;
+      margin-right: 10px;
+      transition: all 0.5s;
+     }
+
+
+     #account-profile-image-options-list-gallery {
+
+      width: 2rem;
+      height: 2rem;
+      fill: white;
+      color: magenta;
+      margin-right: 10px;
+      transition: all 0.5s;
+     }
+
+     
+     #account-profile-image-options-list-delete {
+
+      width: 2rem;
+      height: 2rem;
+      fill: magenta;
+      color: white;
+      margin-right: 10px;
+      transition: all 0.5s;
+     }
+
+
+     .account-profile-child-text {
+   
+      text-shadow: 3px 3px 8px black;
+      color: white;
+      font-size: 1.6rem;
       font-family:'Times New Roman', Times, serif;
       margin-right: auto;
+      letter-spacing: 0.2rem;
      }
    
-     #account-name-value {
+     #account-name-value, #account-email-value, #account-old-password-value, #account-new-password-value, #account-confirm-password-value {
+
       text-shadow: 1px 1px 5px black;
-      margin-left: auto;
       border: none;
       outline: none;
       background: none;
-      border-bottom: 2px solid white;
       color: white;
       font-size: 1.3rem;
       font-weight: normal;
       font-family: 'Times New Roman', Times, serif;
+      margin-right: 1.5rem;
+      
      }
-   
-  .account-password {
-   
-   margin-left: auto;
-   border: none;
-   outline: none;
-   background: none;
-   border-bottom: 2px solid white;
+
+    #account-profile-number-code {
+
+      text-shadow: 1px 1px 5px black;
+      border: none;
+      outline: none;
+      background: none;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: normal;
+      font-family: 'Times New Roman', Times, serif;
+      margin-right: 1.5rem;
+      width: 205px;
+
+     }
+     .account-profile-child-span {
+
+      position: relative;
+      margin-left: auto;
+      border-bottom: 2px solid white;
+      border-radius: 5px;
+     }
+
+
+     #account-profile-child-number-span {
+
+     border: none;
+     display: flex;
+     align-items: center;
+     /* border-bottom: 2px solid white; */
+
+     }
+
+     .account-edit-icon {
+
+      width: 1.2rem;
+      height:1.2rem;
+      fill: magenta;
+      position: absolute;
+      right: 0;
+      color: white;
+      cursor: pointer;
+
+     }
+
+    #account-profile-image-display-div {
+
+      background-color: rgba(0,0,0,0.8);
+      height: 100%;
+     position: fixed;
+      z-index: 1; 
+      width: 100%; 
+      top: 0;
+      left: 0;
+      display: none; 
+      animation-name: profileImg;
+      animation-duration: 0.3s;
+       overflow: auto;
+       grid-template-columns: auto;
+       justify-content: center;
+       align-content: flex-start;
+    }
+
+    #account-profile-image-text {
+
+      margin-top: 20px;
+      margin-bottom: 25px;
+      color: white;
+      font-family:'Times New Roman', Times, serif;
+      font-size: 2rem;
+      text-shadow: 1px 1px 5px magenta;
+      font-variant: small-caps;
+      cursor: default;
+    }
+
+
+    #account-profile-image-display {
+
+      width: 25rem; 
+      height: 25rem; 
+      border-radius: 5px;
+      cursor: default;
+      border: 1px solid magenta;
+    }
+
+    #account-profile-image-options {
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+     margin-top: 30px;
+     margin-bottom: 20px;
+    }
+
+    .account-profile-image-options-child {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: default;
+    }
+
+    .account-profile-image-options-span {
+
+      background: magenta;
+      padding: 11px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+  #account-profile-image-options-camera, #account-profile-image-options-gallery {
+   width: 1.8rem;
+   height: 1.8rem;
+   fill: magenta;
    color: white;
-   font-size: 1.3rem;
-   font-weight: normal;
-  }
    
- #authentication-select {
+  }
+
+ #account-profile-image-options-delete {
+   width: 1.8rem;
+   height: 1.8rem;
+   fill: white;
+   color: magenta;
+   
+  }
+
+  .account-profile-image-options-text {
+
+font-size: 1.3rem;
+font-family: 'Times New Roman', Times, serif;
+color: white;
+text-shadow: 1px 1px 5px magenta;
+
+  }
+ 
+  .account-profile-image-options-span:hover {
+
+   box-shadow: inset 3px 3px 3px 3px rgba(0,0,0,0.9);
+  }
+ 
+  #account-profile-image-cancel-box {
+   position: fixed;
+   top: 5%;
+   right: 5%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: magenta;
+   border-radius: 50%;
+   padding: 8px;
+   color: white;
+   cursor: pointer;
+   transition: all 0.4s;
+  }
+
+  #account-profile-image-cancel-icon {
+  
+   width: 1.9rem;
+   height: 1.9rem;
+   
+  
+  }
+
+  #account-profile-image-cancel-box:hover {
+
+   background: white;
+   color: magenta;
+  }
+
+
+#account-profile-child-span-list {
+
+   position: absolute;
+   list-style-type: none;
+   background: white;
+   border-radius: 5px;
+   padding: 0;
+   right: 0%;
+}
+
+.account-profile-child-span-list-items {
+
+   color: magenta;
+   text-shadow: 1px 1px 5px magenta;
+   padding: 5px;
+   font-size: 1.2rem;
+   white-space: nowrap;
+}
+
+ 
+.authentication-select {
 
    background: indigo;
    color: white;
@@ -1114,18 +1475,13 @@ position: absolute;
     cursor: pointer;
  }
 
- #account-name-method-div {
 
-   margin-bottom: 20px;
-
- }
-
- #account-name-btn-div {
+ .account-name-btn-div {
    display: flex;
-   
+   margin-bottom: 35px;
  }
 
- .authentication-btn, #change-name-btn {
+ .authentication-btn, .change-account-btn {
 
     margin-left: auto;
     background: indigo;
@@ -1140,12 +1496,13 @@ position: absolute;
     transition: all 0.3s;
  }
 
- .authentication-btn:hover, #change-name-btn:hover {
+ .authentication-btn:hover, .change-account-btn:hover {
   
    box-shadow: -1px -1px 1px 2px black;
  }
 
- #authentication-code-box {
+
+ .authentication-code-box {
 
    margin-left: auto;
    display: flex;
@@ -1168,9 +1525,23 @@ position: absolute;
    color: indigo;
    font-family: 'Times New Roman', Times, serif;
    caret-color: white;
-   
- }
+ 
+ } 
+
+
+
  /* For the Animation */
+
+ @keyframes profileImg {
+   
+   from {
+
+      transform: scale(0);
+   } to {
+
+      transform: scale(1);
+   }
+ }
 
  @keyframes accordion {
 

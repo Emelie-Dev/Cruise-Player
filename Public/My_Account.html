@@ -25,6 +25,85 @@
 </script>
 </head>
 <body onresize="navHeight()" onload="navHeight()" onpageshow="navHeight()">
+
+  <!-- For the profile image wide display -->
+  
+
+  <div id="account-profile-image-display-div">
+
+  <span id="account-profile-image-cancel-box" title="Close" onclick="closeProfileImageDisplay()">
+
+    <svg id="account-profile-image-cancel-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+    
+
+  </span>
+   
+   <div id="account-profile-image-text">Profile Image</div>
+
+  <img src="./Templates/Others/ProfilePicturePhoto.jpg" id="account-profile-image-display">
+     
+  <div id="account-profile-image-options">
+
+    <!-- Camera -->
+
+    <div class="account-profile-image-options-child">
+
+    <span class="account-profile-image-options-span">
+      <svg id="account-profile-image-options-camera" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+      </svg>
+      
+    </span>
+
+    <span class="account-profile-image-options-text">
+      Camera
+    </span>
+
+    </div>
+  
+    <!-- Gallery -->
+
+    <div class="account-profile-image-options-child">
+      
+      <span class="account-profile-image-options-span">
+       
+        <svg id="account-profile-image-options-gallery" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+        </svg>
+        
+        
+      </span>
+      
+      <span class="account-profile-image-options-text">
+       Gallery
+      </span>
+
+    </div>
+
+    <!-- Delete -->
+    <div class="account-profile-image-options-child">
+  
+      <span class="account-profile-image-options-span">
+       
+        <svg id="account-profile-image-options-delete"  viewBox="0 0 30 30" ><path d="M 13 3 A 1.0001 1.0001 0 0 0 11.986328 4 L 6 4 A 1.0001 1.0001 0 1 0 6 6 L 24 6 A 1.0001 1.0001 0 1 0 24 4 L 18.013672 4 A 1.0001 1.0001 0 0 0 17 3 L 13 3 z M 6 8 L 6 24 C 6 25.105 6.895 26 8 26 L 22 26 C 23.105 26 24 25.105 24 24 L 24 8 L 6 8 z"/></svg>
+        
+      </span>
+      
+      <span class="account-profile-image-options-text">
+       Delete
+      </span>
+
+     
+      
+    </div>
+    
+  </div>
+
+  </div>
+
     <!--The header -->
     <div id="head"> 
         <span id="head1" class="first">C</span>
@@ -179,6 +258,9 @@
 
     <div id="main" onscroll="scrollUp()">
 
+  <div id="empty-div" onclick="hideProfileImageOptions()">
+    
+  </div>
       
   <div id="account-head">My Account</div>
   
@@ -187,11 +269,11 @@
    <div id="account-content">
 
 
-   <!-- Change Name --> 
+   <!-- Change profile details --> 
 
   <div class="account-settings">
 
-    <div class="account-headers" id="account-name" onclick="showAccountNameContent(this.id)">Change Account Name
+    <div class="account-headers" id="account-profile" onclick="showAccountContent(this.id)">Profile
 
       <span>
          <svg class="closed-arrow-svg"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
@@ -208,56 +290,155 @@
 
     </div>
 
-  <div id="account-name-content" class="account-contents">
-<br>
+
+  <div class="account-contents">
+ 
+
+    <!-- Profile image -->
+
+    <div class="account-profile-child" id="account-profile-image-div">
+     
+      <span id="account-profile-image-box">
+      <img id="account-profile-image" src="./Templates/Others/ProfilePicturePhoto.jpg" onclick="showProfileImg()">
+      <span id="camera-icon-box" onclick="showProfileImageOptions()">
+        <svg id="camera-icon"  fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+        </svg>
+        
+      </span>
+
+      <ul id="account-profile-image-options-list">
+
+        <li class="account-profile-image-options-list-child">
+        
+       <svg id="account-profile-image-options-list-camera" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+       </svg>
+          
+
+         <span>Camera</span>
+         </li>
+
+        <li class="account-profile-image-options-list-child">
+          
+          <svg id="account-profile-image-options-list-gallery" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+          </svg>
+
+        <span>Gallery</span>
+      
+      </li>
+
+        <li class="account-profile-image-options-list-child">
+
+          <svg id="account-profile-image-options-list-delete" viewBox="0 0 30 30" ><path d="M 13 3 A 1.0001 1.0001 0 0 0 11.986328 4 L 6 4 A 1.0001 1.0001 0 1 0 6 6 L 24 6 A 1.0001 1.0001 0 1 0 24 4 L 18.013672 4 A 1.0001 1.0001 0 0 0 17 3 L 13 3 z M 6 8 L 6 24 C 6 25.105 6.895 26 8 26 L 22 26 C 23.105 26 24 25.105 24 24 L 24 8 L 6 8 z"/></svg>
+           
+        <span>Delete</span>
+      
+      </li>
+      </ul>
+
+      </span>
+
+    </div>
 
 <!-- New name -->
 
-    <div class="account-name-child">
+    <div class="account-profile-child">
 
-      <span class="account-name-text">New Name</span>
-      <input type="text"  id="account-name-value" maxlength="30"  oninput="checkName(event)">
-
+      <span class="account-profile-child-text">Name</span>
+      <span class="account-profile-child-span">
+      <input type="text"  id="account-name-value" maxlength="30"  oninput="checkName(event)" size="15">
+      <span class="account-edit-span" title="Edit">
+        <svg class="account-edit-icon"   viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+        </svg>
+        
+      </span>
+      </span>
     </div>
-
-<!-- Account password  -->
-
-    <div class="account-name-child">
-
-      <span class="account-name-text">Enter Password</span>
-      <input type="password" class="account-password">
-
-    </div>
-
-    <!-- Authentication Method -->
-
-  <div class="account-name-child" id="account-name-method-div">
-
-      <span class="account-name-text">Authentication Method</span>
-      <select id="authentication-select">
-        <option  title="The authentication code will be sent to your email." selected>Email</option>
-        <option title="The authentication code will be sent to you through SMS.">SMS</option>
-
-      </select>
-
-    </div>
-
-     <!-- Authentication button -->
-
-  <div class="account-name-child" id="account-name-btn-div">
-
-    <button class="authentication-btn">Send Code</button>
-
-
-  </div>
-
-    <!-- Authentication code-->
     
-  <div class="account-name-child">
+  
 
-    <span class="account-name-text">Authentication Code</span>
+<!-- New Email -->
 
-    <span id="authentication-code-box">
+<div class="account-profile-child">
+
+  <span class="account-profile-child-text">Email</span>
+  <span class="account-profile-child-span">
+  <input type="text"  id="account-email-value"  oninput="checkEmail()" size="15">
+  <span class="account-edit-span" title="Edit">
+    <svg class="account-edit-icon"   viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+    </svg>
+    
+  </span>
+  </span>
+</div>
+
+
+  
+
+<!-- New Mobile Number -->
+
+<div class="account-profile-child">
+
+  <span class="account-profile-child-text">Mobile Number</span>
+  <span class="account-profile-child-span" >
+
+    <input list="account-number-code" id="account-profile-number-code" maxlength="26">
+    <datalist id="account-number-code">
+  
+    </datalist>
+  
+  <span class="account-edit-span" title="Edit" id="account-edit-number-span">
+    <svg class="account-edit-icon" id="account-edit-number-icon"  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+    </svg>
+    
+  </span>
+  </span>
+</div>
+
+
+<!-- Authentication Method -->
+
+
+<div class="account-profile-child">
+
+  <span class="account-profile-child-text">Authentication Method</span>
+  
+  <select class="authentication-select">
+    <option  title="The authentication code will be sent to your email." selected>Email</option>
+    <option title="The authentication code will be sent to you through SMS.">SMS</option>
+
+  </select>
+
+</div>
+
+
+ <!-- Authentication button -->
+
+
+<div class="account-profille-child account-name-btn-div">
+
+<button class="authentication-btn">Send Code</button>
+
+</div>
+
+
+
+
+<!-- Authentication code-->
+
+
+<div class="account-profile-child">
+
+  <span class="account-profile-child-text">Authentication Code</span>
+  
+  <span class="authentication-code-box">
     <input type="number"  class="authentication-code" >
     <input type="number"  class="authentication-code" >
     <input type="number"  class="authentication-code" >
@@ -267,19 +448,238 @@
    
    </span>
 
+</div>
+
+
+ <!-- Change password button  -->
+
+ <div class="account-profile-child">
+
+  <button class="change-account-btn">Save</button>
+
+
+</div>
+  </div>
+
 
   </div>
+
+
   
-   <!-- Change name button  -->
+   <!-- Change passowrd--> 
 
-   <div class="account-name-child">
+   <div class="account-settings">
 
-    <button id="change-name-btn">Change Name</button>
+    <div class="account-headers" id="account-password" onclick="showAccountContent(this.id)">Password
+
+      <span>
+         <svg class="closed-arrow-svg"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+      </span>
+
+      <span >
+
+         <svg class="opened-arrow-svg"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+       </svg>
+ 
+        </span>
+
+    </div>
+
+
+  <div class="account-contents">
+ 
+
+<!-- old Password  -->
+
+    <div class="account-profile-child">
+
+      <span class="account-profile-child-text">Current Password</span>
+      <span class="account-profile-child-span">
+      <input type="text"  id="account-old-password-value" size="15" maxlength="30">
+      <span class="account-edit-span" title="Edit">
+        <svg class="account-edit-icon"   viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+        </svg>
+        
+      </span>
+      </span>
+    </div>
+    
+  
+
+<!-- New Password  -->
+
+<div class="account-profile-child">
+
+  <span class="account-profile-child-text">New Password</span>
+  <span class="account-profile-child-span">
+  <input type="password"  id="account-new-password-value" size="15" maxlength="30">
+  <span class="account-edit-span" title="Edit">
+    <svg class="account-edit-icon"   viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+    </svg>
+    
+  </span>
+
+  <!-- <ul id="account-profile-child-span-list">
+
+    <li class="account-profile-child-span-list-items">Lowercase and uppercase</li>
+    <li class="account-profile-child-span-list-items">Digit</li>
+    <li class="account-profile-child-span-list-items">Special Character</li>
+    <li class="account-profile-child-span-list-items">Between 10 and 30 characters</li>
+   
+  </ul> -->
+  </span>
+</div>
+
+
+
+<!-- confirm Password  -->
+
+<div class="account-profile-child">
+
+  <span class="account-profile-child-text">Confirm Password</span>
+  <span class="account-profile-child-span">
+  <input type="text"  id="account-confirm-password-value" size="15" maxlength="30">
+  <span class="account-edit-span" title="Edit">
+    <svg class="account-edit-icon"   viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+    </svg>
+    
+  </span>
+  </span>
+</div>
+
+
+
+<!-- Authentication Method -->
+
+
+<div class="account-profile-child">
+
+  <span class="account-profile-child-text">Authentication Method</span>
+  
+  <select class="authentication-select">
+    <option  title="The authentication code will be sent to your email." selected>Email</option>
+    <option title="The authentication code will be sent to you through SMS.">SMS</option>
+
+  </select>
+
+</div>
+
+
+ <!-- Authentication button -->
+
+
+<div class="account-profille-child account-name-btn-div">
+
+<button class="authentication-btn">Send Code</button>
+
+</div>
+
+
+
+
+<!-- Authentication code-->
+
+
+<div class="account-profile-child">
+
+  <span class="account-profile-child-text">Authentication Code</span>
+  
+  <span class="authentication-code-box">
+    <input type="number"  class="authentication-code" >
+    <input type="number"  class="authentication-code" >
+    <input type="number"  class="authentication-code" >
+    <input type="number"  class="authentication-code" >
+    <input type="number"  class="authentication-code" >
+    <input type="number"  class="authentication-code" >
+   
+   </span>
+
+</div>
+
+
+ <!-- Change password button  -->
+
+ <div class="account-profile-child">
+
+  <button class="change-account-btn">Change Password</button>
+
+
+</div>
+
+  </div>
 
 
   </div>
 
+
+
+  
+   <!-- Account Security --> 
+
+   <div class="account-settings">
+
+    <div class="account-headers" id="account-security" onclick="showAccountContent(this.id)">Security
+
+      <span>
+         <svg class="closed-arrow-svg"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+      </span>
+
+      <span >
+
+         <svg class="opened-arrow-svg"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+       </svg>
+ 
+        </span>
+
+    </div>
+
+
+  <div class="account-contents">
+ 
+
+    
+<!-- Security Alert -->
+
+<div class="account-profile-child">
+
+  <span class="account-profile-child-text">Sercurity alerts</span>
+  <span class="account-profile-child-span">
+  
+  </span>
+  
+</div>
+
+
+<!-- Manage Devices -->
+
+<div class="account-profile-child">
+
+  <span class="account-profile-child-text">Manage devices</span>
+  <span class="account-profile-child-span">
+  
+  </span>
+  
+</div>
+ 
+<!-- 2-step verification -->
+
+<div class="account-profile-child">
+
+  <span class="account-profile-child-text">2-step verification</span>
+  <span class="account-profile-child-span">
+  
+  </span>
+  
+</div>
   </div>
+
 
   </div>
 
