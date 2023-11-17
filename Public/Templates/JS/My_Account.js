@@ -3,8 +3,11 @@
 // For the menu and files
 var c;
 
+function ab() {
+  alert("ab");
+}
 
-let countryDetails =  [
+let countryDetails = [
   { flag: "🇦🇨", country: "Ascension Island", code: "+" },
 
   { flag: "🇦🇩", country: "Andorra", code: "+376" },
@@ -532,8 +535,6 @@ let countryDetails =  [
   { flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿", country: "Wales", code: "+" },
 ];
 
-
-
 (() => {
   let fir = document.getElementsByClassName("opt")[0];
 
@@ -635,10 +636,10 @@ function navHeight() {
   document.getElementById("point").style.left = `${param1}px`;
 
   document.getElementById("point").style.right = `${param1}px`;
-  
-  // document.querySelector("#empty-div").style.width = 
 
-  // document.querySelector("#empty-div").style.width = 
+  // document.querySelector("#empty-div").style.width =
+
+  // document.querySelector("#empty-div").style.width =
 
   // For the repoer from subject
 }
@@ -649,12 +650,11 @@ function closeIn() {
   document.getElementById("sign-in-page").style.display = "none";
 }
 
-
 let signInmodal = document.getElementById("sign-in-page");
 
 let signUpmodal = document.getElementById("sign-up-page");
 
-document.documentElement.addEventListener("click", event =>  {
+document.documentElement.addEventListener("click", (event) => {
   if (event.target == signInmodal) {
     document.getElementById("sign-in-page").style.display = "none";
   }
@@ -662,33 +662,35 @@ document.documentElement.addEventListener("click", event =>  {
   if (event.target == signUpmodal) {
     document.getElementById("sign-up-page").style.display = "none";
   }
-
 });
-
 
 window.addEventListener("keypress", (event) => {
+  let disp =
+    String(
+      getComputedStyle(
+        document.getElementById("sign-in-page")
+      ).getPropertyValue("display")
+    ).toLowerCase() == "flex"
+      ? true
+      : String(
+          getComputedStyle(
+            document.getElementById("sign-up-page")
+          ).getPropertyValue("display")
+        ).toLowerCase() == "flex"
+      ? true
+      : false;
 
-let disp = String(getComputedStyle(document.getElementById("sign-in-page")).getPropertyValue("display")).toLowerCase() == "flex" ? true : String(getComputedStyle(document.getElementById("sign-up-page")).getPropertyValue("display")).toLowerCase() == "flex" ? true : false;
-
-  if(disp) {
-
-  if (event.which === 13 || event.keyCode == 13) {
-
-    event.preventDefault();
-
+  if (disp) {
+    if (event.which === 13 || event.keyCode == 13) {
+      event.preventDefault();
+    }
+  } else {
+    return;
   }
-
-
-} else {
-  return;
-}
 });
-
-
 
 function signIn() {
   document.getElementById("sign-in-page").style.display = "flex";
-
 }
 
 function showPassword() {
@@ -712,7 +714,6 @@ function closeUp() {
 
 function signUp() {
   document.getElementById("sign-up-page").style.display = "flex";
-
 }
 
 function showPassword1() {
@@ -733,7 +734,6 @@ function showPassword1() {
 //Password
 
 function check() {
-  
   let pass = document.getElementById("password-input1").value;
 
   /* for the length */
@@ -2519,21 +2519,16 @@ function numCheck(event) {
 
 // For password suggestion
 
-
 function rom() {
-
   let random = Math.random();
 
-  if(random < 0.1) {
-
+  if (random < 0.1) {
     random *= 10;
-  
   } else {
-random = random;
+    random = random;
   }
 
- return random;
-
+  return random;
 }
 
 function suggestPass() {
@@ -2616,25 +2611,19 @@ function removePass() {
   document.getElementById("copy-cont").style.display = "none";
 }
 
-
 // For the text copying
 
 function copyText() {
-
   let text = document.getElementById("sugPass");
-  
+
   document.getElementById("copy-message").style.display = "inline";
-  
+
   setTimeout(() => {
-  
     document.getElementById("copy-message").style.display = "none";
-  
   }, 1000);
-  
+
   navigator.clipboard.writeText(text.value);
-  
-  }
-  
+}
 
 // For checking the country code
 
@@ -3333,270 +3322,197 @@ async function getLocation() {
 
 getLocation();
 
-
 // function to show tab contents
 
- function showAccountContent(id) {
+function showAccountContent(id) {
+  let elem = document.querySelector(`#${id}`);
 
-let elem = document.querySelector(`#${id}`);
+  let disp = String(
+    getComputedStyle(elem.nextElementSibling).getPropertyValue("display")
+  ).toLowerCase();
 
- let disp = String(getComputedStyle(elem.nextElementSibling).getPropertyValue("display")).toLowerCase();
+  let closedSvg = elem.querySelector(".closed-arrow-svg");
 
- let closedSvg = elem.querySelector(".closed-arrow-svg");
+  let openendSvg = elem.querySelector(".opened-arrow-svg");
 
-let openendSvg = elem.querySelector(".opened-arrow-svg");
-
-if(disp == "none") {
-    
-  elem.nextElementSibling.style.display = "block";
-  openendSvg.style.display = "inline";
-  closedSvg.style.display = "none";
-
-} else {
-
-  elem.nextElementSibling.style.display = "none";
-  openendSvg.style.display = "none";
-  closedSvg.style.display = "inline";
-
+  if (disp == "none") {
+    elem.nextElementSibling.style.display = "block";
+    openendSvg.style.display = "inline";
+    closedSvg.style.display = "none";
+  } else {
+    elem.nextElementSibling.style.display = "none";
+    openendSvg.style.display = "none";
+    closedSvg.style.display = "inline";
+  }
 }
-
-
-}
-
 
 function checkName(event) {
-
   let { data } = event;
 
   let param = /\W/;
 
-  let name  = String(event.target.value).replace(/\W/gim, "");
+  let name = String(event.target.value).replace(/\W/gim, "");
 
   if (param.test(data)) {
     event.target.value = name;
   }
 }
 
-
 // for the account name authentication code
 
 let authCodeArray = [...document.querySelectorAll(".authentication-code")];
 
-
-
-authCodeArray.forEach((el,index) => {
-  
-  el.addEventListener("input", e => {
-
+authCodeArray.forEach((el, index) => {
+  el.addEventListener("input", (e) => {
     // if(el.value !== "") {
 
     //   for(let i = index; i < authCodeArray.length; i++) {
-    
+
     //     if(!authCodeArray[i].readOnly) {
-      
+
     //       authCodeArray[i].focus();
-        
+
     //       break;
-        
-    //     } 
-        
-    //   } 
-      
-    // } 
-    
-    if(/\d/.test(e.data)) {
 
-  el.value = parseInt(String(el.value)[0]);
+    //     }
 
-  el.readOnly = true;
+    //   }
 
-  if(index !== (authCodeArray.length - 1)) {
- 
-  authCodeArray[index + 1].focus();
-    
-  }
+    // }
 
-  } else {
-   
-  el.value = "";
+    if (/\d/.test(e.data)) {
+      el.value = parseInt(String(el.value)[0]);
 
-  }
+      el.readOnly = true;
 
-})
-
-})
-
-
-authCodeArray.forEach((el,index) => {
-  
-el.addEventListener("click", e => {
-
-if(el.value !== "") {
-
-  for(let i = index; i < authCodeArray.length; i++) {
-
-    if(!authCodeArray[i].readOnly) {
-    
-      authCodeArray[i].focus();
-    
-      break;
-    
+      if (index !== authCodeArray.length - 1) {
+        authCodeArray[index + 1].focus();
+      }
+    } else {
+      el.value = "";
     }
-    } 
+  });
+});
 
-} else {
+authCodeArray.forEach((el, index) => {
+  el.addEventListener("click", (e) => {
+    if (el.value !== "") {
+      for (let i = index; i < authCodeArray.length; i++) {
+        if (!authCodeArray[i].readOnly) {
+          authCodeArray[i].focus();
 
-  
-for(let i = 0; i < index; i++) {
+          break;
+        }
+      }
+    } else {
+      for (let i = 0; i < index; i++) {
+        if (!authCodeArray[i].readOnly) {
+          authCodeArray[i].focus();
 
-if(!authCodeArray[i].readOnly) {
+          break;
+        }
+      }
+    }
+  });
+});
 
-  authCodeArray[i].focus();
+authCodeArray.forEach((el, index) => {
+  el.addEventListener("keydown", (e) => {
+    let key = String(e.key).toLowerCase().trim();
 
-  break;
+    if (key === "backspace") {
+      let elemArray = authCodeArray.filter((elem) => elem.value !== "");
 
-}
-} 
+      if (elemArray.length !== 0) {
+        let lastElem = elemArray[elemArray.length - 1];
 
-  }
-  
-  
+        let lastIndex = authCodeArray.indexOf(lastElem);
 
-})
+        lastElem.value = "";
 
-})
+        lastElem.readOnly = false;
 
-
-
-authCodeArray.forEach((el,index) => {
-  
-  el.addEventListener("keydown", e => {
-
-let key = String(e.key).toLowerCase().trim();
-
- if(key === "backspace") {
-
-
-  let elemArray = authCodeArray.filter(elem => elem.value !== "");
-
-  if(elemArray.length !== 0) {
-
-  let lastElem = elemArray[elemArray.length - 1];
-
-  let lastIndex = authCodeArray.indexOf(lastElem);
-
-  lastElem.value = "";
-
-  lastElem.readOnly = false;
-
-  authCodeArray[lastIndex].focus();
-
-  }
-} 
-  })
-})
-
+        authCodeArray[lastIndex].focus();
+      }
+    }
+  });
+});
 
 // for showing the profile image
 
 function showProfileImg() {
-  
- document.querySelector("#account-profile-image-display-div").style.display = "grid";
-
+  document.querySelector("#account-profile-image-display-div").style.display =
+    "grid";
 }
-
 
 // for closing the profile image display
 
 function closeProfileImageDisplay() {
-
- document.querySelector("#account-profile-image-display-div").style.display = "none";
-
+  document.querySelector("#account-profile-image-display-div").style.display =
+    "none";
 }
-
 
 // for showing the profile image options list
 
 function showProfileImageOptions() {
+  let disp = String(
+    getComputedStyle(
+      document.querySelector("#account-profile-image-options-list")
+    ).getPropertyValue("display")
+  ).toLowerCase();
 
-  let disp = String(getComputedStyle(document.querySelector("#account-profile-image-options-list")).getPropertyValue("display")).toLowerCase();
-
-  if(disp == "none") {
-  
+  if (disp == "none") {
     document.querySelector("#empty-div").style.display = "block";
-  
-    document.querySelector("#account-profile-image-options-list").style.display = "block";
-  
-  
-  } else {
-  
-    document.querySelector("#empty-div").style.display = "none";
-  
-    document.querySelector("#account-profile-image-options-list").style.display = "none";
-  
-  }
-  
-  
-}
 
+    document.querySelector(
+      "#account-profile-image-options-list"
+    ).style.display = "block";
+  } else {
+    document.querySelector("#empty-div").style.display = "none";
+
+    document.querySelector(
+      "#account-profile-image-options-list"
+    ).style.display = "none";
+  }
+}
 
 // for showing the profile image options list
 
-
 function hideProfileImageOptions() {
-
   document.querySelector("#empty-div").style.display = "none";
 
-  document.querySelector("#account-profile-image-options-list").style.display = "none";
-
+  document.querySelector("#account-profile-image-options-list").style.display =
+    "none";
 }
-
 
 // for checking the account email
 
-
 function checkEmail() {
-
   let param = /^\w{1,}\@\w{1,}\.\w{1,}/m;
 
   let email = document.getElementById("account-email-value").value;
 
   if (param.test(email.toString())) {
-   
-    console.log("Success")
+    console.log("Success");
   } else {
-   
-    console.log("error")
+    console.log("error");
   }
 }
 
-
 // for giving the account country code its values
 
-
 (() => {
+  let countryCodes = new Set(countryDetails.map((con) => con.code));
 
-let countryCodes = new Set(countryDetails.map(con => con.code));
+  let dataList = document.querySelector("#account-number-code");
 
-let dataList = document.querySelector("#account-number-code");
+  let options = "";
 
-let options = "";
+  countryCodes.forEach((con) => {
+    options += `<option value="${con}">\n`;
+  });
 
- countryCodes.forEach(con => {
-
- options += `<option value="${con}">\n`;
-
-})
-
-dataList.innerHTML = options;
-
-
+  dataList.innerHTML = options;
 })();
 
-
 // Function to check the new password
-
-
-
-
-

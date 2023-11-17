@@ -10,7 +10,6 @@ import express from "express";
 
 import morgan from "morgan";
 
-
 // Local Modules
 
 import locationRouter from "./Routes/LocationRoute.js";

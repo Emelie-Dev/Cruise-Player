@@ -7,23 +7,30 @@ import ip from "what-is-my-ip-address";
 
 // Get Request
 
-export const getLocation = (req, res) => {
-  ip.v4()
-    .then((loc) => {
+export const getLocation = async (req, res) => {
+ 
+  try {
 
-      satelize.satelize({ ip: loc }, (err, address) => {
-        if (err) {
+let loc = await ip.v4();
+
+satelize.satelize({ ip: loc }, (err, address) => {
+
+   if (err) {
+
    return res.status(404).send("");
           
-        }
-      return res.status(200).send(address.country.en);
-      
-        
+     }
+     
+  return res.status(200).send(address.country.en);
+       
       });
-    })
-    .catch((err) => {
-      res.status(404).send("");
-    });
+  
+    } catch {
+
+      return res.status(404).send("");
+
+    }
+  
 };
 
 
