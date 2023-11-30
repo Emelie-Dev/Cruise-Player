@@ -1529,6 +1529,48 @@ text-shadow: 1px 1px 5px magenta;
  
  } 
 
+.account-profile-child-security-btn {
+
+    background: indigo;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+
+
+.account-profile-child-security-btn:hover {
+  
+   box-shadow: -1px -1px 1px 1px black;
+ }
+
+ 
+.account-profile-child-management-btn {
+
+   background: indigo;
+   color: white;
+   padding: 8px;
+   border-radius: 5px;
+   font-family: 'Times New Roman', Times, serif;
+   outline: none;
+   border: none;
+   font-size: 1.2rem;
+   cursor: pointer;
+   transition: all 0.3s;
+
+}
+
+
+.account-profile-child-management-btn:hover {
+ 
+  box-shadow: -1px -1px 1px 1px black;
+}
 
 
  /* For the Animation */
