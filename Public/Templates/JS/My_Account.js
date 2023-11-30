@@ -1,13 +1,8 @@
 "use strict";
 
 // For the menu and files
-var c;
 
-function ab() {
-  alert("ab");
-}
-
-let countryDetails = [
+const countryDetails = [
   { flag: "🇦🇨", country: "Ascension Island", code: "+" },
 
   { flag: "🇦🇩", country: "Andorra", code: "+376" },
@@ -516,7 +511,7 @@ let countryDetails = [
 
   { flag: "🇼🇸", country: "Samoa", code: "+685" },
 
-  { flag: "🇽🇰", country: "Kosovo", code: "+", code: "+" },
+  { flag: "🇽🇰", country: "Kosovo", code: "+" },
 
   { flag: "🇾🇪", country: "Yemen", code: "+967" },
 
@@ -536,9 +531,9 @@ let countryDetails = [
 ];
 
 (() => {
-  let fir = document.getElementsByClassName("opt")[0];
+  const fir = document.getElementsByClassName("opt")[0];
 
-  let sec = document.getElementsByClassName("opt")[1];
+  const sec = document.getElementsByClassName("opt")[1];
 
   fir.classList.add("opt2");
 
@@ -546,9 +541,9 @@ let countryDetails = [
     fir.classList.add("opt2");
     sec.classList.remove("opt2");
 
-    let nav = document.getElementById("nav");
-    let navFir = document.getElementById("menu");
-    let navSec = document.getElementById("nav-list2");
+    // let nav = document.getElementById("nav");
+    const navFir = document.getElementById("menu");
+    const navSec = document.getElementById("nav-list2");
 
     navFir.style.display = "block";
     navSec.style.display = "none";
@@ -559,9 +554,9 @@ let countryDetails = [
   sec.onclick = () => {
     sec.classList.add("opt2");
     fir.classList.remove("opt2");
-    let nav = document.getElementById("nav");
-    let navFir = document.getElementById("menu");
-    let navSec = document.getElementById("nav-list2");
+
+    const navFir = document.getElementById("menu");
+    const navSec = document.getElementById("nav-list2");
 
     navSec.style.display = "block";
     navFir.style.display = "none";
@@ -575,13 +570,13 @@ let countryDetails = [
     document.getElementById("file").click();
   };
 
-  let index = Math.floor(Math.random() * 26);
-  let index1 = Math.floor(Math.random() * 26);
-  let index2 = Math.floor(Math.random() * 26);
-  let index3 = Math.floor(Math.random() * 26);
-  let index4 = Math.floor(Math.random() * 26);
-  let alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  let random = `${Math.floor(Math.random() * 100)}${alpha[index2]}${
+  const index = Math.floor(Math.random() * 26);
+  const index1 = Math.floor(Math.random() * 26);
+  const index2 = Math.floor(Math.random() * 26);
+  const index3 = Math.floor(Math.random() * 26);
+  const index4 = Math.floor(Math.random() * 26);
+  const alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const random = `${Math.floor(Math.random() * 100)}${alpha[index2]}${
     alpha[index]
   }${Math.floor(Math.random() * 1000)}${alpha[index3]}${
     alpha[index4]
@@ -595,10 +590,10 @@ let countryDetails = [
 // For the side nav height
 
 function navHeight() {
-  let parentHeight = getComputedStyle(
+  const parentHeight = getComputedStyle(
     document.getElementById("nav")
   ).getPropertyValue("height");
-  let par = parentHeight.replace("px", "");
+  const par = parentHeight.replace("px", "");
 
   document.getElementById("nav-list").style.height = `${0.74 * par}px`;
 
@@ -606,32 +601,32 @@ function navHeight() {
 
   // For the main body and animation
 
-  let wid = getComputedStyle(document.getElementById("nav")).getPropertyValue(
+  const wid = getComputedStyle(document.getElementById("nav")).getPropertyValue(
     "width"
   );
 
-  let widNo = Number(wid.toString().replace("px", ""));
+  const widNo = Number(wid.toString().replace("px", ""));
 
   document.getElementById("main").style.marginLeft = `${widNo + 10}px`;
   document.getElementById("main").style.width = `${
     screen.availWidth - (widNo + 15)
   }px`;
 
-  let point1 = getComputedStyle(
+  const point1 = getComputedStyle(
     document.getElementById("point")
   ).getPropertyValue("width");
 
-  let point2 = getComputedStyle(
+  const point2 = getComputedStyle(
     document.getElementById("point")
   ).getPropertyValue("height");
 
-  let hor = Number(point1.toString().replace("px", ""));
+  const hor = Number(point1.toString().replace("px", ""));
 
-  let ver = Number(point2.toString().replace("px", ""));
+  const ver = Number(point2.toString().replace("px", ""));
 
-  let param1 = screen.availWidth / 2 - hor;
+  const param1 = screen.availWidth / 2 - hor;
 
-  let param2 = screen.availHeight / 2 - ver / 2;
+  const param2 = screen.availHeight / 2 - ver / 2;
 
   document.getElementById("point").style.left = `${param1}px`;
 
@@ -650,9 +645,9 @@ function closeIn() {
   document.getElementById("sign-in-page").style.display = "none";
 }
 
-let signInmodal = document.getElementById("sign-in-page");
+const signInmodal = document.getElementById("sign-in-page");
 
-let signUpmodal = document.getElementById("sign-up-page");
+const signUpmodal = document.getElementById("sign-up-page");
 
 document.documentElement.addEventListener("click", (event) => {
   if (event.target == signInmodal) {
@@ -665,7 +660,7 @@ document.documentElement.addEventListener("click", (event) => {
 });
 
 window.addEventListener("keypress", (event) => {
-  let disp =
+  const disp =
     String(
       getComputedStyle(
         document.getElementById("sign-in-page")
@@ -684,8 +679,6 @@ window.addEventListener("keypress", (event) => {
     if (event.which === 13 || event.keyCode == 13) {
       event.preventDefault();
     }
-  } else {
-    return;
   }
 });
 
@@ -734,7 +727,7 @@ function showPassword1() {
 //Password
 
 function check() {
-  let pass = document.getElementById("password-input1").value;
+  const pass = document.getElementById("password-input1").value;
 
   /* for the length */
 
@@ -768,7 +761,7 @@ function check() {
 
   /* for the special characters */
 
-  if (/\W/.test(pass.toString()) || /\_/.test(pass.toString())) {
+  if (/\W/.test(pass.toString()) || /_/.test(pass.toString())) {
     document.getElementById("special").checked = true;
 
     document.getElementById("special").style.pointerEvents = "none";
@@ -780,10 +773,10 @@ function check() {
 // username
 
 function userCheck(event) {
-  let x = event.data;
-  let param = /\W/;
+  const x = event.data;
+  const param = /\W/;
 
-  let username = document
+  const username = document
     .getElementById("username1")
     .value.toString()
     .replace(/\W/gim, "");
@@ -796,7 +789,7 @@ function userCheck(event) {
 //country
 
 (() => {
-  let con = [
+  const con = [
     { flag: "🇦🇨", country: "Ascension Island", code: "+" },
 
     { flag: "🇦🇩", country: "Andorra", code: "+376" },
@@ -1305,7 +1298,7 @@ function userCheck(event) {
 
     { flag: "🇼🇸", country: "Samoa", code: "+685" },
 
-    { flag: "🇽🇰", country: "Kosovo", code: "+", code: "+" },
+    { flag: "🇽🇰", country: "Kosovo", code: "+" },
 
     { flag: "🇾🇪", country: "Yemen", code: "+967" },
 
@@ -1324,22 +1317,23 @@ function userCheck(event) {
     { flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿", country: "Wales", code: "+" },
   ];
 
-  let conSort = con.sort((x, y) => {
-    let a = x.country.toUpperCase();
+  const conSort = con.sort((x, y) => {
+    const a = x.country.toUpperCase();
 
-    let b = y.country.toUpperCase();
+    const b = y.country.toUpperCase();
 
     return a == b ? 0 : a > b ? 1 : -1;
   });
 
-  let sel = document.getElementById("sel");
+  const sel = document.getElementById("sel");
 
-  let conFlag = document.getElementById("col");
+  const conFlag = document.getElementById("col");
 
-  for (let [index, { country, flag }] of conSort.entries()) {
-    let opt = document.createElement("option");
+  // eslint-disable-next-line no-restricted-syntax
+  for (const [index, { country, flag }] of conSort.entries()) {
+    const opt = document.createElement("option");
 
-    let opt1 = document.createElement("option");
+    const opt1 = document.createElement("option");
 
     opt.value = country;
 
@@ -1355,7 +1349,7 @@ function userCheck(event) {
 // Mtaching the datalists
 
 function match() {
-  let con = [
+  const con = [
     { flag: "🇦🇨", country: "Ascension Island", code: "+" },
 
     { flag: "🇦🇩", country: "Andorra", code: "+376" },
@@ -1864,7 +1858,7 @@ function match() {
 
     { flag: "🇼🇸", country: "Samoa", code: "+685" },
 
-    { flag: "🇽🇰", country: "Kosovo", code: "+", code: "+" },
+    { flag: "🇽🇰", country: "Kosovo", code: "+" },
 
     { flag: "🇾🇪", country: "Yemen", code: "+967" },
 
@@ -1883,15 +1877,15 @@ function match() {
     { flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿", country: "Wales", code: "+" },
   ];
 
-  let conSort = con.sort((x, y) => {
-    let a = x.country.toUpperCase();
+  const conSort = con.sort((x, y) => {
+    const a = x.country.toUpperCase();
 
-    let b = y.country.toUpperCase();
+    const b = y.country.toUpperCase();
 
     return a == b ? 0 : a > b ? 1 : -1;
   });
 
-  let param = conSort.find(
+  const param = conSort.find(
     (el) =>
       el.country.toString().toLowerCase().trim() ===
       document.getElementById("country").value.toString().toLowerCase().trim()
@@ -1899,7 +1893,7 @@ function match() {
 
   if (param) {
     if (document.getElementById("country").value.toString().includes(" ")) {
-      let val = param.country.toString().replace(/\s/g, "_");
+      const val = param.country.toString().replace(/\s/g, "_");
       param.flag = `./Templates/Flags/${val}.jpg`;
       document.getElementById("col").style.visibility = "visible";
     } else {
@@ -1925,9 +1919,9 @@ function match() {
 // for the email
 
 function emailCheck() {
-  let param = /^\w{1,}\@\w{1,}\.\w{1,}/m;
+  const param = /^\w{1,}@\w{1,}\.\w{1,}/m;
 
-  let email = document.getElementById("email").value;
+  const email = document.getElementById("email").value;
 
   if (param.test(email.toString())) {
     document.getElementById("emailText").style.display = "none";
@@ -1941,7 +1935,7 @@ function emailCheck() {
 // For phone number
 
 (() => {
-  let con = [
+  const con = [
     { flag: "🇦🇨", country: "Ascension Island", code: "+" },
 
     { flag: "🇦🇩", country: "Andorra", code: "+376" },
@@ -2450,7 +2444,7 @@ function emailCheck() {
 
     { flag: "🇼🇸", country: "Samoa", code: "+685" },
 
-    { flag: "🇽🇰", country: "Kosovo", code: "+", code: "+" },
+    { flag: "🇽🇰", country: "Kosovo", code: "+" },
 
     { flag: "🇾🇪", country: "Yemen", code: "+967" },
 
@@ -2469,18 +2463,19 @@ function emailCheck() {
     { flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿", country: "Wales", code: "+" },
   ];
 
-  let conSort = con.sort((x, y) => {
-    let a = x.country.toUpperCase();
+  const conSort = con.sort((x, y) => {
+    const a = x.country.toUpperCase();
 
-    let b = y.country.toUpperCase();
+    const b = y.country.toUpperCase();
 
     return a == b ? 0 : a > b ? 1 : -1;
   });
 
-  let cod = document.getElementById("code");
+  const cod = document.getElementById("code");
 
-  for (let [index, { country, flag, code }] of conSort.entries()) {
-    let opt = document.createElement("option");
+  // eslint-disable-next-line no-restricted-syntax
+  for (const [index, { country, flag, code }] of conSort.entries()) {
+    const opt = document.createElement("option");
 
     opt.value = code;
 
@@ -2493,14 +2488,14 @@ function emailCheck() {
 /* Number spacing and validation */
 
 function numCheck(event) {
-  let num = document.getElementById("tel");
+  const num = document.getElementById("tel");
 
-  let conCode = document.getElementById("con-code");
+  const conCode = document.getElementById("con-code");
 
-  let str = num.value.toString();
+  const str = num.value.toString();
 
   if (!/\d/.test(event.data)) {
-    let odd = num.value.toString().replace(event.data, "");
+    const odd = num.value.toString().replace(event.data, "");
 
     num.value = odd;
   }
@@ -2524,15 +2519,13 @@ function rom() {
 
   if (random < 0.1) {
     random *= 10;
-  } else {
-    random = random;
   }
 
   return random;
 }
 
 function suggestPass() {
-  let sugPass = document.getElementById("sugPass");
+  const sugPass = document.getElementById("sugPass");
 
   document.getElementById("sp3").style.display = "block";
 
@@ -2540,21 +2533,21 @@ function suggestPass() {
 
   document.getElementById("copy-cont").style.display = "inline";
 
-  let param1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const param1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-  let param2 = param1.toLowerCase();
+  const param2 = param1.toLowerCase();
 
-  let index1 = Math.floor(rom() * 26);
+  const index1 = Math.floor(rom() * 26);
 
-  let index2 = Math.floor(rom() * 26);
-  let index3 = Math.floor(rom() * 26);
-  let index4 = Math.floor(rom() * 26);
-  let index5 = Math.floor(rom() * 26);
-  let index6 = Math.floor(rom() * 26);
-  let index7 = Math.floor(rom() * 26);
-  let index8 = Math.floor(rom() * 26);
+  const index2 = Math.floor(rom() * 26);
+  const index3 = Math.floor(rom() * 26);
+  const index4 = Math.floor(rom() * 26);
+  const index5 = Math.floor(rom() * 26);
+  const index6 = Math.floor(rom() * 26);
+  const index7 = Math.floor(rom() * 26);
+  const index8 = Math.floor(rom() * 26);
 
-  let spec = [
+  const spec = [
     "%",
     ".",
     "_",
@@ -2580,13 +2573,13 @@ function suggestPass() {
     ";",
   ];
 
-  let index9 = Math.floor(rom() * spec.length);
+  const index9 = Math.floor(rom() * spec.length);
 
-  let index10 = Math.floor(rom() * spec.length);
+  const index10 = Math.floor(rom() * spec.length);
 
-  let index11 = Math.floor(rom() * spec.length);
+  const index11 = Math.floor(rom() * spec.length);
 
-  let ans = `${param1[index1]}${Math.floor(rom() * 10)}${Math.floor(
+  const ans = `${param1[index1]}${Math.floor(rom() * 10)}${Math.floor(
     rom() * 10
   )}${param2[index5]}${param2[index6]}${spec[index9]}${param1[index2]}${
     param1[index3]
@@ -2614,7 +2607,7 @@ function removePass() {
 // For the text copying
 
 function copyText() {
-  let text = document.getElementById("sugPass");
+  const text = document.getElementById("sugPass");
 
   document.getElementById("copy-message").style.display = "inline";
 
@@ -2628,12 +2621,12 @@ function copyText() {
 // For checking the country code
 
 function conCodeCheck(event) {
-  let num = document.getElementById("tel");
+  const num = document.getElementById("tel");
 
-  let conCode = document.getElementById("con-code");
+  const conCode = document.getElementById("con-code");
 
   if (!/\d/.test(event.data) && !/\+/.test(event.data)) {
-    let odd = conCode.value.toString().replace(event.data, "");
+    const odd = conCode.value.toString().replace(event.data, "");
 
     conCode.value = odd;
   }
@@ -2653,28 +2646,28 @@ function conCodeCheck(event) {
 // Submit validation
 
 setInterval(() => {
-  let user = document.getElementById("username1").value !== "";
+  const user = document.getElementById("username1").value !== "";
 
-  let check =
+  const check =
     document.getElementById("letter").checked === true &&
     document.getElementById("digit").checked === true &&
     document.getElementById("special").checked === true;
 
-  let email = /^\w{1,}\@\w{1,}\.\w{1,}/gm.test(
+  const email = /^\w{1,}@\w{1,}\.\w{1,}/gm.test(
     document.getElementById("email").value.toString()
   );
 
-  let country =
+  const country =
     document.getElementById("col").value !== "" &&
     document.getElementById("country").value !== "";
 
-  let code = /^\+\d{0,}$/.test(
+  const code = /^\+\d{0,}$/.test(
     document.getElementById("con-code").value.toString()
   );
 
-  let phone = document.getElementById("tel").value !== "";
+  const phone = document.getElementById("tel").value !== "";
 
-  let all = user && check && email && country && code && phone;
+  const all = user && check && email && country && code && phone;
 
   if (all) {
     document.getElementById("final").style.pointerEvents = "all";
@@ -2686,27 +2679,27 @@ setInterval(() => {
 
   // For the nav width onresize
 
-  let wid = getComputedStyle(document.getElementById("nav")).getPropertyValue(
+  const wid = getComputedStyle(document.getElementById("nav")).getPropertyValue(
     "width"
   );
 
-  let widNo = Number(wid.toString().replace("px", ""));
+  const widNo = Number(wid.toString().replace("px", ""));
 
   document.getElementById("main").style.marginLeft = `${widNo + 10}px`;
   document.getElementById("main").style.width = `${
     screen.availWidth - (widNo + 15)
   }px`;
 
-  let parentHeight = getComputedStyle(
+  const parentHeight = getComputedStyle(
     document.getElementById("nav")
   ).getPropertyValue("height");
-  let par = parentHeight.replace("px", "");
+  const par = parentHeight.replace("px", "");
 
   document.getElementById("nav-list").style.height = `${0.74 * par}px`;
 }, 0);
 
 function validate() {
-  let pass = document.getElementById("password-input1");
+  const pass = document.getElementById("password-input1");
 
   if (pass.type === "text") {
     pass.type = "password";
@@ -2741,13 +2734,13 @@ function scrollUp() {
 
 async function getLocation() {
   try {
-    let res = await fetch("http://127.0.0.1:1000/api/v1/user-location", {
+    const res = await fetch("http://127.0.0.1:1000/api/v1/user-location", {
       mode: "no-cors",
     });
 
-    let data = await res.text();
+    const data = await res.text();
 
-    let con = [
+    const con = [
       { flag: "🇦🇨", country: "Ascension Island", code: "+" },
 
       { flag: "🇦🇩", country: "Andorra", code: "+376" },
@@ -3256,7 +3249,7 @@ async function getLocation() {
 
       { flag: "🇼🇸", country: "Samoa", code: "+685" },
 
-      { flag: "🇽🇰", country: "Kosovo", code: "+", code: "+" },
+      { flag: "🇽🇰", country: "Kosovo", code: "+" },
 
       { flag: "🇾🇪", country: "Yemen", code: "+967" },
 
@@ -3275,15 +3268,15 @@ async function getLocation() {
       { flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿", country: "Wales", code: "+" },
     ];
 
-    let conSort = con.sort((x, y) => {
-      let a = x.country.toUpperCase();
+    const conSort = con.sort((x, y) => {
+      const a = x.country.toUpperCase();
 
-      let b = y.country.toUpperCase();
+      const b = y.country.toUpperCase();
 
       return a == b ? 0 : a > b ? 1 : -1;
     });
 
-    let loc = conSort.find(
+    const loc = conSort.find(
       (x) =>
         x.country.toString().toLowerCase().trim() ==
         data.toString().toLowerCase().trim()
@@ -3291,7 +3284,7 @@ async function getLocation() {
 
     if (loc) {
       if (data.toString().includes(" ")) {
-        let val = loc.country.toString().replace(/\s/g, "_");
+        const val = loc.country.toString().replace(/\s/g, "_");
         loc.flag = `./Templates/Flags/${val}.jpg`;
         document.getElementById("col").style.visibility = "visible";
       } else {
@@ -3325,15 +3318,15 @@ getLocation();
 // function to show tab contents
 
 function showAccountContent(id) {
-  let elem = document.querySelector(`#${id}`);
+  const elem = document.querySelector(`#${id}`);
 
-  let disp = String(
+  const disp = String(
     getComputedStyle(elem.nextElementSibling).getPropertyValue("display")
   ).toLowerCase();
 
-  let closedSvg = elem.querySelector(".closed-arrow-svg");
+  const closedSvg = elem.querySelector(".closed-arrow-svg");
 
-  let openendSvg = elem.querySelector(".opened-arrow-svg");
+  const openendSvg = elem.querySelector(".opened-arrow-svg");
 
   if (disp == "none") {
     elem.nextElementSibling.style.display = "block";
@@ -3347,11 +3340,11 @@ function showAccountContent(id) {
 }
 
 function checkName(event) {
-  let { data } = event;
+  const { data } = event;
 
-  let param = /\W/;
+  const param = /\W/;
 
-  let name = String(event.target.value).replace(/\W/gim, "");
+  const name = String(event.target.value).replace(/\W/gim, "");
 
   if (param.test(data)) {
     event.target.value = name;
@@ -3360,7 +3353,7 @@ function checkName(event) {
 
 // for the account name authentication code
 
-let authCodeArray = [...document.querySelectorAll(".authentication-code")];
+const authCodeArray = [...document.querySelectorAll(".authentication-code")];
 
 authCodeArray.forEach((el, index) => {
   el.addEventListener("input", (e) => {
@@ -3381,7 +3374,7 @@ authCodeArray.forEach((el, index) => {
     // }
 
     if (/\d/.test(e.data)) {
-      el.value = parseInt(String(el.value)[0]);
+      el.value = parseInt(String(el.value)[0], 10);
 
       el.readOnly = true;
 
@@ -3395,7 +3388,7 @@ authCodeArray.forEach((el, index) => {
 });
 
 authCodeArray.forEach((el, index) => {
-  el.addEventListener("click", (e) => {
+  el.addEventListener("click", () => {
     if (el.value !== "") {
       for (let i = index; i < authCodeArray.length; i++) {
         if (!authCodeArray[i].readOnly) {
@@ -3418,15 +3411,15 @@ authCodeArray.forEach((el, index) => {
 
 authCodeArray.forEach((el, index) => {
   el.addEventListener("keydown", (e) => {
-    let key = String(e.key).toLowerCase().trim();
+    const key = String(e.key).toLowerCase().trim();
 
     if (key === "backspace") {
-      let elemArray = authCodeArray.filter((elem) => elem.value !== "");
+      const elemArray = authCodeArray.filter((elem) => elem.value !== "");
 
       if (elemArray.length !== 0) {
-        let lastElem = elemArray[elemArray.length - 1];
+        const lastElem = elemArray[elemArray.length - 1];
 
-        let lastIndex = authCodeArray.indexOf(lastElem);
+        const lastIndex = authCodeArray.indexOf(lastElem);
 
         lastElem.value = "";
 
@@ -3455,7 +3448,7 @@ function closeProfileImageDisplay() {
 // for showing the profile image options list
 
 function showProfileImageOptions() {
-  let disp = String(
+  const disp = String(
     getComputedStyle(
       document.querySelector("#account-profile-image-options-list")
     ).getPropertyValue("display")
@@ -3488,9 +3481,9 @@ function hideProfileImageOptions() {
 // for checking the account email
 
 function checkEmail() {
-  let param = /^\w{1,}\@\w{1,}\.\w{1,}/m;
+  const param = /^\w{1,}@\w{1,}\.\w{1,}/m;
 
-  let email = document.getElementById("account-email-value").value;
+  const email = document.getElementById("account-email-value").value;
 
   if (param.test(email.toString())) {
     console.log("Success");
@@ -3502,9 +3495,9 @@ function checkEmail() {
 // for giving the account country code its values
 
 (() => {
-  let countryCodes = new Set(countryDetails.map((con) => con.code));
+  const countryCodes = new Set(countryDetails.map((con) => con.code));
 
-  let dataList = document.querySelector("#account-number-code");
+  const dataList = document.querySelector("#account-number-code");
 
   let options = "";
 

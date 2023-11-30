@@ -852,6 +852,7 @@ box-shadow: 0.5px 0.5px 5px 0.5px white;
 
  input[type="number"] {
    -moz-appearance: textfield;
+   appearance: textfield;
  }
 
  #tel {

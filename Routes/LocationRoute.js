@@ -2,10 +2,10 @@
 
 import express from "express";
 
-import * as controllers from "../Controllers/LocationController.js";
+import locationController from "../Controllers/LocationController.js";
 
 const Router = express.Router();
 
-Router.route("/").get(controllers.getLocation);
+Router.route("/").get(locationController);
 
 export default Router;

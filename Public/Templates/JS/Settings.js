@@ -2931,9 +2931,18 @@ function displayContent(id) {
     let el = document.getElementById(id);
     
   document.getElementById("screen-guard").style.display = "block";
-  el.style.display = "block";
   el.scrollIntoView();
   
+  if(["layout-content", "sub-text-cont", "screen-content"].includes(String(id))) {
+
+  el.style.display = "block";
+
+  } else {
+
+    el.style.display = "grid";
+
+  }
+
 /*
     let width = getComputedStyle(el)
       .getPropertyValue("width")
@@ -3035,7 +3044,7 @@ btns.forEach((value, index, array) => {
     } else if (index === 1) {
     
       displayContent("controls-content");
-      
+     
     } else if (index === 2) {
       
       displayContent("screen-nav-contents");
