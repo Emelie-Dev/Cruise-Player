@@ -27,6 +27,11 @@
 </head>
 <body onresize="navHeight()" onload="navHeight()" onpageshow="navHeight()">
 
+
+  <div id="empty-div2">
+ 
+  </div>
+
   <!-- For the profile image wide display -->
   
 
@@ -107,6 +112,13 @@
 
     <!--The header -->
     <div id="head"> 
+
+      <span id="nav-svg-box">
+      <svg id="nav-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" onclick="showNavBar(event)">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+      </svg>
+      </span>
+
         <span id="head1" class="first" >C</span>
         <span id="head2">r</span>
         <span id="head3">u</span>
@@ -168,8 +180,9 @@
           My Account
         
         </li>
-</a>
-        <a href="./Bookmark.html" id="bookmark-button"> 
+    </a>
+       
+    <a href="./Bookmark.html" id="bookmark-button"> 
            <li class="nav-list-child">
             
  
@@ -179,8 +192,9 @@
             Bookmarks
  
           </li>  
-</a>
-          <a href="./History.html" id="history-button"> 
+     </a>
+
+     <a href="./History.html" id="history-button"> 
          <li class="nav-list-child">
           
 
@@ -190,8 +204,10 @@
           History
         
         </li> 
-</a>
-        <a href="./Settings.html" id="settings-buttton">  
+      </a>
+
+
+    <a href="./Settings.html" id="settings-buttton">  
          <li class="nav-list-child">
           
           
@@ -201,8 +217,10 @@
           Settings
         
         </li>
-        </a>
-        <a href="./Help.html" id="help-buttton"> <li class="nav-list-child"  >
+       </a>
+
+
+    <a href="./Help.html" id="help-buttton"> <li class="nav-list-child"  >
           
     
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">  <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" /></svg>
@@ -213,9 +231,9 @@
           Help
         
         </li>
-      </a>
+     </a>
         
-      <a href="./About.html" id="about-buttton"> <li class="nav-list-child"  >
+    <a href="./About.html" id="about-buttton"> <li class="nav-list-child"  >
         
 
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -224,25 +242,29 @@
       
             About
        
-          </li>  
+      </li>  
+
+   
 
 </a>
-           <div style="display: flex;"> <button id="log-out">
-            
-            
-<span>
 
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" /></svg> 
-  Log out 
-</span>
- 
-
-
-
+<div style="display: flex;"> <button id="log-out">
            
-          
-          </button></div>
+  <span>
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" /></svg> 
+    Log out 
+  </span>
+    
+            
+     </button>
+  
+    
+    </div>    
        </ul> 
+
+       
+
 
       </div>
     </div>
@@ -351,7 +373,7 @@
 
       <span class="account-profile-child-text">Name</span>
       <span class="account-profile-child-span">
-      <input type="text"  id="account-name-value" maxlength="30"  oninput="checkName(event)" size="15">
+      <input type="text"  id="account-name-value" maxlength="30"  oninput="checkName(event)" >
       <span class="account-edit-span" title="Edit">
         <svg class="account-edit-icon"   viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" >
           <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
@@ -650,9 +672,215 @@
 
 <div class="account-profile-child">
 
- <button class="account-profile-child-security-btn">Security Alerts</button>
+ <button class="account-profile-child-security-btn" onclick="showSecurityModals('account-profile-child-security-alerts-modal', 1)">Security Alerts</button>
+ 
+<div id="account-profile-child-security-alerts-modal" class="account-profile-child-security-modal">
   
+    <span class="account-profile-child-security-modal-close-span" onclick="closeSecurityModals('account-profile-child-security-alerts-modal')" title="Close">
+      
+      <svg class="account-profile-child-security-modal-close-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
 
+      </svg>
+      
+    </span>
+ 
+
+  <div id="account-profile-child-security-alerts-box">
+
+   <div id="account-profile-child-security-alerts-box-head" onclick="switchContent()">Security Alerts</div>
+
+
+   <!-- No security Box-->
+
+   <div id="account-profile-child-no-security-alerts-box">
+
+    <span id="account-profile-child-no-security-alerts-svg-box">
+
+    <svg id="account-profile-child-no-security-alerts-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+    </svg>
+
+    </span>
+    
+    <span id="account-profile-child-no-security-alerts-box-text">
+
+   No unusual account activity detected in the last 30 days.
+
+    </span>
+
+
+   </div>
+
+   <!--Container-->
+
+   <div id="account-profile-child-security-alerts-container">
+
+    <!--First Item-->
+
+    <div class="account-profile-child-security-alerts-item">
+
+    <div class="account-profile-child-security-alerts-item-head" id="account-profile-child-security-alerts-item-first-head" onclick="showAlertContent(event)">
+
+      <span class="account-profile-child-security-alerts-item-head-text">
+
+      1. &nbsp;New device sign-in
+
+    </span>
+
+    <span class="account-profile-child-security-alerts-item-head-svg-box">
+
+      <svg class="account-profile-child-security-alerts-item-head-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+      </svg>
+
+
+    </span>
+
+
+
+    </div>
+
+    <!-- Box Content -->
+
+    <div class="account-profile-child-security-alerts-item-box">
+
+      
+      <span class="account-profile-child-security-alerts-item-box-head">A new sign-in on Iphone 11 mini</span>
+   
+    <div class="account-profile-child-security-alerts-item-box-text">
+
+      We noticed a new sign-in to your account on an Iphone 11 mini. If this was you, you don't need to do anything. If not, click on the button below to block the unauthorized user.
+    </div>
+    
+    <div class="account-profile-child-security-alerts-item-box-btn-div">
+
+      <button class="account-profile-child-security-alerts-item-box-btn">Block user</button>
+    </div>
+
+
+    <div class="account-profile-child-security-alerts-item-box-footer">
+
+      <!-- Time -->
+
+    <div class="account-profile-child-security-alerts-item-box-time-div">
+
+      <span class="account-profile-child-security-alerts-item-box-time-text">Time:</span>
+
+      <span class="account-profile-child-security-alerts-item-box-time">&nbsp;Friday, 25th December, 2023</span>
+
+    </div>
+    
+    <!-- Location -->
+
+    <div class="account-profile-child-security-alerts-item-box-loc-div">
+
+      <span class="account-profile-child-security-alerts-item-box-time-text">Location:</span>
+
+      <span class="account-profile-child-security-alerts-item-box-loc">&nbsp;Abuja, Nigeria</span>
+
+    </div>
+
+    </div>
+
+
+    </div>
+   
+    </div>
+
+    <!--Second Item-->
+
+
+    <div class="account-profile-child-security-alerts-item">
+
+      <div class="account-profile-child-security-alerts-item-head" id="account-profile-child-security-alerts-item-last-head" onclick="showAlertContent(event)">
+  
+        <span class="account-profile-child-security-alerts-item-head-text">
+  
+        2. &nbsp;New device sign-in
+  
+      </span>
+  
+      <span class="account-profile-child-security-alerts-item-head-svg-box">
+  
+        <svg class="account-profile-child-security-alerts-item-head-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+        </svg>
+  
+  
+      </span>
+  
+  
+  
+      </div>
+  
+      <!-- Box Content -->
+  
+      <div class="account-profile-child-security-alerts-item-box">
+  
+        
+        <span class="account-profile-child-security-alerts-item-box-head">A new sign-in on Redmi 10 C</span>
+     
+      <div class="account-profile-child-security-alerts-item-box-text">
+  
+        We noticed a new sign-in to your account on a Redmi 10 C. If this was you, you don't need to do anything. If not, click on the button below to block the unauthorized user.
+
+      </div>
+      
+      <div class="account-profile-child-security-alerts-item-box-btn-div">
+  
+        <button class="account-profile-child-security-alerts-item-box-btn">Block user</button>
+      </div>
+  
+  
+      <div class="account-profile-child-security-alerts-item-box-footer">
+  
+        <!-- Time -->
+  
+      <div class="account-profile-child-security-alerts-item-box-time-div">
+  
+        <span class="account-profile-child-security-alerts-item-box-time-text">Time:</span>
+  
+        <span class="account-profile-child-security-alerts-item-box-time">&nbsp;Sunday, 20th December, 2023</span>
+  
+      </div>
+      
+      <!-- Location -->
+  
+      <div class="account-profile-child-security-alerts-item-box-loc-div">
+  
+        <span class="account-profile-child-security-alerts-item-box-time-text">Location:</span>
+  
+        <span class="account-profile-child-security-alerts-item-box-loc">&nbsp;Lagos, Nigeria</span>
+  
+      </div>
+  
+      </div>
+  
+  
+      </div>
+     
+      </div>
+      
+    
+<!-- End of Container -->
+   </div>
+
+   <br><br>
+
+   <!-- Security box footer -->
+
+   <div id="account-profile-child-security-alerts-footer">
+    This shows the security alert(s) from the last 30 days.
+  </div>
+
+  
+ <br><br>
+
+</div>
+
+  
+</div>
   
 </div>
 
@@ -661,7 +889,260 @@
 
 <div class="account-profile-child">
 
-  <button class="account-profile-child-security-btn">Manage Devices</button>
+  <button class="account-profile-child-security-btn"  onclick="showSecurityModals('account-profile-child-manage-devices-modal', 2)">Manage Devices</button>
+
+
+  <div id="account-profile-child-manage-devices-modal" class="account-profile-child-security-modal">
+  
+    <!-- Close Icon -->
+
+    <span class="account-profile-child-security-modal-close-span" onclick="closeSecurityModals('account-profile-child-manage-devices-modal')" title="Close">
+      
+      <svg class="account-profile-child-security-modal-close-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+
+      </svg>
+      
+    </span>
+
+    <!-- Devices Box -->
+    
+  <div id="account-profile-child-manage-devices-box">
+
+
+  <div id="account-profile-child-manage-devices-box-head">Manage Devices</div>
+
+    <!--Container-->
+    
+   <div id="account-profile-child-manage-devices-container">
+
+    <!--First Item-->
+
+  <div class="account-profile-child-manage-devices-item" id="account-profile-child-manage-devices-item-active">
+
+    <!--SVG-->
+
+    <span class="account-profile-child-manage-devices-item-svg-box">
+
+      <svg class="account-profile-child-manage-devices-item-svg"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+      </svg>
+      
+    </span>
+
+    <!--Details-->
+
+    <div class="account-profile-child-manage-devices-item-details-div">
+
+    <span class="account-profile-child-manage-devices-item-name">Redmi 10 C</span>
+    
+    <span class="account-profile-child-manage-devices-item-time">Dec 10, 2023 4:10 PM</span>
+
+    </div>
+    
+    <!--Active Symbol-->
+    
+    <div id="account-profile-child-manage-devices-item-active-div">
+
+      <span id="account-profile-child-manage-devices-item-active-svg-box">
+
+    <svg id="account-profile-child-manage-devices-item-active-svg" viewBox="0 0 24 24" >
+      <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+    </svg>
+    
+    </span>
+
+    <span id="account-profile-child-manage-devices-item-active-text">Active</span>
+
+
+    </div>
+
+    
+  </div>
+
+  <!--Second Item-->
+
+  <div class="account-profile-child-manage-devices-item">
+
+    <!--SVG-->
+
+    <span class="account-profile-child-manage-devices-item-svg-box">
+
+      <svg  class="account-profile-child-manage-devices-item-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+      </svg>
+      
+      
+    </span>
+
+    <!--Details-->
+
+    <div class="account-profile-child-manage-devices-item-details-div">
+
+    <span class="account-profile-child-manage-devices-item-name">Macbook Air</span>
+    
+    <span class="account-profile-child-manage-devices-item-time">Feb 18, 2023 10:40 AM</span>
+
+    </div>
+  
+   <!--Delete Icon-->
+
+   <span class="account-profile-child-manage-devices-delete-svg-box">
+
+    <svg class="account-profile-child-manage-devices-delete-svg" onclick="showRemoveDeviceBox(event)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+    </svg>
+    
+   </span>
+    
+  </div>
+
+
+  <!--Third Item -->
+
+  <div class="account-profile-child-manage-devices-item">
+
+    <!--SVG-->
+
+    <span class="account-profile-child-manage-devices-item-svg-box">
+
+      <svg class="account-profile-child-manage-devices-item-svg"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+      </svg>
+      
+      
+    </span>
+
+    <!--Details-->
+
+    <div class="account-profile-child-manage-devices-item-details-div">
+
+    <span class="account-profile-child-manage-devices-item-name">Iphone 14 Pro</span>
+    
+    <span class="account-profile-child-manage-devices-item-time">Nov 2, 2022 9:10 AM</span>
+
+    </div>
+  
+   <!--Delete Icon-->
+
+   <span class="account-profile-child-manage-devices-delete-svg-box">
+
+    <svg class="account-profile-child-manage-devices-delete-svg" onclick="showRemoveDeviceBox(event)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+    </svg>
+    
+   </span>
+    
+  </div>
+
+
+  <!--Fourth Item -->
+
+  <div class="account-profile-child-manage-devices-item">
+
+    <!--SVG-->
+
+    <span class="account-profile-child-manage-devices-item-svg-box">
+
+      <svg  class="account-profile-child-manage-devices-item-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5h3m-6.75 2.25h10.5a2.25 2.25 0 002.25-2.25v-15a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 4.5v15a2.25 2.25 0 002.25 2.25z" />
+      </svg>
+      
+      
+      
+    </span>
+
+    <!--Details-->
+
+    <div class="account-profile-child-manage-devices-item-details-div">
+
+    <span class="account-profile-child-manage-devices-item-name">Samsung Galaxy Tab A7</span>
+    
+    <span class="account-profile-child-manage-devices-item-time">June 7, 2022 8:33 AM</span>
+
+    </div>
+  
+   <!--Delete Icon-->
+
+   <span class="account-profile-child-manage-devices-delete-svg-box">
+
+    <svg class="account-profile-child-manage-devices-delete-svg" onclick="showRemoveDeviceBox(event)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+    </svg>
+    
+   </span>
+    
+  </div>
+
+  <!--Fifth Item -->
+
+  <div class="account-profile-child-manage-devices-item">
+
+    <!--SVG-->
+
+    <span class="account-profile-child-manage-devices-item-svg-box">
+
+      <svg  class="account-profile-child-manage-devices-item-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+      </svg>
+      
+      
+    </span>
+
+    <!--Details-->
+
+    <div class="account-profile-child-manage-devices-item-details-div">
+
+    <span class="account-profile-child-manage-devices-item-name">HP Elite</span>
+    
+    <span class="account-profile-child-manage-devices-item-time">Mar 7, 2022 2:27 PM</span>
+
+    </div>
+  
+   <!--Delete Icon-->
+
+   <span class="account-profile-child-manage-devices-delete-svg-box">
+
+    <svg class="account-profile-child-manage-devices-delete-svg" onclick="showRemoveDeviceBox(event)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+    </svg>
+    
+   </span>
+    
+  </div>
+
+
+  
+    </div>
+ 
+    <!--End of container -->
+
+ </div>
+
+ 
+ <!--Delete Device Box-->
+
+ <div id="account-profile-child-manage-devices-delete-box">
+
+
+  <div id="account-profile-child-manage-devices-delete-box-content">
+
+    <span id="account-profile-child-manage-devices-delete-box-head">Remove <span id="account-profile-child-manage-devices-delete-box-device-name"></span>?</span>
+
+    <span id="account-profile-child-manage-devices-delete-box-text">You will be logged out on this device.</span>
+
+    <div id="account-profile-child-manage-devices-delete-box-button-div">
+      <button id="account-profile-child-manage-devices-delete-box-cancel-btn" onclick="closeRemoveDeviceBox()">Cancel</button>
+      <button id="account-profile-child-manage-devices-delete-box-remove-btn" onclick="closeRemoveDeviceBox()">Remove</button>
+    </div>
+
+  </div>
+
+ </div>
+
+
+ </div>
+
   
 </div>
  
@@ -669,9 +1150,174 @@
 
 <div class="account-profile-child">
 
-  <button class="account-profile-child-security-btn">2-step Verification</button>
+  <button class="account-profile-child-security-btn"  onclick="showSecurityModals('account-profile-child-2step-verification-modal', 3)">2-step Verification</button>
+
+  
+  <div id="account-profile-child-2step-verification-modal" class="account-profile-child-security-modal">
+  
+    <!-- Close Icon -->
+
+    <span class="account-profile-child-security-modal-close-span" onclick="closeSecurityModals('account-profile-child-2step-verification-modal')" title="Close">
+      
+      <svg class="account-profile-child-security-modal-close-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+
+      </svg>
+      
+    </span>
+
+
+  <!-- Method Box -->
+    
+  <div id="account-profile-child-2step-verification-box">
+
+
+    <div id="account-profile-child-2step-verification-box-head">2-step Verification</div>
+
+    
+    <!--Container-->
+    
+     
+   <div id="account-profile-child-2step-verification-container">
+
+    <div id="account-profile-child-2step-verification-container-text">2-step verification offers an extra layer of security for your account, even if someone knows your password.</div>
+
+
+    <!--SMS OPTION-->
+
+    <div class="account-profile-child-2step-verification-container-item" onclick="enable2FA()">
+
+      <span class="account-profile-child-2step-verification-container-icon-box">
+        <svg class="account-profile-child-2step-verification-container-icon" id="account-profile-child-2step-verification-container-icon-sms" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+        </svg>
+        
+      </span>
+
+      <div class="account-profile-child-2step-verification-container-item-box">
+
+      <span class="account-profile-child-2step-verification-container-item-head">SMS</span>
+    
+      <span class="account-profile-child-2step-verification-container-item-text">A verification code will be sent to you via SMS when you want to log in.</span>
+      </div>
+
+      <div class="account-profile-child-2step-verification-container-arrow-icon-box">
+
+  <svg class="account-profile-child-2step-verification-container-arrow-icon"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+        
+        
+      </div>
+
+    </div>
+
+
+    
+    <!--EMAIL OPTION-->
+
+    <div class="account-profile-child-2step-verification-container-item" onclick="enable2FA()">
+
+      <span class="account-profile-child-2step-verification-container-icon-box">
+
+        <svg class="account-profile-child-2step-verification-container-icon" id="account-profile-child-2step-verification-container-icon-email" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+        </svg>
+        
+        
+      </span>
+
+      <div class="account-profile-child-2step-verification-container-item-box">
+
+      <span class="account-profile-child-2step-verification-container-item-head">Email</span>
+    
+      <span class="account-profile-child-2step-verification-container-item-text">A verification code will be sent to your email address when you want to log in.</span>
+      </div>
+
+      <div class="account-profile-child-2step-verification-container-arrow-icon-box">
+
+  <svg class="account-profile-child-2step-verification-container-arrow-icon"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+        
+        
+      </div>
+
+    </div>
+
+
+    <!--Authenticator app option-->
+
+    <div class="account-profile-child-2step-verification-container-item" onclick="enable2FA()">
+
+      <span class="account-profile-child-2step-verification-container-icon-box">
+
+        <svg class="account-profile-child-2step-verification-container-icon" id="account-profile-child-2step-verification-container-icon-app" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+        </svg>
+        
+        
+      </span>
+
+      <div class="account-profile-child-2step-verification-container-item-box">
+
+      <span class="account-profile-child-2step-verification-container-item-head">Authenticator app</span>
+    
+      <span class="account-profile-child-2step-verification-container-item-text">Use a verification code from your authenticator app when you want to log in.</span>
+      </div>
+
+      <div class="account-profile-child-2step-verification-container-arrow-icon-box">
+
+  <svg class="account-profile-child-2step-verification-container-arrow-icon"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+        
+        
+      </div>
+
+    </div>
+    </div>
+
+    <!--End of container-->
+
+
+    <!--Password box-->
+
+    <div id="account-profile-child-2step-verification-password-box">
+
+      <div id="account-profile-child-2step-verification-password-box-head">
+
+      <span id="account-profile-child-2step-verification-password-box-svg-box" title="Go back">
+
+        <svg id="account-profile-child-2step-verification-password-box-svg" onclick="cancel2FA()" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        
+      </span>
+
+      <span id="account-profile-child-2step-verification-password-box-text">Enter password:</span>
+
+      </div>
+
+      <div id="account-profile-child-2step-verification-password-box-div">
+
+        <input type="password" id="account-profile-child-2step-verification-password" >
+      </div>
+
+      <div id="account-profile-child-2step-verification-password-btn-div">
+
+        <button id="account-profile-child-2step-verification-password-btn">Done</button>
+      </div>
+
+    </div>
+
+  </div>
+
+    </div>
   
 </div>
+
+
   </div>
 
 
@@ -709,10 +1355,154 @@
 
 <div class="account-profile-child">
 
- <button class="account-profile-child-management-btn">Switch Account</button>
+ <button class="account-profile-child-management-btn" onclick="showSecurityModals('account-profile-child-management-switch-account-modal', 4)">Switch Account</button>
+  
+<!--Switch acount modal -->
+ 
+<div id="account-profile-child-management-switch-account-modal" class="account-profile-child-management-modal">
+  
+  <span class="account-profile-child-management-modal-close-span" onclick="closeSecurityModals('account-profile-child-management-switch-account-modal')" title="Close">
+    
+    <svg class="account-profile-child-management-modal-close-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+
+    </svg>
+    
+  </span>
+
+
+
+  <!-- Accounts Box -->
+    
+  <div id="account-profile-child-switch-account-box">
+
+
+    <div id="account-profile-child-switch-account-box-head">Switch Account</div>
+
+    
+    <!--Container-->
+    
+     
+   <div id="account-profile-child-switch-account-container">
+
+   
+    <!--Current Account -->
+
+    <div class="account-profile-child-switch-account-container-item" id="account-profile-child-switch-account-container-item-active">
+
+      <!--Profile image-->
+
+    <span class="account-profile-child-switch-account-container-item-image-box">
+      <img src="./Templates/Others/Screenshot (8).png" class="account-profile-child-switch-account-container-item-image">
+    </span>
+
+
+    <!--Account name-->
+
+    <span class="account-profile-child-switch-account-container-item-name">
+      Da_Godfather100
+    </span>
+
+    <!--Active tag-->
+
+    <span id="account-profile-child-switch-account-container-item-active-box">
+
+      <svg id="account-profile-child-switch-account-container-item-active-svg" viewBox="0 0 24 24" >
+        <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+      </svg>
+
+      <span id="account-profile-child-switch-account-container-item-active-text">Active</span>
+
+    </span>
+
+    </div>
+
+
+    <!--Second account -->
+
+    
+    <div class="account-profile-child-switch-account-container-item" >
+
+      <!--Profile image-->
+
+    <span class="account-profile-child-switch-account-container-item-image-box">
+      <img src="./Templates/Others/movie4.jpg" class="account-profile-child-switch-account-container-item-image">
+    </span>
+
+
+    <!--Account name-->
+
+    <span class="account-profile-child-switch-account-container-item-name">
+      Big Vince
+    </span>
+
+
+
+    </div>
+
+
+    <!--Third account -->
+
+    
+    <div class="account-profile-child-switch-account-container-item" >
+
+      <!--Profile image-->
+
+    <span class="account-profile-child-switch-account-container-item-image-box">
+      <img src="./Templates/Others/movie5.jpg" class="account-profile-child-switch-account-container-item-image">
+    </span>
+
+
+    <!--Account name-->
+
+    <span class="account-profile-child-switch-account-container-item-name">
+      Bahdest_1
+    </span>
+
+
+
+    </div>
+
+
+    <!--Add account-->
+
+    
+    
+    <div class="account-profile-child-switch-account-container-item" id="account-profile-child-switch-account-container-item-add-account-div" onclick="addAccount()">
+
+      <!--Profile image-->
+
+    <span id="account-profile-child-switch-account-container-item-add-account-icon-box">
+
+      <svg id="account-profile-child-switch-account-container-item-add-account-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+      </svg>
+      
+      
+      
+    </span>
+
+
+    <!--Account name-->
+
+    <span id="account-profile-child-switch-account-container-item-add-account">
+      Add account
+    </span>
+
+
+
+    </div>
+
+    </div>
+
+    <!--End of container-->
+
+    </div>
+
+ </div>
   
 
-  
+
 </div>
 
 
@@ -720,19 +1510,405 @@
 
 <div class="account-profile-child">
 
-  <button class="account-profile-child-management-btn">Deactivate Account</button>
+  <button class="account-profile-child-management-btn" onclick="showSecurityModals('account-profile-child-management-deactivate-account-modal', 5)">Deactivate Account</button>
+
+  
+<!--Deactivate acount modal -->
+ 
+<div id="account-profile-child-management-deactivate-account-modal" class="account-profile-child-management-modal">
+  
+  <span class="account-profile-child-management-modal-close-span" onclick="closeSecurityModals('account-profile-child-management-deactivate-account-modal')" title="Close">
+    
+    <svg class="account-profile-child-management-modal-close-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+
+    </svg>
+    
+  </span>
+
+
+  
+  <!-- Deactivate Box -->
+    
+  <div id="account-profile-child-deactivate-account-box">
+
+
+    <div id="account-profile-child-deactivate-account-box-head">Deactivate Account</div>
+
+
+    <!--Details Container-->
+
+    <div id="account-profile-child-deactivate-account-details-container">
+    
+<div id="account-profile-child-deactivate-account-box-text">If you deactivate your account:</div>
+     
+ <ul id="account-profile-child-deactivate-account-box-list">
+
+  <li class="account-profile-child-deactivate-account-box-list-item">No one will see your account.</li>
+
+  <li class="account-profile-child-deactivate-account-box-list-item">Cruise Player will retain your data to facilitate recovery when you choose to reactivate your account.</li>
+
+  <li class="account-profile-child-deactivate-account-box-list-item">You have the option to reactivate your account and retrieve all content at any time by logging in again.</li>
+ </ul>
+
+ <div id="account-profile-child-deactivate-account-next-btn-div">
+  <button id="account-profile-child-deactivate-account-next-btn" onclick="proceedDeactivation()">Continue</button>
+ </div>
+
+</div>
+
+
+ <!--Verification container-->
+
+ <div id="account-profile-child-deactivate-account-verification-container" >
+
+  <span id="account-profile-child-deactivate-account-verification-container-svg-box" title="Go back">
+
+    <svg id="account-profile-child-deactivate-account-verification-container-svg"  onclick="cancelDeactivation()" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    
+  </span>
+
+  <div id="account-profile-child-deactivate-account-verification-container-box">
+
+    <span id="account-profile-child-deactivate-account-verification-container-code-text">Enter 6-digit code</span>
+    <span id="account-profile-child-deactivate-account-verification-container-box-text">To proceed, please complete the SMS verification to confirm ownership of this account.</span>
+
+    <input id="account-profile-child-deactivate-account-verification-container-code" type="number">
+
+    <div id="account-profile-child-deactivate-account-verification-container-resend-div">
+
+      <span id="account-profile-child-deactivate-account-verification-container-resend-text">Resend code</span>
+      <span id="account-profile-child-deactivate-account-verification-container-resend-time">30s</span>
+
+    </div>
+
+    <div id="account-profile-child-deactivate-account-verification-container-btn-div">
+
+      <button id="account-profile-child-deactivate-account-verification-container-btn" onclick="confirmDeactivation()">Deactivate</button>
+      
+    </div>
+
+  </div>
+
+ </div>
+
+
+
+    </div>
+
+   
+ <!--Confrim deactivation modal-->
+    
+ <div id="account-profile-child-deactivate-account-confirm-modal">
+  
+  <div id="account-profile-child-deactivate-account-confirm-modal-content">
+
+    <span id="account-profile-child-deactivate-account-confirm-modal-text">Deactivate <span id="account-profile-child-deactivate-account-confirm-modal-name">Da_godfather100?</span></span>
+
+    <div id="account-profile-child-deactivate-account-confirm-modal-btn-div">
+
+      <button id="account-profile-child-deactivate-account-confirm-modal-cancel-btn" onclick="closeDeactivation()">Cancel</button>
+      <button id="account-profile-child-deactivate-account-confirm-modal-deactivate-btn" onclick="closeDeactivation()">Deactivate</button>
+
+    </div>
+
+  </div>
+  
+   </div>
+
+
+  </div>
   
 </div>
+
+
+
  
 <!-- Delete Account -->
 
 <div class="account-profile-child">
 
-  <button class="account-profile-child-management-btn">Delete Account</button>
+  <button class="account-profile-child-management-btn"  onclick="showSecurityModals('account-profile-child-management-delete-account-modal', 6)">Delete Account</button>
+
   
-</div>
+<!--Delete acount modal -->
+ 
+<div id="account-profile-child-management-delete-account-modal" class="account-profile-child-management-modal">
+  
+  <span class="account-profile-child-management-modal-close-span" onclick="closeSecurityModals('account-profile-child-management-delete-account-modal')" title="Close">
+    
+    <svg class="account-profile-child-management-modal-close-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+
+    </svg>
+    
+  </span>
+
+
+  
+  <!-- Delete Box -->
+    
+  <div id="account-profile-child-delete-account-box">
+
+
+    <div id="account-profile-child-delete-account-box-head">Delete Account</div>
+
+
+  <!--Questions container-->
+
+
+  <div id="account-profile-child-delete-account-questions-container">
+
+    <span id="account-profile-child-delete-account-questions-container-skip" onclick="showDownloadContainer()">Skip</span>
+
+    <div id="account-profile-child-delete-account-questions-container-head">Why do you want to delete your account?</div>
+
+    <span id="account-profile-child-delete-account-questions-container-text">We're truly saddened by your departure. Please share why you are leaving, your insights play a vital role in enhancing our app.</span>
+
+  
+
+    <div id="account-profile-child-delete-account-questions-container-content">
+
+
+      <!--First-->
+
+      <div class="account-profile-child-delete-account-questions-container-item">
+        <span class="account-profile-child-delete-account-questions-container-item-text">Privacy concern</span>
+        <input type="radio" class="account-profile-child-delete-account-questions-container-item-input"  name="delete_reason">
+      </div>
+
+      <!--Second-->
+
+      <div class="account-profile-child-delete-account-questions-container-item">
+        <span class="account-profile-child-delete-account-questions-container-item-text">Too much time on Cruise Player</span>
+        <input type="radio" class="account-profile-child-delete-account-questions-container-item-input"  name="delete_reason">
+      </div>
+
+        <!--Third-->
+      
+        <div class="account-profile-child-delete-account-questions-container-item">
+          <span class="account-profile-child-delete-account-questions-container-item-text">Difficulty getting started</span>
+          <input type="radio" class="account-profile-child-delete-account-questions-container-item-input"  name="delete_reason">
+        </div> 
+        
+        <!-- Fourth -->
+      
+        <div class="account-profile-child-delete-account-questions-container-item">
+          <span class="account-profile-child-delete-account-questions-container-item-text">Multiple accounts</span>
+          <input type="radio" class="account-profile-child-delete-account-questions-container-item-input"  name="delete_reason">
+        </div>  
+        
+        <!--Fifth-->
+
+      <div class="account-profile-child-delete-account-questions-container-child">
+
+        <div class="account-profile-child-delete-account-questions-container-item" id="account-profile-child-delete-account-questions-container-item5" >
+          <span class="account-profile-child-delete-account-questions-container-item-text">Another reason</span>
+          <input type="radio" class="account-profile-child-delete-account-questions-container-item-input"  name="delete_reason">   
+           
+        </div> 
+
+        
+
+        <div id="account-profile-child-delete-account-questions-container-reason-div">
+
+          <div id="account-profile-child-delete-account-questions-container-reason-input" contenteditable="true"></div>
+
+        </div>
+
+      </div>
+      
+
+
+
+    </div>
+   
+   <div id="account-profile-child-delete-account-questions-container-btn-div">
+
+    <button id="account-profile-child-delete-account-questions-container-btn" onclick="showDownloadContainer()">Continue</button>
+
+   </div>
+
   </div>
 
+
+  <!--Download Content Container-->
+
+  <div id="account-profile-child-delete-account-download-container">
+
+
+    <div id="account-profile-child-delete-account-download-container-head">
+
+      <!--Arrow svg-->
+
+      <span id="account-profile-child-delete-account-download-container-head-svg-box">
+        <svg id="account-profile-child-delete-account-download-container-head-svg" onclick="showQuestionsContainer()"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+      </span>
+
+    <div id="account-profile-child-delete-account-download-container-head-div">
+
+      <div id="account-profile-child-delete-account-download-container-head-text">Download your bookmark(s)</div>
+      <div id="account-profile-child-delete-account-download-container-head-content">
+        It's advisable to download your bookmark(s) before you delete your account, as retrieval becomes impossible once the deletion is finalized.<br>
+      
+        <div id="account-profile-child-delete-account-download-container-head-sub-content">Upon requesting a copy of your bookmarks, kindly await its download before proceeding to delete your account.</div>
+      </div>
+
+    </div>
+
+   
+      
+    </div>
+
+    <div id="account-profile-child-delete-account-download-container-link">Request download</div>
+
+    
+
+   <div id="account-profile-child-delete-account-download-container-btn-div">
+
+    <button id="account-profile-child-delete-account-download-container-btn" onclick="showReviewContainer()">Continue</button>
+
+   </div>
+ 
+  </div>
+
+
+  <!--Review Container-->
+
+  <div id="account-profile-child-delete-account-review-container">
+
+    <div id="account-profile-child-delete-account-review-container-head">
+
+      <span id="account-profile-child-delete-account-review-container-svg-box" title="Go back">
+
+        <svg id="account-profile-child-delete-account-review-container-svg" onclick="showDownloadContainer(1)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        
+      </span>
+
+      <span id="account-profile-child-delete-account-review-container-head-txt">If you delete your account:</span>
+
+    </div>
+
+    <ul id="account-profile-child-delete-account-review-container-list">
+
+      <li class="account-profile-child-delete-account-review-container-list-item">
+        Your account will undergo a 30-day dectivation period, during which it will not be accessible to the public.
+      </li>
+
+      <li class="account-profile-child-delete-account-review-container-list-item">
+        You can reactivate your account by logging in at anytime during this deactivation period.
+      </li>
+
+      <li class="account-profile-child-delete-account-review-container-list-item">
+        After the 30-days interval, both your account and its data will be deleted permanently.
+      </li>
+
+      <li class="account-profile-child-delete-account-review-container-list-item">
+        You will lose access to all your bookmarks.
+      </li>
+
+    </ul>
+
+
+
+    <div id="account-profile-child-delete-account-review-container-btn-div">
+
+      <button id="account-profile-child-delete-account-review-container-btn" onclick="showVerificationContainer()">Continue</button>
+  
+     </div>
+
+
+
+
+
+  </div>
+
+
+  <!--Verification container-->
+
+  <div id="account-profile-child-delete-account-verification-container">
+
+
+  <span id="account-profile-child-delete-account-verification-container-svg-box" title="Go back">
+
+    <svg id="account-profile-child-delete-account-verification-container-svg"  onclick="showReviewContainer(1)" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    
+  </span>
+
+  <div id="account-profile-child-delete-account-verification-container-box">
+
+    <span id="account-profile-child-delete-account-verification-container-code-text">Enter 6-digit code</span>
+    <span id="account-profile-child-delete-account-verification-container-box-text">To proceed, please complete the SMS verification to confirm ownership of this account.</span>
+
+    <input id="account-profile-child-delete-account-verification-container-code" type="number">
+
+
+    <div id="account-profile-child-delete-account-verification-container-resend-div">
+
+      <span id="account-profile-child-delete-account-verification-container-resend-text">Resend code</span>
+      <span id="account-profile-child-delete-account-verification-container-resend-time">30s</span>
+
+    </div>
+
+
+    <div id="account-profile-child-delete-account-verification-container-btn-div">
+
+      <button id="account-profile-child-delete-account-verification-container-btn" onclick="confirmAccountDelete()">Delete</button>
+      
+    </div>
+
+  </div>
+
+ 
+
+  
+  </div>
+
+
+
+
+
+    </div>
+
+
+
+ <!--Confrim delete modal-->
+    
+ <div id="account-profile-child-delete-account-confirm-modal">
+  
+  <div id="account-profile-child-delete-account-confirm-modal-content">
+
+    <span id="account-profile-child-delete-account-confirm-modal-text">Delete 
+      <span id="account-profile-child-delete-account-confirm-modal-name">Da_godfather100?</span></span>
+
+    <div id="account-profile-child-delete-account-confirm-modal-btn-div">
+
+      <button id="account-profile-child-delete-account-confirm-modal-cancel-btn" onclick="closeAccountDeletion()">Cancel</button>
+      <button id="account-profile-child-delete-account-confirm-modal-delete-btn" onclick="closeAccountDeletion()">Delete</button>
+
+    </div>
+
+  </div>
+  
+   </div>
+
+    </div>
+
+  
+</div>
+
+
+
+
+  </div>
 
   </div>
  

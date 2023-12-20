@@ -26,18 +26,60 @@ body {
    overflow-x: hidden;
   
 }
+
+#empty-div, #empty-div2 {
  
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+
+}
+   
 #head {
     margin: 15px;
     font-size: 3rem;
     color: white;
-    font-family: cooper;
+    font-family:cooper;
     margin-bottom: 0;
     text-shadow: 4px 4px 4px black;
  position: sticky;
  top: 0;
    
     display: inline;
+  
+}
+
+#nav-svg-box {
+
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   display: none;
+   vertical-align: -5px;
+   z-index: 2;
+ 
+}
+
+#nav-svg {
+
+   width: 3rem;
+   height: 3rem;
+   color: white;
+   cursor: pointer;
+   padding: 3px;
+   transform: scale(1.1);
+   fill: indigo;
+}
+
+#nav-svg:hover {
+
+   box-shadow: 1px 1px 10px 1px black;
+   border-radius: 10px;
+ 
 }
  
  .first {
@@ -47,23 +89,22 @@ body {
  #nav {
     position: fixed;
     float: left;
-    background:  white;
-    height: 85%;
+    background-color: white;
     margin: 5px;
     margin-top: 0; 
-    background-color: white;
     border-radius: 5px;
-    width: auto;
     -o-box-shadow: 1px 1px 30px 1px black, 2px 2px 20px 2px white;
     -ms-box-shadow: 1px 1px 30px 1px black, 2px 2px 20px 2px white;
     -moz-box-shadow: 1px 1px 30px 1px black, 2px 2px 20px 2px white;
     -webkit-box-shadow: 1px 1px 30px 1px black, 2px 2px 20px 2px white;
     box-shadow: 1px 1px 30px 1px black, 2px 2px 20px 2px white;
      overflow: hidden;
-    overflow-x: hidden;
   resize: horizontal;
     max-width: 30%;
     min-width: 20%;
+    animation: showNavBar 0.5s;
+    width: 22%;
+    z-index: 2;
  }
 
  #nav-list {
@@ -71,10 +112,10 @@ body {
     margin: 0;
     text-align: center;
     padding: 0;
-  
     overflow: auto;
-       
     overflow-x: hidden;
+   padding-bottom: 15px;
+    height: 400px;
  }
  
  .opt {
@@ -379,7 +420,7 @@ left: 15px;
       position: fixed;
       left: 0;
       top: 0;
-      z-index: 1; 
+      z-index: 4; 
       width: 100%; 
       display: none; 
       animation-name: sign-in;
@@ -574,7 +615,7 @@ cursor: pointer;
       background-color: rgba(0,0,0,0.6);
       height: 100%;
    position: fixed;
-   z-index: 1; 
+   z-index: 4; 
       width: 100%; 
       top: 0;
       left: 0;
@@ -892,15 +933,14 @@ box-shadow: 0.5px 0.5px 5px 0.5px white;
  margin-right: 5px;
   margin-bottom: 5px;
   position: fixed;
-  height: 84.5%;
 border-radius: 5px;
 overflow: auto;
 color: white;
 text-shadow: 3px 3px 8px black;
 font-size: 1.3rem;
 letter-spacing: 0.2rem;
-
-
+margin-left: 23%;
+width: 76.7%;
  }
  
 
@@ -1010,22 +1050,12 @@ display: none;
 position: absolute;
    }
 
-  #empty-div {
-
-display: none;
-position: fixed;
-top: 0;
-left: 0;
-width: 100vw;
-height: 100vh;
-z-index: 3;
-}
-
+ 
 
    #account-head {
 
       color: indigo;
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       margin-top: 0;
       font-family: 'Times New Roman', Times, serif;
       margin: 10px;
@@ -1045,7 +1075,7 @@ z-index: 3;
          border-radius: 5px;
          padding: 5px;
          font-size: 1.6rem;
-        
+         letter-spacing: 0.1rem;
       }
    
       .account-headers:hover {
@@ -1129,7 +1159,6 @@ z-index: 3;
       position: absolute;
       bottom: 10px;
       right: 6%;
-      z-index: 5;
       background: magenta;
       border-radius: 50%;
       padding: 10px;
@@ -1171,7 +1200,8 @@ z-index: 3;
       cursor: pointer;
       border: none;
       border-bottom: 1px solid magenta;
-      text-shadow: 3px 3px 7px black;
+      text-shadow: none;
+      letter-spacing: 0.1rem;
       transition: all 0.3s;
      }
 
@@ -1249,10 +1279,10 @@ z-index: 3;
    
       text-shadow: 3px 3px 8px black;
       color: white;
-      font-size: 1.6rem;
+      font-size: 1.35rem;
       font-family:'Times New Roman', Times, serif;
       margin-right: auto;
-      letter-spacing: 0.2rem;
+      letter-spacing: 0.1rem;
      }
    
      #account-name-value, #account-email-value, #account-old-password-value, #account-new-password-value, #account-confirm-password-value {
@@ -1266,7 +1296,7 @@ z-index: 3;
       font-weight: normal;
       font-family: 'Times New Roman', Times, serif;
       margin-right: 1.5rem;
-      
+      width: 13rem;
      }
 
     #account-profile-number-code {
@@ -1280,7 +1310,7 @@ z-index: 3;
       font-weight: normal;
       font-family: 'Times New Roman', Times, serif;
       margin-right: 1.5rem;
-      width: 205px;
+      width: 13rem;
 
      }
      .account-profile-child-span {
@@ -1318,7 +1348,7 @@ z-index: 3;
       background-color: rgba(0,0,0,0.8);
       height: 100%;
      position: fixed;
-      z-index: 1; 
+      z-index: 4; 
       width: 100%; 
       top: 0;
       left: 0;
@@ -1573,7 +1603,1667 @@ text-shadow: 1px 1px 5px magenta;
 }
 
 
+
+.account-profile-child-security-modal, .account-profile-child-management-modal {
+
+   background-color: rgba(0,0,0,0.7);
+   position: fixed;
+   height: 100%;
+   width: 100%; 
+   top: 0;
+   left: 0;
+   display:  none; 
+   animation-name: sign-in;
+   animation-duration: 0.5s;
+    cursor: pointer;
+    overflow: auto;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 4; 
+
+
+}
+
+#account-profile-child-security-alerts-box {
+
+   margin-top: 40px;
+   background: white;
+   color: indigo;
+   width: 40%;
+   min-height: 70%;
+   border-radius: 10px;
+  cursor: auto;
+  margin-bottom: 30px;
+ position: relative;
+  
+}
+
+#account-profile-child-security-alerts-box-head {
+
+   font-size: 1.8rem;
+   text-shadow: none;
+   font-weight: 900;
+   font-variant: small-caps;
+   margin-top: 15px;
+   margin-bottom: 30px;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+
+
+.account-profile-child-security-modal-close-span, .account-profile-child-management-modal-close-span {
+
+   position: fixed;
+   right: 5%;
+   top: 50px;
+
+      }
+   
+   .account-profile-child-security-modal-close-icon, .account-profile-child-management-modal-close-icon {
+   width: 30px;
+   height: 30px;
+   color: white;
+   cursor: pointer;
+      }
+   
+.account-profile-child-security-modal-close-icon:hover, .account-profile-child-management-modal-close-icon:hover {
+
+         background: indigo;
+         padding: 5px;
+         transition: all 0.3s;
+         border-radius: 50%;
+         transform: scale(1.3);
+         
+      }
+
+
+ #account-profile-child-security-alerts-container {
+
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px;
+  border-radius: 5px;
+ }
+
+.account-profile-child-security-alerts-item {
+
+   display: flex;
+   flex-direction: column;
+}
+
+.account-profile-child-security-alerts-item:last-child {
+
+   margin-bottom: 0;
+}
+
+
+
+
+.account-profile-child-security-alerts-item-head {
+
+   display: flex;
+   align-items: center;
+   text-shadow: none;
+   background: indigo;
+   color: white;
+   padding: 15px;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-style: oblique;
+   font-size: 1.4rem;
+   transition: opacity 0.3s;
+   cursor: pointer;
+}
+
+ #account-profile-child-security-alerts-item-first-head {
+
+border-radius: 5px 5px 0 0;
+
+}
+
+
+#account-profile-child-security-alerts-item-last-head{
+
+   border-radius: 0 0 5px 5px;
+   } 
+
+
+.account-profile-child-security-alerts-item-head:hover {
+
+ /* background: rgba(204, 204, 204, 0.308); */
+opacity: 0.8;
+
+}
+
+.account-profile-child-security-alerts-item-head-svg-box  {
+
+margin-left: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+.account-profile-child-security-alerts-item-head-svg {
+
+   width: 25px;
+   height: 25px;
+   fill: white;
+
+}
+
+/* Alert Content*/
+
+
+.account-profile-child-security-alerts-item-box {
+
+   background: white;
+   display: flex;
+   height: 0;
+   overflow: hidden;
+   flex-direction: column;
+  transition: height 0.3s ease-out;
+}
+
+
+
+
+.account-profile-child-security-alerts-item-box-head {
+
+   text-align: center;
+   text-shadow: none;
+   margin-top: 25px;
+   font-weight: bold;
+   font-size: 1.5rem;
+   margin-bottom: 20px;
+   letter-spacing: 0.1rem;
+}
+
+.account-profile-child-security-alerts-item-box-text {
+
+   text-shadow: none;
+   margin: 20px;
+   margin-top: 0px;
+   font-size: 1.3rem;
+
+}
+
+.account-profile-child-security-alerts-item-box-btn-div {
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.account-profile-child-security-alerts-item-box-btn {
+
+ background: indigo;
+ color: white;
+ padding: 10px;
+ border-radius: 5px;
+ font-size: 1.2rem;
+ font-family:'Times New Roman', Times, serif;
+ border: none;
+ outline: none;
+cursor: pointer;
+transition: box-shadow 0.3s;
+}
+
+.account-profile-child-security-alerts-item-box-btn:hover {
+
+   box-shadow: inset 3px 3px 3px 2px black;
+}
+
+.account-profile-child-security-alerts-item-box-footer {
+
+   display: flex;
+   flex-direction: column;
+
+}
+
+.account-profile-child-security-alerts-item-box-time-div, .account-profile-child-security-alerts-item-box-loc-div {
+
+   display: flex;
+   align-items: flex-start;
+   margin: 10px 15px;
+   text-shadow: none;
+
+}
+
+.account-profile-child-security-alerts-item-box-loc-div {
+
+   margin-bottom: 30px;
+}
+
+.account-profile-child-security-alerts-item-box-time-text, .account-profile-child-security-alerts-item-box-loc-text {
+
+   font-weight: bold;
+   font-variant: small-caps;
+   font-size: 1.4rem;
+
+}
+
+
+#account-profile-child-security-alerts-footer {
+ 
+  position: absolute;
+   text-shadow: none;
+   font-style: oblique;
+   font-variant: small-caps;
+   text-align: center;
+   font-size: 1.3rem;
+   bottom: 0;
+   border: none;
+   border-top: 1px indigo solid;
+   padding: 20px;
+   margin: 0 10px;
+}
+
+#account-profile-child-no-security-alerts-box {
+
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 20px;
+  margin-top: 12%;
+}
+
+
+#account-profile-child-no-security-alerts-svg {
+  
+
+   width: 9rem;
+   height: 9rem;
+   fill: indigo;
+   color: white;
+}
+
+#account-profile-child-no-security-alerts-box-text {
+
+   text-shadow: none;
+   margin-top: 30px;
+   text-align: center;
+   font-variant: small-caps;
+   font-style: italic;
+   font-size: 1.4rem;
+
+}
+
+#account-profile-child-manage-devices-box {
+
+   margin-top: 40px;
+   background: white;
+   color: indigo;
+   width: 40%;
+   min-height: 80%;
+   border-radius: 10px;
+  cursor: auto;
+  margin-bottom: 30px;
+ position: relative;
+ 
+
+}
+
+
+#account-profile-child-manage-devices-box-head {
+
+   font-size: 1.8rem;
+   text-shadow: none;
+   font-weight: 900;
+   font-variant: small-caps;
+   margin-top: 15px;
+   margin-bottom: 30px;
+   margin-left: 20px;
+   margin-right: 20px;
+
+}
+
+.account-profile-child-manage-devices-item {
+
+   display: flex;
+   align-items: center;
+  margin: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+
+#account-profile-child-manage-devices-item-active {
+
+   border-bottom: 1px solid indigo;
+   padding-bottom: 20px;
+}
+
+.account-profile-child-manage-devices-item-svg {
+
+   width: 40px;
+   height: 50px;
+   fill: white;
+   color: indigo;
+
+}
+
+.account-profile-child-manage-devices-item-details-div {
+
+   display: flex;
+   flex-direction: column;
+  text-shadow: none;
+  margin-left: 15px;
+
+}
+
+.account-profile-child-manage-devices-item-name {
+
+   font-weight: bold;
+   font-style: oblique;
+   letter-spacing: 0.05rem;
+   font-size: 1.3rem;
+}
+
+.account-profile-child-manage-devices-item-time {
+   font-size: 1.3rem;
+   font-weight: bold;
+   font-style: oblique;
+   letter-spacing: 0.05rem;
+}
+
+#account-profile-child-manage-devices-item-active-div {
+
+   display: flex;
+   align-items: center;
+   margin-left: auto;
+   align-self: flex-end;
+
+
+}
+
+#account-profile-child-manage-devices-item-active-svg-box {
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 5px;
+}
+
+#account-profile-child-manage-devices-item-active-svg {
+
+   width: 25px;
+   height: 25px;
+   fill: indigo;
+
+}
+
+#account-profile-child-manage-devices-item-active-text {
+
+   text-shadow: none;
+   font-size: 1.25rem;
+   font-variant: small-caps;
+   font-weight: bold;
+
+}
+
+.account-profile-child-manage-devices-delete-svg-box {
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: auto;
+   align-self: flex-end;
+
+}
+
+.account-profile-child-manage-devices-delete-svg {
+
+   width: 28px;
+   height: 28px;
+   fill: white;
+   color: indigo;
+   cursor: pointer;
+   
+
+}
+
+.account-profile-child-manage-devices-delete-svg:hover {
+
+opacity: 0.8;
+
+}
+
+#account-profile-child-manage-devices-delete-box {
+
+  
+   position: fixed;
+   border-radius: 10px;
+   z-index: 10;
+   display: none;
+   box-shadow: 2px 2px 20px 1px black;
+   color: indigo;
+   width: 100%;
+   height: 100%;
+   backdrop-filter: blur(5px);
+   align-items: center;
+   justify-content: center;
+   cursor: auto;
+}
+
+#account-profile-child-manage-devices-delete-box-content {
+
+   background: white;
+   box-shadow: 3px 3px 20px 3px black;
+   color: indigo;
+   text-shadow: none;
+   display: flex;
+   flex-direction: column;
+   border-radius: 10px;
+   padding: 20px;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+#account-profile-child-manage-devices-delete-box-head {
+
+font-weight: bold;
+font-variant: small-caps;
+font-size: 1.4rem;
+margin-bottom: 30px;
+}
+
+
+#account-profile-child-manage-devices-delete-box-text {
+
+   font-size: 1.4rem;
+   font-style: oblique;
+   font-family:'Times New Roman', Times, serif;
+}
+
+#account-profile-child-manage-devices-delete-box-button-div {
+
+   margin-left: auto;
+   margin-top: 30px;
+}
+
+#account-profile-child-manage-devices-delete-box-cancel-btn {
+
+   background: white;
+   border: 2px solid indigo;
+   border-radius: 5px;
+   padding: 8px;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 1.1rem;
+   outline: none;
+   color: indigo;
+   font-weight: 900;
+   cursor: pointer;
+   margin-right: 15px;
+   transition: box-shadow 0.3s;
+}
+
+#account-profile-child-manage-devices-delete-box-remove-btn {
+
+   background: indigo;
+   border: 2px solid indigo;
+   border-radius: 5px;
+   padding: 8px;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 1.1rem;
+   outline: none;
+   color: white;
+   font-weight: 900;
+   cursor: pointer;
+   margin-right: 20px;
+   transition: box-shadow 0.3s;
+}
+
+#account-profile-child-manage-devices-delete-box-remove-btn:hover, #account-profile-child-manage-devices-delete-box-cancel-btn:hover {
+
+   box-shadow: 1px 1px 5px 1px black;
+}
+
+
+#account-profile-child-2step-verification-box {
+
+   margin-top: 40px;
+   background: white;
+   color: indigo;
+   width: 40%;
+   min-height: 80%;
+   border-radius: 10px;
+  cursor: auto;
+  margin-bottom: 30px;
+ position: relative;
+
+}
+
+
+#account-profile-child-2step-verification-box-head {
+
+   font-size: 1.8rem;
+   text-shadow: none;
+   font-weight: 900;
+   font-variant: small-caps;
+   margin-top: 15px;
+   margin-left: 20px;
+   margin-right: 20px;
+   
+}
+
+#account-profile-child-2step-verification-container {
+
+   display: flex;
+   flex-direction: column;
+   margin-right: 10px;
+   margin-left: 10px;
+}
+
+#account-profile-child-2step-verification-container-text {
+
+   text-shadow: none;
+   font-size: 1.2rem;
+   font-style: oblique;
+   padding: 20px;
+   font-family: 'Times New Roman', Times, serif;
+   margin-bottom: 20px;
+   letter-spacing: 0.1rem;
+}
+
+
+.account-profile-child-2step-verification-container-item {
+
+   display: flex;
+   align-items: flex-start;
+   margin: 0 20px;
+   margin-bottom: 40px;
+   cursor: pointer;
+   background: transparent;
+}
+
+.account-profile-child-2step-verification-container-item:hover {
+
+opacity: 0.9;
+
+
+}
+
+
+
+.account-profile-child-2step-verification-container-icon-box {
+
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   margin-right: 15px;
+   
+}
+
+.account-profile-child-2step-verification-container-icon {
+
+   width: 40px;
+   height: 40px;
+   fill: indigo;
+   color: white;
+  
+}
+
+.account-profile-child-2step-verification-container-item-box {
+
+   display: flex;
+   flex-direction: column;
+
+   
+}
+
+.account-profile-child-2step-verification-container-item-head {
+
+text-shadow: none;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+.account-profile-child-2step-verification-container-item-text {
+
+   text-shadow: none;
+   font-size: 1.2rem;
+   letter-spacing: 0.1rem;
+   
+}
+
+.account-profile-child-2step-verification-container-arrow-icon-box {
+
+   
+   margin-right: auto;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+}
+
+.account-profile-child-2step-verification-container-arrow-icon {
+
+   width: 52px;
+   height: 30px;
+   fill: indigo;
+}
+
+#account-profile-child-2step-verification-container-icon-sms {
+
+   transform: translateY(-3px);
+}
+
+#account-profile-child-2step-verification-container-icon-email, 
+#account-profile-child-2step-verification-container-icon-app {
+
+   transform: translateY(-5px);
+}
+
+
+#account-profile-child-2step-verification-password-box {
+
+   display: none;
+   flex-direction: column;
+   
+}
+
+#account-profile-child-2step-verification-password-box-head {
+
+   display: flex;
+   align-items: center;
+   margin-top: 30px;
+}
+
+#account-profile-child-2step-verification-password-box-text {
+
+   text-shadow: none;
+   font-style: oblique;
+   font-weight: 500;
+   font-size: 1.4rem;
+   margin-left: 30px;
+}
+
+
+#account-profile-child-2step-verification-password-box-svg-box {
+
+   display: flex;
+   align-items: center;
+   margin-left: 10px;
+}
+
+
+#account-profile-child-2step-verification-password-box-svg {
+
+   width: 50px;
+   height: 50px;
+   fill: indigo;
+   color: white;
+    cursor: pointer;
+    transition: fill 0.3s, color 0.3s;
+}
+
+#account-profile-child-2step-verification-password-box-svg:hover {
+
+   fill: white;
+   color: indigo;
+   transform: scale(0.9);
+}
+
+#account-profile-child-2step-verification-password-box-div {
+
+   display: flex;
+   align-items: center;
+   margin: 15px 90px 10px;
+
+}
+
+#account-profile-child-2step-verification-password {
+
+border: none;
+outline: none;
+background: transparent;
+border-bottom: 2px solid indigo;
+font-size: 1.5rem;
+width: 30rem;
+color: indigo;
+
+}
+
+
+#account-profile-child-2step-verification-password-btn-div {
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px;
+}
+
+#account-profile-child-2step-verification-password-btn {
+
+   background: indigo;
+   border: none;
+   outline: none;
+   padding: 8px;
+   border-radius: 5px;
+   color: white;
+   font-weight: 600;
+   font-size: 1.2rem;
+   font-family: 'Times New Roman', Times, serif;
+   cursor: pointer;
+   transition: box-shadow 0.3s;
+}
+
+#account-profile-child-2step-verification-password-btn:hover {
+
+   box-shadow:inset 3px 3px 5px 3px black;
+}
+
+#account-profile-child-switch-account-box, #account-profile-child-deactivate-account-box, #account-profile-child-delete-account-box {
+
+   margin-top: 40px;
+   background: white;
+   color: indigo;
+   width: 40%;
+   min-height: 80%;
+   border-radius: 10px;
+  cursor: auto;
+  margin-bottom: 30px;
+ position: relative;
+
+
+}
+
+
+#account-profile-child-switch-account-box-head, #account-profile-child-deactivate-account-box-head, #account-profile-child-delete-account-box-head {
+
+   font-size: 1.8rem;
+   text-shadow: none;
+   font-weight: 900;
+   font-variant: small-caps;
+   margin-top: 15px;
+   margin-left: 20px;
+   margin-right: 20px;
+   
+}
+
+#account-profile-child-switch-account-container-item-active {
+
+   border-bottom: 1px solid indigo;
+   padding-bottom: 15px;
+   margin-top: 30px;
+   cursor: auto;
+   margin-bottom: 10px;
+}
+
+#account-profile-child-switch-account-container-item-active:hover {
+
+   background: transparent;
+   border-radius: 0px;
+}
+
+.account-profile-child-switch-account-container-item {
+
+   display: flex;
+   align-items: center;
+   margin: 20px;
+   cursor: pointer;
+   transition: background 0.3s, border-radius 0.3s;
+}
+
+.account-profile-child-switch-account-container-item:hover {
+
+   background: rgb(119, 136, 153, 0.4);
+   border-radius: 10px;
+}
+
+.account-profile-child-switch-account-container-item-image-box {
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 5px;
+   border-radius: 50%;
+   
+}
+
+.account-profile-child-switch-account-container-item-image {
+
+   width: 4rem;
+   height: 4rem;
+   border-radius: 50%;
+   object-fit: cover;
+
+}
+
+.account-profile-child-switch-account-container-item-name {
+
+   text-shadow: none;
+   margin-left: 20px;
+   font-size: 1.3rem;
+   font-weight: bold;
+
+
+}
+
+#account-profile-child-switch-account-container-item-active-box {
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-left: auto;
+}
+
+#account-profile-child-switch-account-container-item-active-svg {
+
+   width: 25px;
+   height: 25px;
+   fill: indigo;
+
+}
+
+#account-profile-child-switch-account-container-item-active-text {
+
+   text-shadow: none;
+    font-size: 1.25rem;
+    font-variant: small-caps;
+    font-weight: bold;
+    margin-left: 5px;
+
+}
+
+#account-profile-child-switch-account-container-item-add-account {
+
+   text-shadow: none;
+   margin-left: 20px;
+   font-size: 1.3rem;
+   font-variant: small-caps;
+
+}
+
+#account-profile-child-switch-account-container-item-add-account-icon-box {
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: indigo;
+   border-radius: 50%;
+   padding: 10px;
+   margin: 5px;
+}
+
+#account-profile-child-switch-account-container-item-add-account-icon {
+
+width: 30px;
+height: 30px;
+color: white;
+
+}
+
+#account-profile-child-deactivate-account-box-text {
+
+   text-shadow: none;
+   font-size: 1.5rem;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 500;
+   margin-top: 30px;
+   margin-left: 30px;
+   font-style: oblique;
+
+}
+
+#account-profile-child-deactivate-account-box-list {
+
+   margin-top: 10px;
+   margin-left: 10px;
+   margin-right: 20px;
+}
+
+
+.account-profile-child-deactivate-account-box-list-item {
+
+   text-shadow: none;
+   font-size: 1.3rem;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 500;
+   margin-bottom: 20px;
+   margin-top: 30px;
+   letter-spacing: 0.1rem;
+}
+
+#account-profile-child-deactivate-account-next-btn-div {
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 50px;
+
+}
+
+#account-profile-child-deactivate-account-next-btn {
+
+background: indigo;
+color: white;
+border: none;
+outline: none;
+padding: 10px;
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+font-size: 1.4rem;
+border-radius: 5px;
+cursor: pointer;
+transition: box-shadow 0.3s;
+}
+
+#account-profile-child-deactivate-account-next-btn:hover {
+
+box-shadow:inset 4px 4px 3px 3px black;
+}
+
+
+#account-profile-child-deactivate-account-verification-container {
+
+   display: none;
+   align-items: flex-start;
+   margin-top: 30px;
+   margin-left: 10px;
+    
+ 
+}
+
+#account-profile-child-deactivate-account-verification-container-svg-box {
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+#account-profile-child-deactivate-account-verification-container-svg {
+
+   width: 50px;
+    height: 50px;
+    fill: indigo;
+    color: white;
+    cursor: pointer;
+    transition: fill 0.3s, color 0.3s;
+
+}
+
+
+#account-profile-child-deactivate-account-verification-container-svg:hover {
+
+   fill: white;
+   color: indigo;
+   transform: scale(0.9);
+
+}
+
+#account-profile-child-deactivate-account-verification-container-box {
+
+   display: flex;
+   flex-direction: column;
+   margin-left: 30px;
+   margin-right: 30px;
+}
+
+#account-profile-child-deactivate-account-verification-container-code-text {
+
+   text-shadow: none;
+   font-style: oblique;
+   font-weight: 900;
+   font-size: 1.4rem;
+   margin-top: 12px;
+}
+
+#account-profile-child-deactivate-account-verification-container-box-text {
+
+   text-shadow: none;
+   margin-top: 10px;
+   font-size: 1.25rem;
+   letter-spacing: 0.1rem;
+}
+
+#account-profile-child-deactivate-account-verification-container-code {
+
+   border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid indigo;
+    font-size: 1.5rem;
+    width: 20rem;
+    color: indigo;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    padding-left: 0;
+}
+
+#account-profile-child-deactivate-account-verification-container-resend-div, #account-profile-child-delete-account-verification-container-resend-div {
+
+   display:flex;
+   align-items: center;
+   text-shadow: none;
+   margin-top: 25px;
+
+}
+
+#account-profile-child-deactivate-account-verification-container-resend-text, #account-profile-child-delete-account-verification-container-resend-text {
+
+   cursor: pointer;
+   margin-right: 20px;
+   letter-spacing: 0.05rem;
+   color: rgb(0, 128, 0);
+}
+
+#account-profile-child-deactivate-account-verification-container-resend-text:hover, #account-profile-child-delete-account-verification-container-resend-text:hover {
+
+   text-decoration: underline;
+
+}
+
+
+#account-profile-child-deactivate-account-verification-container-resend-time, #account-profile-child-delete-account-verification-container-resend-time {
+
+   font-size: 1.25rem;
+}
+
+#account-profile-child-deactivate-account-verification-container-btn-div {
+
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   margin-top: 30px;
+
+}
+
+#account-profile-child-deactivate-account-verification-container-btn {
+
+   background: indigo;
+   color: white;
+   border: none;
+   outline: none;
+   padding: 10px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: bold;
+   font-size: 1.3rem;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: box-shadow 0.3s;
+
+   }
+   
+   #account-profile-child-deactivate-account-verification-container-btn:hover {
+   
+   box-shadow:inset 4px 4px 3px 3px black;
+   }
+
+
+   #account-profile-child-deactivate-account-confirm-modal, #account-profile-child-delete-account-confirm-modal {
+
+   position: fixed;
+    z-index: 10;
+    display: none;
+    color: indigo;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    cursor: auto;
+    top: 0;
+
+
+   }
+
+   #account-profile-child-deactivate-account-confirm-modal-content, #account-profile-child-delete-account-confirm-modal-content {
+
+   background: white;
+    box-shadow: 3px 3px 20px 3px black;
+    color: indigo;
+    text-shadow: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+
+   }
+
+   #account-profile-child-deactivate-account-confirm-modal-text, #account-profile-child-delete-account-confirm-modal-text {
+
+     
+      font-variant: small-caps;
+      font-size: 1.4rem;
+  
+   }
+
+   #account-profile-child-deactivate-account-confirm-modal-name, #account-profile-child-delete-account-confirm-modal-name {
+
+      font-weight: bold;
+
+   }
+
+#account-profile-child-deactivate-account-confirm-modal-btn-div, #account-profile-child-delete-account-confirm-modal-btn-div {
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 30px;
+}
+
+#account-profile-child-deactivate-account-confirm-modal-deactivate-btn, #account-profile-child-delete-account-confirm-modal-delete-btn {
+
+   background: indigo;
+   border: 2px solid indigo;
+   border-radius: 5px;
+   padding: 8px;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 1.1rem;
+   outline: none;
+   color: white;
+   font-weight: 900;
+   cursor: pointer;
+   margin-right: 20px;
+   transition: box-shadow 0.3s;
+
+}
+
+#account-profile-child-deactivate-account-confirm-modal-cancel-btn, #account-profile-child-delete-account-confirm-modal-cancel-btn {
+
+background: white;
+    border: 2px solid indigo;
+    border-radius: 5px;
+    padding: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    outline: none;
+    color: indigo;
+    font-weight: 900;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: box-shadow 0.3s;
+
+}
+
+#account-profile-child-delete-account-confirm-modal-cancel-btn:hover, #account-profile-child-delete-account-confirm-modal-delete-btn:hover {
+
+box-shadow: 1px 1px 5px 1px black;
+
+}
+
+
+#account-profile-child-delete-account-questions-container {
+
+   margin: 30px;
+  
+}
+
+
+#account-profile-child-delete-account-questions-container-head {
+
+   text-shadow: none;
+   font-weight: bold;
+   font-style: oblique;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 1.4rem;
+   margin-bottom: 15px;
+   letter-spacing: 0.1rem;
+   
+}
+
+#account-profile-child-delete-account-questions-container-text {
+
+   text-shadow: none;
+   font-size: 1.2rem;
+   font-family: 'Times New Roman', Times, serif;
+   letter-spacing: 0.05rem;
+   
+}
+
+#account-profile-child-delete-account-questions-container-content {
+
+   margin-top: 50px;
+   display: flex;
+   flex-direction: column;
+
+}
+
+.account-profile-child-delete-account-questions-container-child {
+
+   display: flex;
+   flex-direction: column;
+}
+
+.account-profile-child-delete-account-questions-container-item {
+
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid gray;
+   padding-bottom: 20px;
+   margin-bottom: 20px;
+}
+
+
+#account-profile-child-delete-account-questions-container-item5 {
+
+border: none;
+padding-bottom: 0;
+margin-bottom: 0;
+
+}
+
+
+.account-profile-child-delete-account-questions-container-item-text {
+
+   text-shadow: none;
+   font-size: 1.3rem;
+   letter-spacing: 0.1rem;
+
+}
+
+.account-profile-child-delete-account-questions-container-item-input {
+
+   margin-left: auto;
+   accent-color: indigo;
+   width: 22px;
+   height: 22px;
+   cursor: pointer;
+   border: none;
+   outline: none;
+}
+
+#account-profile-child-delete-account-questions-container-btn-div, #account-profile-child-delete-account-review-container-btn-div {
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 20px 0 50px;
+   
+}
+
+#account-profile-child-delete-account-questions-container-btn, #account-profile-child-delete-account-review-container-btn {
+
+   background: indigo;
+   color: white;
+   border: none;
+   outline: none;
+   padding: 10px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: bold;
+   font-size: 1.3rem;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: box-shadow 0.3s;
+   margin-top: 30px;
+   }
+   
+ #account-profile-child-delete-account-questions-container-btn:hover, #account-profile-child-delete-account-review-container-btn:hover {
+   
+   box-shadow:inset 4px 4px 3px 3px black;
+
+   }
+
+   #account-profile-child-delete-account-questions-container-skip {
+
+      position: absolute;
+      top: 5%;
+      right: 4%;
+     text-shadow: none;
+     letter-spacing: 0.1rem;
+     font-weight: bold;
+     cursor: pointer;
+     font-size: 1.3rem;
+
+   }
+
+   #account-profile-child-delete-account-questions-container-skip:hover {
+
+      text-decoration: underline;
+
+   }
+   
+#account-profile-child-delete-account-questions-container-reason-div {
+
+      display: none;
+      align-items: center;
+      justify-content: center;
+    
+   }
+
+#account-profile-child-delete-account-questions-container-reason-input {
+
+border: none;
+outline: none;
+border-bottom: 1px solid indigo;
+width: 100%;
+padding: 10px;
+color: indigo;
+font-size: 1.25rem;
+text-shadow: none;
+margin-top: 30px;
+
+}
+
+#account-profile-child-delete-account-download-container {
+
+   display: none;
+
+}
+
+#account-profile-child-delete-account-download-container-head {
+
+   display: flex;
+   align-items: flex-start;
+   margin: 40px 10px;
+   margin-bottom: 25px;
+}
+
+
+#account-profile-child-delete-account-download-container-head-svg-box {
+
+   display: flex;
+   align-items: flex-start;
+   transform: translateY(-12px);
+}
+
+
+#account-profile-child-delete-account-download-container-head-svg {
+
+   width: 50px;
+   height: 50px;
+   fill: indigo;
+   color: white;
+    cursor: pointer;
+    transition: fill 0.3s, color 0.3s;
+}
+
+#account-profile-child-delete-account-download-container-head-svg:hover {
+
+   fill: white;
+   color: indigo;
+   transform: scale(0.9);
+}
+
+#account-profile-child-delete-account-download-container-head-div {
+
+   display: flex;
+   flex-direction: column;
+   margin-left: 30px;
+
+}
+
+#account-profile-child-delete-account-download-container-head-text {
+
+   text-shadow: none;
+   font-weight: bold;
+   font-style: oblique;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 1.5rem;
+   margin-bottom: 15px;
+   letter-spacing: 0.1rem;
+}
+
+#account-profile-child-delete-account-download-container-head-content {
+
+   text-shadow: none;
+   font-size: 1.2rem;
+   font-family: 'Times New Roman', Times, serif;
+   letter-spacing: 0.05rem;
+   margin-right: 20px;
+}
+
+#account-profile-child-delete-account-download-container-head-sub-content {
+
+   margin-top: 10px;
+}
+
+#account-profile-child-delete-account-download-container-link {
+
+  margin-left: 90px;
+  text-shadow: none;
+  color: rgb(0, 128, 0);
+  letter-spacing: 0.05rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  cursor: pointer;
+  
+}
+
+#account-profile-child-delete-account-download-container-link:hover {
+
+   text-decoration: underline;
+}
+
+
+#account-profile-child-delete-account-download-container-btn-div {
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 50px;
+  
+   
+}
+
+#account-profile-child-delete-account-download-container-btn {
+
+   background: indigo;
+   color: white;
+   border: none;
+   outline: none;
+   padding: 10px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: bold;
+   font-size: 1.3rem;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: box-shadow 0.3s;
+   margin-top: 30px;
+   }
+   
+ #account-profile-child-delete-account-download-container-btn:hover {
+   
+   box-shadow:inset 4px 4px 3px 3px black;
+
+   }
+
+#account-profile-child-delete-account-review-container {
+
+   margin-top: 30px;
+   display: none;
+
+}
+
+ #account-profile-child-delete-account-review-container-head {
+
+  display: flex;
+  align-items: center;
+ 
+
+   }
+
+#account-profile-child-delete-account-review-container-head-txt {
+
+   text-shadow: none;
+   font-size: 1.5rem;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 500;
+   margin-left: 30px;
+   font-style: oblique;
+  
+
+}
+   
+#account-profile-child-delete-account-review-container-list {
+
+   margin-top: 10px;
+   margin-left: 65px;
+   margin-right: 20px;
+}
+
+
+.account-profile-child-delete-account-review-container-list-item {
+
+   text-shadow: none;
+   font-size: 1.3rem;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 500;
+   margin-bottom: 20px;
+   margin-top: 20px;
+   letter-spacing: 0.1rem;
+}
+
+#account-profile-child-delete-account-review-container-list li:first-child {
+
+margin-top: 10px;
+}
+
+#account-profile-child-delete-account-review-container-svg-box{
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 10px;
+}
+
+#account-profile-child-delete-account-review-container-svg {
+
+   width: 50px;
+    height: 50px;
+    fill: indigo;
+    color: white;
+    cursor: pointer;
+    transition: fill 0.3s, color 0.3s;
+
+}
+
+
+#account-profile-child-delete-account-review-container-svg:hover {
+
+   fill: white;
+   color: indigo;
+   transform: scale(0.9);
+
+}
+
+
+
+#account-profile-child-delete-account-verification-container {
+
+   display: none;
+   align-items: flex-start;
+   margin-top: 30px;
+   margin-left: 10px;
+}
+
+#account-profile-child-delete-account-verification-container-svg-box {
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+#account-profile-child-delete-account-verification-container-svg {
+
+   width: 50px;
+    height: 50px;
+    fill: indigo;
+    color: white;
+    cursor: pointer;
+    transition: fill 0.3s, color 0.3s;
+
+}
+
+
+#account-profile-child-delete-account-verification-container-svg:hover {
+
+   fill: white;
+   color: indigo;
+   transform: scale(0.9);
+
+}
+
+
+
+#account-profile-child-delete-account-verification-container-box {
+
+   display: flex;
+   flex-direction: column;
+   margin-left: 30px;
+   margin-right: 30px;
+}
+
+#account-profile-child-delete-account-verification-container-code-text {
+
+   text-shadow: none;
+   font-style: oblique;
+   font-weight: 900;
+   font-size: 1.4rem;
+   margin-top: 12px;
+}
+
+#account-profile-child-delete-account-verification-container-box-text{
+
+   text-shadow: none;
+   margin-top: 10px;
+   font-size: 1.25rem;
+   letter-spacing: 0.1rem;
+
+}
+
+
+#account-profile-child-delete-account-verification-container-code {
+
+   border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid indigo;
+    font-size: 1.5rem;
+    width: 20rem;
+    color: indigo;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    padding-left: 0;
+}
+
+
+#account-profile-child-delete-account-verification-container-btn-div {
+
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   margin-top: 40px;
+
+}
+
+#account-profile-child-delete-account-verification-container-btn {
+
+   background: indigo;
+   color: white;
+   border: none;
+   outline: none;
+   padding: 10px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: bold;
+   font-size: 1.3rem;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: box-shadow 0.3s;
+
+   }
+   
+   #account-profile-child-delete-account-verification-container-btn:hover {
+   
+   box-shadow:inset 4px 4px 3px 3px black;
+
+   }
+
+
+
  /* For the Animation */
+
+
 
  @keyframes profileImg {
    
@@ -2008,3 +3698,1049 @@ height: 0;
    animation: gridAnimation 0.8s ease 0.4s 2 alternate both;
  }
 
+@keyframes showNavBar {
+   
+   from {
+
+      width: 0;
+   } to {
+
+      width: auto;
+   }
+}
+
+/* Media Queries */
+
+/* Width */
+
+@media screen and (max-width: 1199px) and (min-width: 1000px)   {
+
+   #nav {
+   
+   
+      width: 25%;
+      max-width: 25%;
+      min-width: 25%;  
+
+   }
+
+   #main {
+   
+      width: 73.7%;
+      margin-left: 26%;
+   }
+
+   
+ .opt {
+
+   font-size: 1.4rem;
+
+ }
+
+ #profile-name {
+
+   font-size: 1.25rem;
+
+ }
+
+ #profile-img { 
+   width: 60px;
+   height: 60px;
+ }
+
+ .nav-list-child {
+
+ font-size: 1.15em;
+
+ }
+
+ #home-svg svg {
+
+   width: 30px;
+   height: 30px;
+
+ }
+
+ 
+ 
+#account-head {
+
+   font-size: 2.2rem;
+
+}
+
+
+.account-profile-image-options-list-child {
+      
+ font-size: 1.25rem;
+
+}
+ 
+}
+
+@media screen and (max-width: 999px) and (min-width: 800px)   {
+
+   #nav {
+   
+   
+      width: 30%;
+      max-width: 30%;
+      min-width: 30%;  
+
+   }
+
+   #main {
+   
+      width: 68%;
+      margin-left: 31.5%;
+   }
+
+   
+ .opt {
+
+   font-size: 1.3rem;
+
+ }
+
+ #profile-name {
+
+   font-size: 1.2rem;
+
+ }
+
+ #profile-img { 
+   width: 55px;
+   height: 55px;
+ }
+
+ .nav-list-child {
+
+ font-size: 1.1rem;
+
+ }
+
+ #home-svg svg {
+
+   width: 28px;
+   height: 28px;
+
+ }
+
+ 
+#account-head {
+
+   font-size: 2.2rem;
+
+}
+
+
+.account-profile-image-options-list-child {
+      
+   font-size: 1.25rem;
+  
+  }
+
+  
+  #account-profile-image-options-list-camera,  #account-profile-image-options-list-gallery, #account-profile-image-options-list-delete {
+
+   width: 1.9rem;
+   height: 1.9rem;
+  
+    }
+
+  
+    #account-profile-image-text {
+
+      font-size: 1.8rem;
+      
+   }
+
+  
+   #account-profile-image-cancel-icon {
+  
+      width: 1.7rem;
+      height: 1.7rem;
+        
+     } 
+
+   
+  #account-profile-image-options-camera, #account-profile-image-options-gallery,  #account-profile-image-options-delete {
+   
+   width: 1.6rem;
+   height: 1.6rem;
+
+  }
+
+  .account-profile-image-options-text {
+
+   font-size: 1.25rem;
+
+  }
+
+  
+  #account-profile-image-display {
+
+   width: 23rem; 
+   height: 23rem; 
+
+  }
+ 
+}
+
+@media screen and (max-width: 799px) and (min-width: 600px) {
+
+#nav {
+
+   display: none;
+   width: 300px;
+   max-width: 400px;
+   min-width: 280px;
+}
+
+#main {
+
+   width: 99%;
+   border: none;
+   margin-left: 1%;
+}
+
+#nav-svg-box {
+
+   display: inline-flex;
+   vertical-align: -10px;
+
+}
+
+#head {
+
+   font-size: 2.5rem;
+  
+
+}
+
+.first {
+
+   font-size: 3.5rem;
+}
+
+.account-profile-child-text { 
+
+font-size: 1.2rem;
+letter-spacing: 0.1rem;
+}
+
+#btn-1, #btn-2 {
+
+   display: none;
+}
+  
+
+#account-head {
+
+   font-size: 2.15rem;
+
+}
+
+
+.account-profile-image-options-list-child {
+      
+   font-size: 1.2rem;
+  
+  }
+  
+  #account-profile-image-options-list-camera,  #account-profile-image-options-list-gallery, #account-profile-image-options-list-delete {
+
+   width: 1.85rem;
+   height: 1.85rem;
+  
+    }
+
+  
+    #account-profile-image-text {
+
+      font-size: 1.75rem;
+      
+   }
+
+  
+   #account-profile-image-cancel-icon {
+  
+      width: 1.55rem;
+      height: 1.55rem;
+        
+     } 
+
+   
+  #account-profile-image-options-camera, #account-profile-image-options-gallery,  #account-profile-image-options-delete {
+   
+   width: 1.5rem;
+   height: 1.5rem;
+
+  }
+
+  .account-profile-image-options-text {
+
+   font-size: 1.2rem;
+
+  }
+
+  
+  #account-profile-image-display {
+
+   width: 21.5rem; 
+   height: 21.5rem; 
+
+  }
+ 
+
+}
+
+
+@media screen and (max-width: 599px) and (min-width: 480px){
+
+   #nav {
+   
+      display: none;
+      width: 280px;
+      max-width: 300px;
+      min-width: 280px;  
+
+   }
+   
+   #main {
+   
+      width: 99%;
+      border: none;
+      margin-left: 1%;
+   }
+   
+   #nav-svg-box {
+   
+      display: inline-flex;
+      vertical-align: -10px;
+   
+   }
+   
+   #head {
+   
+      font-size: 2.3rem;
+      
+   
+   }
+   
+   .first {
+   
+      font-size: 3.3rem;
+   }
+   
+   .account-profile-child-text { 
+   
+   font-size: 1.2rem;
+   letter-spacing: 0.1rem;
+   }
+   
+   #btn-1, #btn-2 {
+   
+      display: none;
+   }
+
+   .account-headers {
+
+      font-size: 1.4rem;
+      letter-spacing: 0.1rem;
+   }
+
+   #account-head {
+
+      font-size: 2rem;
+
+   }
+
+   
+.account-profile-image-options-list-child {
+      
+   font-size: 1.2rem;
+  
+  }
+  
+  #account-profile-image-options-list-camera,  #account-profile-image-options-list-gallery, #account-profile-image-options-list-delete {
+
+   width: 1.8rem;
+   height: 1.8rem;
+  
+    }
+
+    
+    #account-profile-image-text {
+
+      font-size: 1.6rem;
+      
+   }
+
+  
+   #account-profile-image-cancel-icon {
+  
+      width: 1.4rem;
+      height: 1.4rem;
+        
+     } 
+
+   
+  #account-profile-image-options-camera, #account-profile-image-options-gallery,  #account-profile-image-options-delete {
+   
+   width: 1.4rem;
+   height: 1.4rem;
+
+  }
+
+  .account-profile-image-options-text {
+
+   font-size: 1.2rem;
+
+  }
+
+  
+  #account-profile-image-display {
+
+   width: 20.5rem; 
+   height: 20.5rem; 
+
+  }
+  
+      
+   }
+
+
+@media screen and (max-width: 479px) and (min-width: 400px) {
+
+   #nav {
+   
+      display: none;
+      width: 250px;
+      max-width:250px;
+      min-width: 250px;  
+
+   }
+
+   
+#nav-svg {
+
+   width: 2.8rem;
+   height: 2.8rem;
+   transform: scale(1);
+
+}
+   
+   #main {
+   
+      width: 99%;
+      border: none;
+      margin-left: 1%;
+   }
+   
+   #nav-svg-box {
+   
+      display: inline-flex;
+      vertical-align: -12px;
+    
+   
+   }
+   
+   #head {
+   
+      font-size: 1.85rem;
+    
+   
+   }
+   
+   .first {
+   
+      font-size: 2.5rem;
+   }
+   
+   .account-profile-child-text { 
+   
+   font-size: 1.15rem;
+   letter-spacing: 0.1rem;
+   }
+   
+   #btn-1, #btn-2 {
+   
+      display: none;
+   }
+
+   .account-headers {
+
+      font-size: 1.25rem;
+      letter-spacing: 0.1rem;
+   }
+
+   #account-head {
+
+      font-size: 1.8rem;
+
+   }
+
+   .authentication-code {
+    
+      width: 2rem;
+      height: 2rem;
+      font-size: 1.5rem;
+
+   }
+
+   
+ .opt {
+
+   font-size: 1.35rem;
+
+ }
+
+ #profile-name {
+
+   font-size: 1.2rem;
+
+ }
+
+ #profile-img { 
+   width: 55px;
+   height: 55px;
+ }
+
+ .nav-list-child {
+
+ font-size: 1.15rem;
+ }
+
+
+ 
+ #account-name-value, #account-email-value, #account-old-password-value, #account-new-password-value, #account-confirm-password-value,    #account-profile-number-code  {
+
+   width: 9rem;
+   font-size: 1.15rem;
+    }
+         
+    
+    .authentication-select {
+    
+   font-size: 1.1rem;
+   
+    }
+   
+    .authentication-btn, .change-account-btn { 
+   
+      font-size: 1.05rem;
+   
+    }
+   
+    
+   .account-profile-child-security-btn, 
+   .account-profile-child-management-btn { 
+   
+      font-size: 1.1rem;
+   
+   }
+   
+   
+   #account-profile-image {
+   
+      width: 11rem;
+      height: 11rem;
+   
+   } 
+
+   
+.account-profile-image-options-list-child {
+      
+   font-size: 1.15rem;
+  
+  }
+
+  
+  #account-profile-image-options-list-camera,  #account-profile-image-options-list-gallery, #account-profile-image-options-list-delete {
+
+   width: 1.7rem;
+   height: 1.7rem;
+  
+    }
+
+     
+    #account-profile-image-text {
+
+      font-size: 1.5rem;
+      
+   }
+
+  
+   #account-profile-image-cancel-icon {
+  
+      width: 1.3rem;
+      height: 1.3rem;
+        
+     } 
+
+   
+  #account-profile-image-options-camera, #account-profile-image-options-gallery,  #account-profile-image-options-delete {
+   
+   width: 1.3rem;
+   height: 1.3rem;
+
+  }
+
+  .account-profile-image-options-text {
+
+   font-size: 1.1rem;
+
+  }
+
+  
+  #account-profile-image-display {
+
+   width: 19rem; 
+   height: 19rem; 
+
+  }
+   
+      
+   }
+
+ 
+@media screen and (max-width: 399px) and (min-width: 320px)  {
+
+   #nav {
+   
+      display: none;
+      width: 250px;
+      max-width:250px;
+      min-width: 250px;  
+
+   }
+
+   
+#nav-svg {
+
+   width: 2.5rem;
+   height: 2.5rem;
+   transform: scale(1);
+
+}
+   
+   #main {
+   
+      width: 99%;
+      border: none;
+      margin-left: 1%;
+   }
+   
+   #nav-svg-box {
+   
+      display: inline-flex;
+      transform: translateY(6px);
+    
+   
+   }
+   
+   #head {
+   
+      font-size: 1.5rem;
+      margin-left: 5px;
+      
+   }
+   
+   .first {
+   
+      font-size: 2.2rem;
+   }
+   
+   .account-profile-child-text { 
+   
+   font-size: 1.1rem;
+   letter-spacing: 0.05rem;
+   }
+   
+   #btn-1, #btn-2 {
+   
+      display: none;
+   }
+
+   .account-headers {
+
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+   }
+
+   #account-head {
+
+      font-size: 1.6rem;
+
+   }
+
+  
+
+   .authentication-code {
+    
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1.1rem;
+      padding: 5px;
+      padding-left: 5px;
+      margin: 0.5px;
+     
+   }
+
+   
+ .opt {
+
+   font-size: 1.25rem;
+
+ }
+
+ #profile-name {
+
+   font-size: 1.2rem;
+
+ }
+
+ #profile-img { 
+   width: 50px;
+   height: 50px;
+ }
+
+ .nav-list-child {
+
+ font-size: 1.1rem;
+
+ }
+
+ #home-svg svg {
+
+   width: 25px;
+   height: 25px;
+
+ }
+
+ 
+ #account-name-value, #account-email-value, #account-old-password-value, #account-new-password-value, #account-confirm-password-value,    #account-profile-number-code  {
+
+width: 7rem;
+font-size: 1.1rem;
+ }
+      
+ 
+ .authentication-select {
+ 
+font-size: 1rem;
+
+ }
+
+ .authentication-btn, .change-account-btn { 
+
+   font-size: 1rem;
+
+ }
+
+ 
+.account-profile-child-security-btn, 
+.account-profile-child-management-btn { 
+
+   font-size: 1rem;
+
+}
+
+
+#account-profile-image {
+
+   width: 10rem;
+   height: 10rem;
+
+} 
+
+
+.account-profile-image-options-list-child {
+      
+   font-size: 1.1rem;
+  
+  }
+
+  
+  #account-profile-image-options-list-camera,  #account-profile-image-options-list-gallery, #account-profile-image-options-list-delete {
+
+   width: 1.5rem;
+   height: 1.5rem;
+  
+    }
+
+    
+    #account-profile-image-text {
+
+      font-size: 1.3rem;
+    
+      
+   }
+
+   #account-profile-image-cancel-box {
+
+      margin-right: 5px;
+
+   } 
+  
+   #account-profile-image-cancel-icon {
+  
+      width: 1.1rem;
+      height: 1.1rem;
+   
+        
+     } 
+
+   
+  #account-profile-image-options-camera, #account-profile-image-options-gallery,  #account-profile-image-options-delete {
+   
+   width: 1.2rem;
+   height: 1.2rem;
+
+  }
+
+  .account-profile-image-options-text {
+
+   font-size: 1rem;
+
+  }
+
+  
+  #account-profile-image-display {
+
+   width: 17rem; 
+   height: 17rem; 
+
+  }
+     
+
+   }  
+
+  
+@media screen and (max-width: 319px) {
+
+   #nav {
+   
+      display: none;
+      width: 250px;
+      max-width:250px;
+      min-width: 250px;  
+
+   }
+
+   
+#nav-svg {
+
+   width: 2.3rem;
+   height: 2.3rem;
+   transform: scale(1);
+
+}
+   
+   #main {
+   
+      width: 99%;
+      border: none;
+      margin-left: 1%;
+   }
+   
+   #nav-svg-box {
+   
+      display: inline-flex;
+      transform: translateY(6px);
+    
+   
+   }
+   
+   #head {
+   
+      font-size: 1.3rem;
+      margin-left: 5px;
+      
+   }
+   
+   .first {
+   
+      font-size: 1.8rem;
+   }
+   
+   .account-profile-child-text { 
+   
+   font-size: 1rem;
+   letter-spacing: 0.05rem;
+   }
+   
+   #btn-1, #btn-2 {
+   
+      display: none;
+   }
+
+   .account-headers {
+
+      font-size: 1.15rem;
+      letter-spacing: 0.1rem;
+   }
+
+   #account-head {
+
+      font-size: 1.5rem;
+
+   }
+
+  
+
+   .authentication-code {
+    
+      width: 1.35rem;
+      height: 1.35rem;
+      font-size: 1rem;
+      padding: 5px;
+      padding-left: 5px;
+      margin: 0.5px;
+     
+   }
+
+   
+ .opt {
+
+   font-size: 1.2rem;
+
+ }
+
+ #profile-name {
+
+   font-size: 1.1rem;
+
+ }
+
+ #profile-img { 
+   width: 45px;
+   height: 45px;
+ }
+
+ .nav-list-child {
+
+ font-size: 1.05rem;
+
+ }
+
+ #home-svg svg {
+
+   width: 25px;
+   height: 25px;
+
+ }
+
+ 
+ #account-name-value, #account-email-value, #account-old-password-value, #account-new-password-value, #account-confirm-password-value,    #account-profile-number-code  {
+
+width: 5rem;
+font-size: 1rem;
+ }
+      
+ 
+ .authentication-select {
+ 
+font-size: 0.9rem;
+
+ }
+
+ .authentication-btn, .change-account-btn { 
+
+   font-size: 0.9rem;
+
+ }
+
+ 
+.account-profile-child-security-btn, 
+.account-profile-child-management-btn { 
+
+   font-size: 1rem;
+
+}
+
+
+#account-profile-image {
+
+   width: 9rem;
+   height: 9rem;
+
+} 
+
+.account-profile-image-options-list-child {
+      
+   font-size: 1rem;
+  
+  }
+
+  #account-profile-image-options-list-camera,  #account-profile-image-options-list-gallery, #account-profile-image-options-list-delete {
+
+ width: 1.5rem;
+ height: 1.5rem;
+
+  }
+
+
+  
+  #account-profile-image-text {
+
+   font-size: 1.2rem;
+ 
+   
+}
+
+#account-profile-image-cancel-box {
+
+   margin-right: 5px;
+   padding: 5px;
+
+} 
+
+#account-profile-image-cancel-icon {
+
+   width: 1rem;
+   height: 1rem;
+
+     
+  } 
+
+
+#account-profile-image-options-camera, #account-profile-image-options-gallery,  #account-profile-image-options-delete {
+
+width: 1.1rem;
+height: 1.1rem;
+
+}
+
+.account-profile-image-options-text {
+
+font-size: 1rem;
+
+}
+
+
+#account-profile-image-display {
+
+width: 15rem; 
+height: 15rem; 
+
+}
+  
+
+
+   }   
+
+
+/* For the profile image option box*/
+
+@media screen and (max-width: 900px) {
+
+#account-profile-image-options-list {  
+
+   top: 95%;
+   right: 12%;
+
+}
+
+}

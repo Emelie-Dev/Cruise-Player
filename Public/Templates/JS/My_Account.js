@@ -589,55 +589,37 @@ const countryDetails = [
 
 // For the side nav height
 
-function navHeight() {
-  const parentHeight = getComputedStyle(
-    document.getElementById("nav")
-  ).getPropertyValue("height");
-  const par = parentHeight.replace("px", "");
+// function navHeight() {
 
-  document.getElementById("nav-list").style.height = `${0.74 * par}px`;
+//   let matchWidth = window.matchMedia("(min-width: 800px)");
 
-  // For the main content
+//   if(matchWidth.matches) {
 
-  // For the main body and animation
+//   const parentHeight = getComputedStyle(
+//     document.getElementById("nav")
+//   ).getPropertyValue("height");
+//   const par = parentHeight.replace("px", "");
 
-  const wid = getComputedStyle(document.getElementById("nav")).getPropertyValue(
-    "width"
-  );
+//   document.getElementById("nav-list").style.height = `${0.74 * par}px`;
 
-  const widNo = Number(wid.toString().replace("px", ""));
+//   // For the main content
 
-  document.getElementById("main").style.marginLeft = `${widNo + 10}px`;
-  document.getElementById("main").style.width = `${
-    screen.availWidth - (widNo + 15)
-  }px`;
+//   // For the main body and animation
 
-  const point1 = getComputedStyle(
-    document.getElementById("point")
-  ).getPropertyValue("width");
+//   const wid = getComputedStyle(document.getElementById("nav")).getPropertyValue(
+//     "width"
+//   );
 
-  const point2 = getComputedStyle(
-    document.getElementById("point")
-  ).getPropertyValue("height");
+//   const widNo = Number(wid.toString().replace("px", ""));
 
-  const hor = Number(point1.toString().replace("px", ""));
+//   document.getElementById("main").style.marginLeft = `${widNo + 10}px`;
+//   document.getElementById("main").style.width = `${
+//     screen.availWidth - (widNo + 15)
+//   }px`;
 
-  const ver = Number(point2.toString().replace("px", ""));
+// } 
 
-  const param1 = screen.availWidth / 2 - hor;
-
-  const param2 = screen.availHeight / 2 - ver / 2;
-
-  document.getElementById("point").style.left = `${param1}px`;
-
-  document.getElementById("point").style.right = `${param1}px`;
-
-  // document.querySelector("#empty-div").style.width =
-
-  // document.querySelector("#empty-div").style.width =
-
-  // For the repoer from subject
-}
+// }
 
 //sign in
 
@@ -2677,26 +2659,21 @@ setInterval(() => {
     document.getElementById("final").style.opacity = 0.5;
   }
 
-  // For the nav width onresize
+ // For the nav height onresize
 
-  const wid = getComputedStyle(document.getElementById("nav")).getPropertyValue(
-    "width"
-  );
+document.querySelector("#nav").style.height =
+ `${-95.917127 + (window.innerHeight * (179/181))}px`;
 
-  const widNo = Number(wid.toString().replace("px", ""));
 
-  document.getElementById("main").style.marginLeft = `${widNo + 10}px`;
-  document.getElementById("main").style.width = `${
-    screen.availWidth - (widNo + 15)
-  }px`;
+ document.querySelector("#nav-list").style.height =
+ `${-219.407895 + (document.querySelector("#nav").offsetHeight * (175/152))}px`;
 
-  const parentHeight = getComputedStyle(
-    document.getElementById("nav")
-  ).getPropertyValue("height");
-  const par = parentHeight.replace("px", "");
 
-  document.getElementById("nav-list").style.height = `${0.74 * par}px`;
+ document.querySelector("#main").style.height = `${-86.98125 + (window.innerHeight * (0.98125))}px`;
+
+
 }, 0);
+
 
 function validate() {
   const pass = document.getElementById("password-input1");
@@ -3508,4 +3485,543 @@ function checkEmail() {
   dataList.innerHTML = options;
 })();
 
-// Function to check the new password
+// Function to show security modals
+
+function showSecurityModals(id, num) {
+
+document.querySelector(`#${id}`).style.display = "flex";
+
+document.querySelector("#nav").style.position = "static"; 
+
+if(num === 1) {
+
+
+const alertContentArray = [...document.querySelectorAll(".account-profile-child-security-alerts-item-box")];
+
+alertContentArray.forEach(el => {
+
+  el.style.height = "0px";
+  el.style.overflow = `hidden`;
+  el.previousElementSibling.children[1].innerHTML = ` <svg class="account-profile-child-security-alerts-item-head-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+</svg>`;
+
+})
+
+
+
+} else if (num === 3) {
+
+  document.querySelector("#account-profile-child-2step-verification-password-box").style.display = "none";
+  
+  document.querySelector("#account-profile-child-2step-verification-container").style.display = "flex";
+
+} else if (num === 5) {
+
+  document.querySelector("#account-profile-child-deactivate-account-verification-container").style.display = "none";
+  
+  document.querySelector("#account-profile-child-deactivate-account-details-container").style.display = "block";
+ 
+} else if (num === 6) {
+
+  document.querySelector("#account-profile-child-delete-account-download-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-delete-account-review-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-delete-account-verification-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-delete-account-questions-container").style.display = "block";
+
+
+}
+
+
+}
+
+
+// function to close the security modals
+
+function closeSecurityModals(id) {
+
+  document.querySelector(`#${id}`).style.display = "none";
+
+  document.querySelector("#nav").style.position = "fixed"; 
+
+}
+
+Array.from(document.querySelectorAll(".account-profile-child-security-modal")).forEach(el => {
+  
+  el.addEventListener("click", e => {
+
+  if(e.target === el) {
+    
+    el.style.display = "none";
+
+  }
+
+  })
+})
+
+// for management modals
+
+Array.from(document.querySelectorAll(".account-profile-child-management-modal")).forEach(el => {
+  
+  el.addEventListener("click", e => {
+
+  if(e.target === el) {
+    
+    el.style.display = "none";
+
+  }
+
+  })
+})
+
+
+//  for showing security alert box content
+
+
+function showAlertContent(e) {
+
+  const alertContentArray = [...document.querySelectorAll(".account-profile-child-security-alerts-item-box")];
+
+  alertContentArray.forEach(el => {
+
+    el.style.height = "0px";
+    el.style.overflow = `hidden`;
+    el.previousElementSibling.children[1].innerHTML = ` <svg class="account-profile-child-security-alerts-item-head-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+  </svg>`;
+
+  })
+
+   let alertContent = e.currentTarget.nextElementSibling;
+
+   let elemSymbol = e.currentTarget.children[1];
+
+  let elemHeight = String(getComputedStyle(alertContent).getPropertyValue("height")).toLowerCase();
+
+ 
+
+  if(elemHeight === "0px") {
+
+    alertContent.style.height = `${alertContent.scrollHeight}px`;
+    elemSymbol.innerHTML =
+     `<svg class="account-profile-child-security-alerts-item-head-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+  </svg>
+  `;
+    
+    
+  } else {
+
+    alertContent.style.height = "0px";
+    alertContent.style.overflow = `hidden`;
+    elemSymbol.innerHTML = `  <svg class="account-profile-child-security-alerts-item-head-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+  </svg>`;
+
+  }
+
+  
+}
+
+
+// function for switching security content
+
+function switchContent() {
+
+
+let disp = String(getComputedStyle(document.querySelector("#account-profile-child-no-security-alerts-box")).getPropertyValue("display")).toLowerCase();
+
+ if(disp === "none") {
+
+  document.querySelector("#account-profile-child-no-security-alerts-box").style.display = "flex";
+
+  document.querySelector("#account-profile-child-security-alerts-container").style.display = "none";
+  
+  document.querySelector("#account-profile-child-security-alerts-footer").style.display = "none";
+  
+
+ } else {
+
+  document.querySelector("#account-profile-child-security-alerts-container").style.display = "flex";
+  
+  document.querySelector("#account-profile-child-security-alerts-footer").style.display = "block";
+
+  
+  document.querySelector("#account-profile-child-no-security-alerts-box").style.display = "none";
+
+ }
+
+
+}
+
+// For closing the remove device div
+
+function closeRemoveDeviceBox() {
+
+  document.querySelector("#account-profile-child-manage-devices-delete-box").style.display = "none";
+
+}
+// For showing the remove item div
+
+function showRemoveDeviceBox(e) {
+
+let deviceName = e.currentTarget.parentElement.previousElementSibling.children[0].textContent;
+
+document.querySelector("#account-profile-child-manage-devices-delete-box-device-name").textContent = `${deviceName}`;
+
+document.querySelector("#account-profile-child-manage-devices-delete-box").style.display = "flex";
+
+}
+
+
+// function for enaling 2FA
+
+function enable2FA() {
+
+  document.querySelector("#account-profile-child-2step-verification-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-2step-verification-password-box").style.display = "flex";
+
+  slideForwardAnimation("account-profile-child-2step-verification-password-box", "account-profile-child-2step-verification-modal");
+
+
+
+}
+// function for canceling 2fa 
+
+function cancel2FA() {
+
+  document.querySelector("#account-profile-child-2step-verification-password-box").style.display = "none";
+
+  document.querySelector("#account-profile-child-2step-verification-container").style.display = "flex";
+ 
+  slideBackwardAnimation("account-profile-child-2step-verification-container", "account-profile-child-management-deactivate-account-modal");
+
+}
+
+
+// function for adding account
+
+function addAccount() {
+
+  document.querySelector("#account-profile-child-management-switch-account-modal").style.display = "none";
+
+  document.querySelector("#sign-in-page").style.display = "flex";
+
+}
+
+// function for cancelling deactivation
+
+function cancelDeactivation() {
+
+  document.querySelector("#account-profile-child-deactivate-account-verification-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-deactivate-account-details-container").style.display = "block";
+
+  slideBackwardAnimation("account-profile-child-deactivate-account-details-container", "account-profile-child-management-deactivate-account-modal");
+
+}
+
+// function for sliding forward animation
+
+ function slideForwardAnimation(elemId, modalId) {
+
+document.querySelector(`#${modalId}`).style.overflowX  = "hidden";
+
+const elem = document.querySelector(`#${elemId}`);
+
+const width = elem.offsetWidth;
+
+elem.animate({
+    transform: [`translateX(${width}px)`, `translateX(0)`],
+    opacity: [0, 1]
+  },
+    {
+      duration: 200,
+      iterations: 1
+    }
+  )
+
+
+setTimeout(() => {
+
+  document.querySelector(`#${modalId}`).style.overflowX  = "auto";
+
+}, 300)
+
+}
+
+// function for sliding backward animation 
+
+function slideBackwardAnimation(elemId, modalId) {
+
+document.querySelector(`#${modalId}`).style.overflowX  = "hidden";
+
+const elem = document.querySelector(`#${elemId}`);
+
+const width = elem.offsetWidth;
+
+elem.animate({
+    transform: [`translateX(${-1 * width}px)`, `translateX(0)`],
+    opacity: [0, 1]
+  },
+    {
+      duration: 200,
+      iterations: 1
+    }
+  )
+
+
+setTimeout(() => {
+
+  document.querySelector(`#${modalId}`).style.overflowX  = "auto";
+
+}, 300)
+
+}
+
+// function for proceeding deactivation
+
+function proceedDeactivation() {
+
+
+  document.querySelector("#account-profile-child-deactivate-account-details-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-deactivate-account-verification-container").style.display = "flex";
+
+ slideForwardAnimation("account-profile-child-deactivate-account-verification-container", "account-profile-child-management-deactivate-account-modal");
+
+  
+}
+
+// function for closing deactivation modal
+
+function closeDeactivation() {
+
+  document.querySelector("#account-profile-child-deactivate-account-confirm-modal").style.display = "none";
+
+}
+
+// function for confirming deactivation
+
+function confirmDeactivation() {
+  
+  document.querySelector("#account-profile-child-deactivate-account-confirm-modal").style.display = "flex";
+
+
+}
+
+// for showing additional contents in the questions for deleting account
+
+[...document.querySelectorAll(".account-profile-child-delete-account-questions-container-item-input")].forEach((el,index) => {
+
+  el.addEventListener("input", e => {
+
+    let scroll = document.querySelector("#account-profile-child-delete-account-questions-container-reason-div").scrollHeight;
+
+    if(index === 4) {
+
+      document.querySelector("#account-profile-child-delete-account-questions-container-reason-div").style.display = "flex";
+
+      document.querySelector("#account-profile-child-delete-account-questions-container-reason-input").textContent = "";
+
+      document.querySelector("#account-profile-child-delete-account-questions-container-reason-input").focus();
+
+    } else {
+
+      document.querySelector("#account-profile-child-delete-account-questions-container-reason-div").style.display = "none";
+
+     
+    }
+
+  })
+})
+
+
+// for limitting length of characters in the delete reason
+
+document.querySelector("#account-profile-child-delete-account-questions-container-reason-input").addEventListener("input", e => {
+
+let txt = String(e.currentTarget.textContent).trim();
+
+
+if( txt.length > 500) {
+
+  e.currentTarget.textContent = txt.slice(0, 500);
+
+  if(window.getSelection && document.createRange) {
+  
+  // creates a new range object
+ const range = document.createRange();
+
+  // selects the entire content of the element
+  range.selectNodeContents(e.currentTarget);
+
+ // collapses te range to the end
+  range.collapse(false);
+
+  // Gets the selection object and remove all existing selections
+  const selection = window.getSelection();
+  selection.removeAllRanges();
+
+  // Add the new range to the selection
+  selection.addRange(range);
+
+  } else if(document.body.createTextRange) {
+
+    const textRange = document.body.createTextRange();
+
+    textRange.moveToElementText(e.currentTarget);
+
+    textRange.collapse(false);
+
+    textRange.select();
+
+  }
+}
+
+})
+
+// for showing the questions container
+
+function showQuestionsContainer() {
+
+  document.querySelector("#account-profile-child-delete-account-download-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-delete-account-review-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-delete-account-verification-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-delete-account-questions-container").style.display = "block";
+    
+  slideBackwardAnimation("account-profile-child-delete-account-questions-container", "account-profile-child-management-delete-account-modal");
+
+}
+
+// for showing the download container
+
+function showDownloadContainer(num) {
+
+  document.querySelector("#account-profile-child-delete-account-questions-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-delete-account-review-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-delete-account-verification-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-delete-account-download-container").style.display = "block";
+
+  if(num === 1) {
+    
+  slideBackwardAnimation("account-profile-child-delete-account-download-container", "account-profile-child-management-delete-account-modal");
+
+  } else {
+  
+  slideForwardAnimation("account-profile-child-delete-account-download-container", "account-profile-child-management-delete-account-modal");
+
+  }
+}
+
+
+// for showing the review container
+
+function showReviewContainer(num) {
+
+  document.querySelector("#account-profile-child-delete-account-questions-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-delete-account-download-container").style.display = "none";
+  
+  document.querySelector("#account-profile-child-delete-account-verification-container").style.display = "none";
+
+
+  document.querySelector("#account-profile-child-delete-account-review-container").style.display = "block";
+
+  
+  if(num === 1) {
+    
+    slideBackwardAnimation("account-profile-child-delete-account-review-container", "account-profile-child-management-delete-account-modal");
+  
+    } else {
+    
+  slideForwardAnimation("account-profile-child-delete-account-review-container", "account-profile-child-management-delete-account-modal");
+
+    }
+
+}
+
+// for showing delete verification container
+
+
+function showVerificationContainer() {
+ 
+
+  document.querySelector("#account-profile-child-delete-account-questions-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-delete-account-download-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-delete-account-review-container").style.display = "none";
+
+  document.querySelector("#account-profile-child-delete-account-verification-container").style.display = "flex";
+
+  
+  slideForwardAnimation("account-profile-child-delete-account-verification-container", "account-profile-child-management-delete-account-modal");
+
+
+}
+
+
+// function for confirming account delete
+
+function confirmAccountDelete() {
+  
+  document.querySelector("#account-profile-child-delete-account-confirm-modal").style.display = "flex";
+
+
+}
+
+
+// function for closing delete account confirmation modal
+
+function closeAccountDeletion() {
+
+  document.querySelector("#account-profile-child-delete-account-confirm-modal").style.display = "none";
+
+}
+
+
+// for showing the navbar on smaller screens
+
+function showNavBar(e) {
+
+  let disp = String(getComputedStyle(document.querySelector("#nav")).getPropertyValue("display")).toLowerCase();
+
+  if(disp === "none") {
+
+  document.querySelector("#nav").style.display = "block";
+
+  document.querySelector("#empty-div2").style.display = "block";
+
+ 
+} else {
+
+  document.querySelector("#nav").style.display = "none";
+
+  document.querySelector("#empty-div2").style.display = "none";
+
+
+}
+
+}
+
+// for hiding the empty div
+
+document.querySelector("#empty-div2").addEventListener("click", e => {
+
+  document.querySelector("#nav").style.display = "none";
+  
+  e.target.style.display = "none";
+
+})
+
