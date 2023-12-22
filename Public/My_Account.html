@@ -25,7 +25,7 @@
 
 </script>
 </head>
-<body onresize="navHeight()" onload="navHeight()" onpageshow="navHeight()">
+<body onresize="navHeight(event)" onload="navHeight()" onpageshow="navHeight()">
 
 
   <div id="empty-div2">
@@ -688,7 +688,7 @@
 
   <div id="account-profile-child-security-alerts-box">
 
-   <div id="account-profile-child-security-alerts-box-head" onclick="switchContent()">Security Alerts</div>
+   <div id="account-profile-child-security-alerts-box-head" class="account-modal-box-head" onclick="switchContent()">Security Alerts</div>
 
 
    <!-- No security Box-->
@@ -910,7 +910,7 @@
   <div id="account-profile-child-manage-devices-box">
 
 
-  <div id="account-profile-child-manage-devices-box-head">Manage Devices</div>
+  <div id="account-profile-child-manage-devices-box-head" class="account-modal-box-head">Manage Devices</div>
 
     <!--Container-->
     
@@ -1145,6 +1145,8 @@
 
   
 </div>
+
+
  
 <!-- 2-step verification -->
 
@@ -1172,7 +1174,7 @@
   <div id="account-profile-child-2step-verification-box">
 
 
-    <div id="account-profile-child-2step-verification-box-head">2-step Verification</div>
+    <div id="account-profile-child-2step-verification-box-head" class="account-modal-box-head">2-step Verification</div>
 
     
     <!--Container-->
@@ -1377,7 +1379,7 @@
   <div id="account-profile-child-switch-account-box">
 
 
-    <div id="account-profile-child-switch-account-box-head">Switch Account</div>
+    <div id="account-profile-child-switch-account-box-head" class="account-modal-box-head">Switch Account</div>
 
     
     <!--Container-->
@@ -1533,7 +1535,7 @@
   <div id="account-profile-child-deactivate-account-box">
 
 
-    <div id="account-profile-child-deactivate-account-box-head">Deactivate Account</div>
+    <div id="account-profile-child-deactivate-account-box-head" class="account-modal-box-head">Deactivate Account</div>
 
 
     <!--Details Container-->
@@ -1653,7 +1655,7 @@
   <div id="account-profile-child-delete-account-box">
 
 
-    <div id="account-profile-child-delete-account-box-head">Delete Account</div>
+    <div id="account-profile-child-delete-account-box-head" class="account-modal-box-head">Delete Account</div>
 
 
   <!--Questions container-->

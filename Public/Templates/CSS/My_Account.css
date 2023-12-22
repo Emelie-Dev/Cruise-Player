@@ -1164,7 +1164,8 @@ position: absolute;
       padding: 10px;
       cursor: pointer;
       transition: all 0.1s;
-      z-index: 5;
+      z-index: 2;
+    
      }
 
      #camera-icon-box:hover {
@@ -1175,7 +1176,7 @@ position: absolute;
      #account-profile-image-options-list {
 
       position: absolute;
-      z-index: 6;
+      z-index: 3;
       list-style-type: none;
       top: 20%;
       right: -90%;
@@ -1358,12 +1359,12 @@ position: absolute;
        overflow: auto;
        grid-template-columns: auto;
        justify-content: center;
-       align-content: flex-start;
+       align-content: center;
     }
 
     #account-profile-image-text {
 
-      margin-top: 20px;
+    
       margin-bottom: 25px;
       color: white;
       font-family:'Times New Roman', Times, serif;
@@ -1381,6 +1382,7 @@ position: absolute;
       border-radius: 5px;
       cursor: default;
       border: 1px solid magenta;
+     
     }
 
     #account-profile-image-options {
@@ -1389,7 +1391,7 @@ position: absolute;
       justify-content: space-around;
       align-items: center;
      margin-top: 30px;
-     margin-bottom: 20px;
+     margin-bottom: 40px;
     }
 
     .account-profile-image-options-child {
@@ -1617,16 +1619,23 @@ text-shadow: 1px 1px 5px magenta;
    animation-duration: 0.5s;
     cursor: pointer;
     overflow: auto;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: center; 
     z-index: 4; 
 
 
 }
 
+
+.account-modal-box-head {
+
+   font-size: 1.8rem;
+
+}
+
+
 #account-profile-child-security-alerts-box {
 
-   margin-top: 40px;
    background: white;
    color: indigo;
    width: 40%;
@@ -1640,7 +1649,7 @@ text-shadow: 1px 1px 5px magenta;
 
 #account-profile-child-security-alerts-box-head {
 
-   font-size: 1.8rem;
+   /* font-size: 1.8rem; */
    text-shadow: none;
    font-weight: 900;
    font-variant: small-caps;
@@ -1683,6 +1692,7 @@ text-shadow: 1px 1px 5px magenta;
   flex-direction: column;
   margin: 0px 10px;
   border-radius: 5px;
+  margin-bottom: 20px;
  }
 
 .account-profile-child-security-alerts-item {
@@ -1785,7 +1795,7 @@ align-items: center;
    margin: 20px;
    margin-top: 0px;
    font-size: 1.3rem;
-
+   letter-spacing: 0.1rem;
 }
 
 .account-profile-child-security-alerts-item-box-btn-div {
@@ -1825,6 +1835,7 @@ transition: box-shadow 0.3s;
 
 .account-profile-child-security-alerts-item-box-time-div, .account-profile-child-security-alerts-item-box-loc-div {
 
+   
    display: flex;
    align-items: flex-start;
    margin: 10px 15px;
@@ -1867,7 +1878,7 @@ transition: box-shadow 0.3s;
   align-items: center;
   flex-direction: column;
   margin: 0 20px;
-  margin-top: 12%;
+  margin-top: 10%;
 }
 
 
@@ -1909,7 +1920,7 @@ transition: box-shadow 0.3s;
 
 #account-profile-child-manage-devices-box-head {
 
-   font-size: 1.8rem;
+   /* font-size: 1.8rem; */
    text-shadow: none;
    font-weight: 900;
    font-variant: small-caps;
@@ -1957,16 +1968,15 @@ transition: box-shadow 0.3s;
 .account-profile-child-manage-devices-item-name {
 
    font-weight: bold;
-   font-style: oblique;
    letter-spacing: 0.05rem;
    font-size: 1.3rem;
 }
 
 .account-profile-child-manage-devices-item-time {
-   font-size: 1.3rem;
-   font-weight: bold;
+   font-size: 1.25rem;
    font-style: oblique;
    letter-spacing: 0.05rem;
+   
 }
 
 #account-profile-child-manage-devices-item-active-div {
@@ -2011,7 +2021,7 @@ transition: box-shadow 0.3s;
    align-items: center;
    margin-left: auto;
    align-self: flex-end;
-
+   
 }
 
 .account-profile-child-manage-devices-delete-svg {
@@ -2033,7 +2043,8 @@ opacity: 0.8;
 
 #account-profile-child-manage-devices-delete-box {
 
-  
+  top: 0;
+  left: 0;
    position: fixed;
    border-radius: 10px;
    z-index: 10;
@@ -2140,7 +2151,7 @@ margin-bottom: 30px;
 
 #account-profile-child-2step-verification-box-head {
 
-   font-size: 1.8rem;
+   /* font-size: 1.8rem; */
    text-shadow: none;
    font-weight: 900;
    font-variant: small-caps;
@@ -2220,6 +2231,7 @@ opacity: 0.9;
 text-shadow: none;
 font-weight: bold;
 margin-bottom: 15px;
+
 }
 
 .account-profile-child-2step-verification-container-item-text {
@@ -2233,7 +2245,7 @@ margin-bottom: 15px;
 .account-profile-child-2step-verification-container-arrow-icon-box {
 
    
-   margin-right: auto;
+   margin-left: auto;
    display: flex;
    align-items: flex-start;
    justify-content: center;
@@ -2241,8 +2253,8 @@ margin-bottom: 15px;
 
 .account-profile-child-2step-verification-container-arrow-icon {
 
-   width: 52px;
-   height: 30px;
+   width: 2rem;
+   height: 2rem;
    fill: indigo;
 }
 
@@ -2374,7 +2386,7 @@ color: indigo;
 
 #account-profile-child-switch-account-box-head, #account-profile-child-deactivate-account-box-head, #account-profile-child-delete-account-box-head {
 
-   font-size: 1.8rem;
+   /* font-size: 1.8rem; */
    text-shadow: none;
    font-weight: 900;
    font-variant: small-caps;
@@ -3556,8 +3568,7 @@ height: 0;
  
 ::-webkit-scrollbar {
    background-color: white;
-   width: 15px;
-   
+   width: 0.9rem;
  border-radius: 10px;
 } 
 
@@ -3775,8 +3786,42 @@ height: 0;
  font-size: 1.25rem;
 
 }
+
+
+#account-profile-child-security-alerts-box,#account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+
+  width: 55%;
+
+}
+
+.account-modal-box-head {
+
+   font-size: 1.7rem;
+
+}
+
+
+.account-profile-child-manage-devices-item-svg {
+
+   width: 38px;
+   height: 45px;
+
+}
+
+#account-profile-child-no-security-alerts-box-text {
+
+ font-size: 1.3rem;
+
+}
+
+
+#account-profile-child-manage-devices-delete-box-text {
+
+   font-size: 1.3rem;
+}
  
 }
+
 
 @media screen and (max-width: 999px) and (min-width: 800px)   {
 
@@ -3884,8 +3929,81 @@ height: 0;
    height: 23rem; 
 
   }
+
+  
+#account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+
+   width: 65%;
  
+ }
+ 
+ .account-profile-child-security-alerts-item-head {
+
+   letter-spacing: 0.1rem;
+   font-size: 1.3rem;
+
+ }
+
+ 
+#account-profile-child-no-security-alerts-box-text {
+
+   font-size: 1.25rem;
+   
+  }
+
+  ::-webkit-scrollbar {
+  
+   width: 0.8rem;
+
+} 
+
+.account-modal-box-head {
+
+   font-size: 1.6rem;
+
 }
+
+
+.account-profile-child-manage-devices-item-svg {
+
+   width: 35px;
+   height: 40px;
+
+}
+
+.account-profile-child-manage-devices-item-name {
+
+font-size: 1.25rem;
+
+}
+ 
+.account-profile-child-manage-devices-item-time {
+
+   font-size: 1.2rem;
+
+}
+
+#account-profile-child-manage-devices-delete-box-head {
+
+   font-size: 1.35rem;
+
+}
+
+#account-profile-child-manage-devices-delete-box-text {
+
+   font-size: 1.25rem;
+}
+
+
+.account-profile-child-2step-verification-container-arrow-icon {
+
+width: 1.8rem;
+height: 1.8rem;
+
+}
+
+}
+
 
 @media screen and (max-width: 799px) and (min-width: 600px) {
 
@@ -3991,7 +4109,158 @@ letter-spacing: 0.1rem;
    height: 21.5rem; 
 
   }
+
+  #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+
+   width: 80%;
  
+ }
+ 
+
+ .account-profile-child-security-alerts-item-head {
+
+   letter-spacing: 0.1rem;
+   font-size: 1.3rem;
+
+ }
+
+ 
+#account-profile-child-security-alerts-footer {
+
+ font-size: 1.2rem;
+
+}
+
+.account-profile-child-security-alerts-item-box-time-div, .account-profile-child-security-alerts-item-box-loc-div {
+
+   letter-spacing: 0.1rem;
+
+
+} 
+
+.account-profile-child-security-alerts-item-box-head {
+
+ font-size: 1.4rem;
+
+}
+ 
+#account-profile-child-no-security-alerts-box-text {
+
+   font-size: 1.2rem;
+   
+  }
+
+  
+::-webkit-scrollbar {
+  
+   width: 0.7rem;
+
+} 
+ 
+
+.account-modal-box-head {
+
+   font-size: 1.5rem;
+
+}
+
+
+.account-profile-child-manage-devices-item-svg {
+
+   width: 32px;
+   height: 38px;
+
+}
+
+.account-profile-child-manage-devices-item-name {
+
+font-size: 1.2rem;
+
+}
+ 
+.account-profile-child-manage-devices-item-time {
+
+   font-size: 1.17rem;
+
+}
+
+
+#account-profile-child-manage-devices-item-active-text {
+
+   text-shadow: none;
+   font-size: 1.2rem;
+
+}
+
+
+#account-profile-child-manage-devices-item-active-svg {
+
+   width: 23px;
+   height: 23px;
+
+}
+
+
+.account-profile-child-manage-devices-delete-svg {
+
+   width: 25px;
+   height: 25px;
+
+}
+
+#account-profile-child-manage-devices-delete-box-head {
+
+   font-size: 1.3rem;
+
+}
+
+#account-profile-child-manage-devices-delete-box-text {
+
+   font-size: 1.23rem;
+}
+
+
+#account-profile-child-manage-devices-delete-box-remove-btn, #account-profile-child-manage-devices-delete-box-cancel-btn {
+
+padding: 7px;
+font-size: 1rem;
+
+}
+
+
+.account-profile-child-2step-verification-container-arrow-icon {
+
+   width: 1.7rem;
+   height: 1.7rem;
+   
+   }
+
+.account-profile-child-2step-verification-container-item-head {
+
+   font-size: 1.25rem;
+
+   }    
+
+ #account-profile-child-2step-verification-container-text {
+
+   font-size: 1.15rem;
+
+   } 
+   
+   
+.account-profile-child-2step-verification-container-icon {
+
+   width: 38px;
+   height: 38px;
+
+}
+
+
+.account-profile-child-2step-verification-container-item-text {
+
+   font-size: 1.15rem;
+}
+
 
 }
 
@@ -4048,6 +4317,7 @@ letter-spacing: 0.1rem;
 
       font-size: 1.4rem;
       letter-spacing: 0.1rem;
+      font-family: 'Times New Roman', Times, serif;
    }
 
    #account-head {
@@ -4080,8 +4350,8 @@ letter-spacing: 0.1rem;
   
    #account-profile-image-cancel-icon {
   
-      width: 1.4rem;
-      height: 1.4rem;
+      width: 1.5rem;
+      height: 1.5rem;
         
      } 
 
@@ -4106,8 +4376,195 @@ letter-spacing: 0.1rem;
    height: 20.5rem; 
 
   }
+
+
+  #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+
+   width: 95%;
+ 
+ }
+
+ .account-profile-child-security-modal-close-span {
+
+   right: 5%;
+   top: 15px;
+
+ }
+
+ 
+.account-profile-child-security-alerts-item-box-text {
+
+   font-size: 1.2rem;
+
+}
+ 
+.account-profile-child-security-alerts-item-box-time-text, .account-profile-child-security-alerts-item-box-loc-text {
+
+   font-size: 1.3rem;
+ 
+
+}
+ 
+ .account-profile-child-security-alerts-item-head {
+
+   letter-spacing: 0.1rem;
+   font-size: 1.3rem;
+
+ }
+
+ 
+#account-profile-child-security-alerts-footer {
+
+ font-size: 1.2rem;
+
+}
+
+.account-profile-child-security-alerts-item-box-time-div, .account-profile-child-security-alerts-item-box-loc-div {
+
+   letter-spacing: 0.1rem;
   
-      
+
+
+} 
+
+.account-profile-child-security-alerts-item-box-head {
+
+ font-size: 1.3rem;
+
+}
+
+.account-profile-child-security-alerts-item-box-time-div, .account-profile-child-security-alerts-item-box-loc-div {
+
+   font-size: 1.2rem;
+   align-items: center;
+
+} 
+ 
+#account-profile-child-no-security-alerts-box-text {
+
+   font-size: 1.18rem;
+   
+  }
+ 
+
+  ::-webkit-scrollbar {
+  
+   width: 0.65rem;
+
+} 
+
+
+.account-modal-box-head {
+
+   font-size: 1.5rem;
+
+}
+
+
+.account-profile-child-manage-devices-item-svg {
+
+   width: 30px;
+   height: 35px;
+
+}
+
+.account-profile-child-manage-devices-item-name {
+
+font-size: 1.18rem;
+
+}
+ 
+.account-profile-child-manage-devices-item-time {
+
+   font-size: 1.15rem;
+
+}
+
+
+#account-profile-child-manage-devices-item-active-text {
+
+   text-shadow: none;
+   font-size: 1.17rem;
+
+}
+
+
+#account-profile-child-manage-devices-item-active-svg {
+
+   width: 22px;
+   height: 22px;
+
+}
+
+
+.account-profile-child-manage-devices-delete-svg {
+
+   width: 25px;
+   height: 25px;
+
+}
+  
+
+#account-profile-child-manage-devices-delete-box-head {
+
+   font-size: 1.28rem;
+
+}
+
+#account-profile-child-manage-devices-delete-box-text {
+
+   font-size: 1.2rem;
+}
+
+
+#account-profile-child-manage-devices-delete-box-remove-btn, #account-profile-child-manage-devices-delete-box-cancel-btn {
+
+padding: 6px;
+font-size: 1rem;
+
+}
+
+
+#account-profile-child-manage-devices-delete-box-content {
+
+   margin: 0 50px;
+
+}
+
+.account-profile-child-2step-verification-container-arrow-icon {
+
+   width: 1.6rem;
+   height: 1.6rem;
+   
+   }
+
+.account-profile-child-2step-verification-container-item-head {
+
+   font-size: 1.2rem;
+
+   }    
+
+ #account-profile-child-2step-verification-container-text {
+
+   font-size: 1.12rem;
+
+   } 
+   
+   
+.account-profile-child-2step-verification-container-icon {
+
+   width: 35px;
+   height: 35px;
+
+}
+
+
+.account-profile-child-2step-verification-container-item-text {
+
+   font-size: 1.12rem;
+}
+
+
    }
 
 
@@ -4271,11 +4728,18 @@ letter-spacing: 0.1rem;
       
    }
 
+   
+  #account-profile-image-cancel-box {
+  
+   top: 5%;
+   right: 6%;
+
+  }
   
    #account-profile-image-cancel-icon {
   
-      width: 1.3rem;
-      height: 1.3rem;
+      width: 1.5rem;
+      height: 1.5rem;
         
      } 
 
@@ -4300,7 +4764,212 @@ letter-spacing: 0.1rem;
    height: 19rem; 
 
   }
+
+  
+  #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+
+   width: 95%;
+ 
+ }
+
+ .account-profile-child-security-modal-close-span {
+
+   right: 5%;
+   top: 15px;
+
+ }
+
+ 
+.account-profile-child-security-alerts-item-box-text {
+
+   font-size: 1.15rem;
+
+}
+ 
+.account-profile-child-security-alerts-item-box-time-text, .account-profile-child-security-alerts-item-box-loc-text {
+
+   font-size: 1.2rem;
+ 
+
+}
+ 
+
+ .account-profile-child-security-alerts-item-head {
+
+   letter-spacing: 0.1rem;
+   font-size: 1.2rem;
+
+ }
+
+ 
+.account-profile-child-security-alerts-item-box-btn {
+
+   font-size: 1.1rem;
+
+}
+ 
+#account-profile-child-security-alerts-footer {
+
+ font-size: 1.15rem;
+ letter-spacing: 0.1rem;
+
+}
+
+.account-profile-child-security-alerts-item-box-time-div, .account-profile-child-security-alerts-item-box-loc-div {
+
+   letter-spacing: 0.1rem;
    
+} 
+
+.account-profile-child-security-alerts-item-box-head {
+
+ font-size: 1.25rem;
+
+}
+
+.account-profile-child-security-alerts-item-box-time-div, .account-profile-child-security-alerts-item-box-loc-div {
+
+   font-size: 1.15rem;
+   align-items: flex-start;
+
+} 
+ 
+#account-profile-child-no-security-alerts-box-text {
+
+   font-size: 1.15rem;
+   
+  }
+ 
+  ::-webkit-scrollbar {
+  
+   width: 0.65rem;
+
+}    
+
+.account-modal-box-head {
+
+   font-size: 1.4rem;
+
+}
+
+
+.account-profile-child-manage-devices-item-svg {
+
+   width: 27px;
+   height: 30px;
+
+}
+
+.account-profile-child-manage-devices-item-name {
+
+font-size: 1.15rem;
+
+}
+ 
+.account-profile-child-manage-devices-item-time {
+
+   font-size: 1.1rem;
+
+}
+
+
+#account-profile-child-manage-devices-item-active-text {
+
+   text-shadow: none;
+   font-size: 1.15rem;
+
+}
+
+
+#account-profile-child-manage-devices-item-active-svg {
+
+   width: 20px;
+   height: 20px;
+
+}
+
+.account-profile-child-manage-devices-delete-svg {
+
+   width: 23px;
+   height: 23px;
+
+}
+  
+
+#account-profile-child-manage-devices-delete-box-head {
+
+   font-size: 1.25rem;
+
+}
+
+#account-profile-child-manage-devices-delete-box-text {
+
+   font-size: 1.18rem;
+}
+
+
+#account-profile-child-manage-devices-delete-box-remove-btn, #account-profile-child-manage-devices-delete-box-cancel-btn {
+
+padding: 5px;
+font-size: 1rem;
+
+}
+
+
+#account-profile-child-manage-devices-delete-box-content {
+
+   margin: 0 50px;
+
+}
+
+
+.account-profile-child-2step-verification-container-arrow-icon {
+
+   width: 1.5rem;
+   height: 1.5rem;
+   
+   }
+
+.account-profile-child-2step-verification-container-item-head {
+
+   font-size: 1.2rem;
+   letter-spacing: 0.1rem;
+
+   }    
+
+ #account-profile-child-2step-verification-container-text {
+
+   font-size: 1.1rem;
+
+   } 
+   
+   
+.account-profile-child-2step-verification-container-icon {
+
+   width: 32px;
+   height: 32px;
+
+}
+
+
+.account-profile-child-2step-verification-container-item-text {
+
+   font-size: 1.1rem;
+}
+
+#account-profile-child-2step-verification-password-box-text {
+
+   font-size: 1.35rem;
+   letter-spacing: 0.1rem;
+
+}
+
+#account-profile-child-2step-verification-password {
+
+ width: 15rem;
+ font-size: 1.3rem;
+
+} 
       
    }
 
@@ -4412,7 +5081,7 @@ letter-spacing: 0.1rem;
 
  }
 
- #home-svg svg {
+ #home-svg {
 
    width: 25px;
    height: 25px;
@@ -4480,14 +5149,15 @@ font-size: 1rem;
 
    #account-profile-image-cancel-box {
 
-      margin-right: 5px;
+      top: 3%;
+      right: 3%;
 
    } 
   
    #account-profile-image-cancel-icon {
   
-      width: 1.1rem;
-      height: 1.1rem;
+      width: 1.4rem;
+      height: 1.4rem;
    
         
      } 
@@ -4514,6 +5184,249 @@ font-size: 1rem;
 
   }
      
+  
+  #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+
+   width: 95%;
+ 
+ }
+
+ .account-profile-child-security-modal-close-span {
+
+   right: 5%;
+   top: 10px;
+
+ }
+
+ 
+.account-profile-child-security-alerts-item-box-text {
+
+   font-size: 1.1rem;
+
+}
+ 
+.account-profile-child-security-alerts-item-box-time-text, .account-profile-child-security-alerts-item-box-loc-text {
+
+   font-size: 1.1rem;
+ 
+
+}
+ 
+ .account-profile-child-security-alerts-item-head {
+
+   letter-spacing: 0.1rem;
+   font-size: 1.1rem;
+
+ }
+
+ 
+.account-profile-child-security-alerts-item-box-btn {
+
+   font-size: 1.1rem;
+
+}
+ 
+#account-profile-child-security-alerts-footer {
+
+ font-size: 1.1rem;
+ letter-spacing: 0.1rem;
+
+}
+
+.account-profile-child-security-alerts-item-box-time-div, .account-profile-child-security-alerts-item-box-loc-div {
+
+   letter-spacing: 0.1rem;
+   
+} 
+
+.account-profile-child-security-alerts-item-box-head {
+
+ font-size: 1.2rem;
+
+}
+
+.account-profile-child-security-alerts-item-box-time-div, .account-profile-child-security-alerts-item-box-loc-div {
+
+   font-size: 1.1rem;
+   align-items: flex-start;
+
+} 
+  
+
+.account-profile-child-security-alerts-item-head-svg {
+
+   width: 20px;
+   height: 20px;
+
+}
+
+#account-profile-child-no-security-alerts-box-text {
+
+   font-size: 1.1rem;
+   
+  }
+ 
+  ::-webkit-scrollbar {
+  
+   width: 0.6rem;
+
+} 
+
+.account-modal-box-head {
+
+   font-size: 1.25rem;
+
+}
+
+
+.account-profile-child-manage-devices-item-svg {
+
+   width: 24px;
+   height: 28px;
+
+}
+
+.account-profile-child-manage-devices-item-name {
+
+font-size: 1.12rem;
+
+}
+ 
+.account-profile-child-manage-devices-item-time {
+
+   font-size: 1rem;
+
+}
+
+
+#account-profile-child-manage-devices-item-active-text {
+
+   text-shadow: none;
+   font-size: 1.12rem;
+
+}
+
+
+#account-profile-child-manage-devices-item-active-svg {
+
+   width: 17px;
+   height: 17px;
+
+}
+
+
+.account-profile-child-manage-devices-delete-svg-box {
+
+padding-left: 10px;
+
+} 
+
+.account-profile-child-manage-devices-delete-svg {
+
+   width: 20px;
+   height: 20px;
+   
+}
+  
+  
+#account-profile-child-manage-devices-delete-box-head {
+
+   font-size: 1.2rem;
+
+}
+
+#account-profile-child-manage-devices-delete-box-text {
+
+   font-size: 1.13rem;
+}
+
+
+#account-profile-child-manage-devices-delete-box-remove-btn, #account-profile-child-manage-devices-delete-box-cancel-btn {
+
+padding: 5px;
+font-size: 0.9rem;
+
+}
+
+
+#account-profile-child-manage-devices-delete-box-content {
+
+   margin: 0 40px;
+
+}    
+
+
+.account-profile-child-2step-verification-container-arrow-icon {
+
+   width: 1.4rem;
+   height: 1.4rem;
+   
+   }
+
+.account-profile-child-2step-verification-container-item-head {
+
+   font-size: 1.15rem;
+   letter-spacing: 0.1rem;
+
+   }    
+
+ #account-profile-child-2step-verification-container-text {
+
+   font-size: 1.05rem;
+
+   } 
+   
+   
+.account-profile-child-2step-verification-container-icon {
+
+   width: 30px;
+   height: 30px;
+
+}
+
+
+.account-profile-child-2step-verification-container-item-text {
+
+   font-size: 1.05rem;
+}
+
+
+#account-profile-child-2step-verification-password-box-text {
+
+   font-size: 1.25rem;
+   letter-spacing: 0.1rem;
+
+}
+
+#account-profile-child-2step-verification-password {
+
+ width: 12rem;
+ font-size: 1.2rem;
+
+} 
+
+
+#account-profile-child-2step-verification-password-btn {
+
+   padding: 6px;
+   font-size: 1.1rem;
+
+}
+
+
+#account-profile-child-2step-verification-password-box-svg {
+
+   width: 45px;
+   height: 45px;
+
+}
+
+
+#account-profile-child-2step-verification-password-box-div {
+
+margin-left: 80px;
+
+} 
 
    }  
 
@@ -4625,7 +5538,7 @@ font-size: 1rem;
 
  }
 
- #home-svg svg {
+ #home-svg {
 
    width: 25px;
    height: 25px;
@@ -4692,15 +5605,16 @@ font-size: 0.9rem;
 
 #account-profile-image-cancel-box {
 
-   margin-right: 5px;
+   top: 3%;
+   right: 3%;
    padding: 5px;
 
 } 
 
 #account-profile-image-cancel-icon {
 
-   width: 1rem;
-   height: 1rem;
+   width: 1.3rem;
+   height: 1.3rem;
 
      
   } 
@@ -4727,8 +5641,248 @@ height: 15rem;
 
 }
   
+  
+#account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+
+   width: 95%;
+ 
+ }
+
+ .account-profile-child-security-modal-close-span {
+
+   right: 7%;
+   top: 10px;
+
+ }
 
 
+.account-profile-child-security-alerts-item-box-text {
+
+   font-size: 1.1rem;
+
+}
+ 
+.account-profile-child-security-alerts-item-box-time-text, .account-profile-child-security-alerts-item-box-loc-text {
+
+   font-size: 1.05rem;
+ 
+
+}
+ 
+
+ .account-profile-child-security-alerts-item-head {
+
+   letter-spacing: 0.1rem;
+   font-size: 1rem;
+
+ }
+
+ 
+.account-profile-child-security-alerts-item-box-btn {
+
+   font-size: 1.05rem;
+
+}
+ 
+#account-profile-child-security-alerts-footer {
+
+ font-size: 1rem;
+ letter-spacing: 0.1rem;
+
+}
+
+.account-profile-child-security-alerts-item-box-time-div, .account-profile-child-security-alerts-item-box-loc-div {
+
+   letter-spacing: 0.1rem;
+   
+} 
+
+.account-profile-child-security-alerts-item-box-head {
+
+ font-size: 1.15rem;
+
+}
+
+.account-profile-child-security-alerts-item-box-time-div, .account-profile-child-security-alerts-item-box-loc-div {
+
+   font-size: 1.05rem;
+   align-items: flex-start;
+
+} 
+  
+
+.account-profile-child-security-alerts-item-head-svg {
+
+   width: 20px;
+   height: 20px;
+
+}
+
+#account-profile-child-no-security-alerts-box-text {
+
+   font-size: 1.05rem;
+   
+  }
+ 
+  ::-webkit-scrollbar {
+  
+   width: 0.55rem;
+
+} 
+
+
+.account-modal-box-head {
+
+   font-size: 1.2rem;
+
+}
+
+
+.account-profile-child-manage-devices-item-svg {
+
+   width: 20px;
+   height: 24px;
+
+}
+
+.account-profile-child-manage-devices-item-name {
+
+font-size: 1rem;
+
+}
+ 
+.account-profile-child-manage-devices-item-time {
+
+   font-size: 0.8rem;
+
+}
+
+
+#account-profile-child-manage-devices-item-active-text {
+
+
+   font-size: 1rem;
+
+}
+
+
+#account-profile-child-manage-devices-item-active-svg {
+
+   width: 15px;
+   height: 15px;
+
+}
+
+
+.account-profile-child-manage-devices-delete-svg-box {
+
+padding-left: 8px;
+
+} 
+
+.account-profile-child-manage-devices-delete-svg {
+
+   width: 17px;
+   height: 17px;
+   
+}
+
+
+  
+#account-profile-child-manage-devices-delete-box-head {
+
+   font-size: 1.15rem;
+
+}
+
+#account-profile-child-manage-devices-delete-box-text {
+
+   font-size: 1.1rem;
+}
+
+
+#account-profile-child-manage-devices-delete-box-remove-btn, #account-profile-child-manage-devices-delete-box-cancel-btn {
+
+padding: 5px;
+font-size: 0.9rem;
+
+}
+
+
+#account-profile-child-manage-devices-delete-box-content {
+
+   margin: 0 20px;
+
+}    
+
+
+.account-profile-child-2step-verification-container-arrow-icon {
+
+   width: 1.3rem;
+   height: 1.3rem;
+   
+   }
+
+.account-profile-child-2step-verification-container-item-head {
+
+   font-size: 1.12rem;
+   letter-spacing: 0.1rem;
+
+   }    
+
+ #account-profile-child-2step-verification-container-text {
+
+   font-size: 1.03rem;
+
+   } 
+   
+   
+.account-profile-child-2step-verification-container-icon {
+
+   width: 27px;
+   height: 27px;
+
+}
+
+
+.account-profile-child-2step-verification-container-item-text {
+
+   font-size: 1rem;
+   letter-spacing: 0.05rem;
+}
+
+
+#account-profile-child-2step-verification-password {
+
+   width: 10rem;
+   font-size: 1rem;
+  
+  } 
+  
+  
+  #account-profile-child-2step-verification-password-btn {
+  
+     padding: 7px;
+     font-size: 1rem;
+  
+  }
+  
+  
+  #account-profile-child-2step-verification-password-box-svg {
+  
+     width: 40px;
+     height: 40px;
+  
+  }
+  
+  
+  #account-profile-child-2step-verification-password-box-div {
+  
+  margin-left: 80px;
+  
+  } 
+  
+  
    }   
 
 
@@ -4744,3 +5898,123 @@ height: 15rem;
 }
 
 }
+
+
+
+
+
+/* Height */
+
+/* For the profile image modal */
+
+@media screen and (max-height: 650px) {
+
+   #account-profile-image-display-div {
+
+      align-content: flex-start;
+     
+
+   }    
+  
+  #account-profile-image-text {
+
+  margin-top: 40px;
+   
+   
+}
+    
+
+}
+
+/* For security box modal */
+
+
+@media screen and (max-height: 800px) {
+
+   
+.account-profile-child-security-modal, .account-profile-child-management-modal {
+
+   align-items: flex-start;
+
+} 
+
+
+#account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+
+   margin-top: 50px;
+   margin-bottom: 50px;
+
+}
+
+}
+
+/* others */
+
+
+@media screen and (min-height: 2000px) {
+
+ 
+#account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+
+   min-height: 25%;
+
+}
+
+ 
+}
+
+
+@media screen and (max-height: 1999px) and (min-height: 1600px) {
+
+ 
+   #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+   
+      min-height: 27%;
+   
+   }
+   
+   }
+
+ 
+@media screen and (max-height: 1599px) and (min-height: 1100px) {
+
+   #account-profile-child-security-alerts-box,#account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+   
+      min-height: 35%;
+   
+   }
+   
+   }  
+
+  
+@media screen and (max-height: 1099px) and (min-height: 900px) {
+
+   #account-profile-child-security-alerts-box,#account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+   
+      min-height: 45%;
+   
+   }
+   
+   }   
+
+
+@media screen and (max-height: 899px) and (min-height: 700px) {
+
+   #account-profile-child-security-alerts-box,#account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+   
+      min-height: 55%;
+   
+   }
+   
+   }   
+   
+   
+@media screen and (max-height: 699px) and (min-height: 550px) {
+
+ #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+      
+min-height: 65%;
+      
+      }
+      
+      }     

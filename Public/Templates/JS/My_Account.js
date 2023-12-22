@@ -589,37 +589,22 @@ const countryDetails = [
 
 // For the side nav height
 
-// function navHeight() {
+function navHeight(e) {
+console.log(e)
+  let widthQuery = window.matchMedia("(min-width: 800px)");
 
-//   let matchWidth = window.matchMedia("(min-width: 800px)");
+  if(widthQuery.matches) {
+  
+  document.querySelector("#nav").style.display = "block";
 
-//   if(matchWidth.matches) {
+  document.querySelector("#empty-div2").style.display = "none";
+  
+  } else {
+  
+    document.querySelector("#nav").style.display = "none";
 
-//   const parentHeight = getComputedStyle(
-//     document.getElementById("nav")
-//   ).getPropertyValue("height");
-//   const par = parentHeight.replace("px", "");
-
-//   document.getElementById("nav-list").style.height = `${0.74 * par}px`;
-
-//   // For the main content
-
-//   // For the main body and animation
-
-//   const wid = getComputedStyle(document.getElementById("nav")).getPropertyValue(
-//     "width"
-//   );
-
-//   const widNo = Number(wid.toString().replace("px", ""));
-
-//   document.getElementById("main").style.marginLeft = `${widNo + 10}px`;
-//   document.getElementById("main").style.width = `${
-//     screen.availWidth - (widNo + 15)
-//   }px`;
-
-// } 
-
-// }
+  }
+}
 
 //sign in
 
@@ -2661,13 +2646,13 @@ setInterval(() => {
 
  // For the nav height onresize
 
+
 document.querySelector("#nav").style.height =
  `${-95.917127 + (window.innerHeight * (179/181))}px`;
 
 
  document.querySelector("#nav-list").style.height =
  `${-219.407895 + (document.querySelector("#nav").offsetHeight * (175/152))}px`;
-
 
  document.querySelector("#main").style.height = `${-86.98125 + (window.innerHeight * (0.98125))}px`;
 
@@ -3494,7 +3479,6 @@ document.querySelector(`#${id}`).style.display = "flex";
 document.querySelector("#nav").style.position = "static"; 
 
 if(num === 1) {
-
 
 const alertContentArray = [...document.querySelectorAll(".account-profile-child-security-alerts-item-box")];
 
