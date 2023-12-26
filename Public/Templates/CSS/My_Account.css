@@ -2384,6 +2384,7 @@ color: indigo;
 }
 
 
+
 #account-profile-child-switch-account-box-head, #account-profile-child-deactivate-account-box-head, #account-profile-child-delete-account-box-head {
 
    /* font-size: 1.8rem; */
@@ -2411,12 +2412,20 @@ color: indigo;
    border-radius: 0px;
 }
 
+
+#account-profile-child-switch-account-container-item-add-account-div {
+
+   margin-bottom: 20px;
+}
+
 .account-profile-child-switch-account-container-item {
 
    display: flex;
    align-items: center;
    margin: 20px;
    cursor: pointer;
+   padding: 5px;
+   margin-bottom: 10px;
    transition: background 0.3s, border-radius 0.3s;
 }
 
@@ -2438,10 +2447,17 @@ color: indigo;
 
 .account-profile-child-switch-account-container-item-image {
 
-   width: 4rem;
-   height: 4rem;
+   width: 3.5rem;
+   height: 3.5rem;
    border-radius: 50%;
    object-fit: cover;
+
+}
+
+.account-profile-child-switch-account-container-item-name-box {
+
+   display: flex;
+   flex-direction: column;
 
 }
 
@@ -2461,9 +2477,20 @@ color: indigo;
    align-items: center;
    justify-content: center;
    margin-left: auto;
+   
 }
 
-#account-profile-child-switch-account-container-item-active-svg {
+
+#account-profile-child-switch-account-container-item-active-box2 {
+
+   display: none;
+   align-items: center;
+   margin-left: 20px;
+   margin-top: 10px;   
+}
+
+#account-profile-child-switch-account-container-item-active-svg, 
+#account-profile-child-switch-account-container-item-active-svg2 {
 
    width: 25px;
    height: 25px;
@@ -2471,7 +2498,8 @@ color: indigo;
 
 }
 
-#account-profile-child-switch-account-container-item-active-text {
+#account-profile-child-switch-account-container-item-active-text, 
+#account-profile-child-switch-account-container-item-active-text2 {
 
    text-shadow: none;
     font-size: 1.25rem;
@@ -2528,6 +2556,13 @@ color: white;
    margin-right: 20px;
 }
 
+
+#account-profile-child-deactivate-account-next-btn-div,
+#account-profile-child-deactivate-account-verification-container-btn-div {
+
+  margin-bottom: 30px; 
+
+}
 
 .account-profile-child-deactivate-account-box-list-item {
 
@@ -3788,7 +3823,7 @@ height: 0;
 }
 
 
-#account-profile-child-security-alerts-box,#account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+#account-profile-child-security-alerts-box,#account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box, #account-profile-child-deactivate-account-box {
 
   width: 55%;
 
@@ -3818,6 +3853,45 @@ height: 0;
 #account-profile-child-manage-devices-delete-box-text {
 
    font-size: 1.3rem;
+}
+
+
+.account-profile-child-switch-account-container-item-name, 
+#account-profile-child-switch-account-container-item-add-account  {
+
+font-size: 1.25rem;
+
+}
+
+
+#account-profile-child-deactivate-account-box-text {
+
+   font-size: 1.4rem;
+
+}
+
+
+#account-profile-child-deactivate-account-next-btn {
+
+   font-size: 1.3rem;
+
+}
+
+#account-profile-child-deactivate-account-verification-container-btn {
+
+   font-size: 1.3rem;
+  
+}
+
+#account-profile-child-deactivate-account-verification-container-resend-text {
+
+   font-size: 1.29rem;
+
+}
+
+#account-profile-child-deactivate-account-verification-container-resend-time {
+
+   font-size: 1.2rem;
 }
  
 }
@@ -3931,7 +4005,7 @@ height: 0;
   }
 
   
-#account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+#account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box, #account-profile-child-deactivate-account-box {
 
    width: 65%;
  
@@ -4000,6 +4074,61 @@ font-size: 1.25rem;
 width: 1.8rem;
 height: 1.8rem;
 
+}
+
+.account-profile-child-switch-account-container-item-name, 
+#account-profile-child-switch-account-container-item-add-account,#account-profile-child-switch-account-container-item-active-text  {
+
+font-size: 1.2rem;
+letter-spacing: 0.1rem;
+}
+
+
+#account-profile-child-switch-account-container-item-active-svg {
+
+   width: 23px;
+   height: 23px;
+
+}
+
+
+#account-profile-child-deactivate-account-box-text,#account-profile-child-deactivate-account-verification-container-code-text  {
+
+   font-size: 1.4rem;
+ 
+}
+
+
+#account-profile-child-deactivate-account-next-btn, #account-profile-child-deactivate-account-verification-container-btn {
+
+   font-size: 1.25rem;
+   
+}
+
+
+.account-profile-child-deactivate-account-box-list-item,
+#account-profile-child-deactivate-account-verification-container-box-text {
+
+letter-spacing: 0.05rem;
+font-size: 1.25rem;
+
+}
+
+#account-profile-child-deactivate-account-verification-container-code-text {
+
+letter-spacing: 0.1rem;
+
+} 
+
+#account-profile-child-deactivate-account-verification-container-resend-text {
+
+   font-size: 1.28rem;
+
+}
+
+#account-profile-child-deactivate-account-verification-container-resend-time {
+
+   font-size: 1.18rem;
 }
 
 }
@@ -4110,7 +4239,7 @@ letter-spacing: 0.1rem;
 
   }
 
-  #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+  #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box, #account-profile-child-deactivate-account-box {
 
    width: 80%;
  
@@ -4262,6 +4391,69 @@ font-size: 1rem;
 }
 
 
+.account-profile-child-switch-account-container-item-name, 
+#account-profile-child-switch-account-container-item-add-account {
+
+font-size: 1.2rem;
+letter-spacing: 0.1rem;
+}
+
+
+#account-profile-child-switch-account-container-item-active-text  {
+
+   font-size: 1.17rem;
+   letter-spacing: 0.1rem;
+   }
+
+
+#account-profile-child-switch-account-container-item-active-svg {
+
+   width: 22px;
+   height: 22px;
+
+}
+
+
+#account-profile-child-deactivate-account-box-text,#account-profile-child-deactivate-account-verification-container-code-text {
+
+   font-size: 1.35rem;
+
+}
+
+
+#account-profile-child-deactivate-account-next-btn,#account-profile-child-deactivate-account-verification-container-btn {
+
+   font-size: 1.25rem;
+   
+}
+
+
+.account-profile-child-deactivate-account-box-list-item,#account-profile-child-deactivate-account-verification-container-box-text {
+
+letter-spacing: 0.05rem;
+font-size: 1.25rem;
+
+}
+
+
+#account-profile-child-deactivate-account-verification-container-code-text {
+
+   letter-spacing: 0.1rem;
+   
+   } 
+   
+   
+#account-profile-child-deactivate-account-verification-container-resend-text {
+
+      font-size: 1.28rem;
+   
+   }
+   
+   #account-profile-child-deactivate-account-verification-container-resend-time {
+   
+      font-size: 1.15rem;
+   } 
+
 }
 
 
@@ -4378,7 +4570,7 @@ font-size: 1rem;
   }
 
 
-  #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+  #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box, #account-profile-child-deactivate-account-box {
 
    width: 95%;
  
@@ -4564,6 +4756,76 @@ font-size: 1rem;
    font-size: 1.12rem;
 }
 
+
+.account-profile-child-switch-account-container-item-name, 
+#account-profile-child-switch-account-container-item-add-account {
+
+font-size: 1.18rem;
+letter-spacing: 0.1rem;
+}
+
+
+#account-profile-child-switch-account-container-item-active-text  {
+
+   font-size: 1.13rem;
+   letter-spacing: 0.1rem;
+   }
+
+
+#account-profile-child-switch-account-container-item-active-svg {
+
+   width: 20px;
+   height: 20px;
+
+}
+
+
+.account-profile-child-switch-account-container-item-image {
+
+   width: 3.25rem;
+   height: 3.25rem;
+
+}
+
+
+#account-profile-child-deactivate-account-box-text,#account-profile-child-deactivate-account-verification-container-code-text {
+
+   font-size: 1.32rem;
+
+}
+
+
+#account-profile-child-deactivate-account-next-btn,#account-profile-child-deactivate-account-verification-container-btn {
+
+   font-size: 1.2rem;
+ 
+   
+}
+
+
+.account-profile-child-deactivate-account-box-list-item,#account-profile-child-deactivate-account-verification-container-box-text {
+
+letter-spacing: 0.05rem;
+font-size: 1.22rem;
+
+}
+
+#account-profile-child-deactivate-account-verification-container-code-text {
+
+   letter-spacing: 0.1rem;
+   
+   } 
+    
+#account-profile-child-deactivate-account-verification-container-resend-text {
+
+   font-size: 1.25rem;
+
+}
+
+#account-profile-child-deactivate-account-verification-container-resend-time {
+
+   font-size: 1.12rem;
+}   
 
    }
 
@@ -4766,7 +5028,7 @@ font-size: 1rem;
   }
 
   
-  #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+  #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box, #account-profile-child-deactivate-account-box {
 
    width: 95%;
  
@@ -4970,7 +5232,95 @@ font-size: 1rem;
  font-size: 1.3rem;
 
 } 
-      
+  
+
+.account-profile-child-switch-account-container-item-name, 
+#account-profile-child-switch-account-container-item-add-account {
+
+font-size: 1.15rem;
+letter-spacing: 0.05rem;
+}
+
+
+#account-profile-child-switch-account-container-item-active-text  {
+
+   font-size: 1rem;
+   letter-spacing: 0.05rem;
+   }
+
+
+#account-profile-child-switch-account-container-item-active-svg {
+
+   width: 17px;
+   height: 17px;
+
+}
+
+
+.account-profile-child-switch-account-container-item-image {
+
+   width: 3rem;
+   height: 3rem;
+
+}
+
+
+#account-profile-child-switch-account-container-item-add-account-icon {
+
+   width: 25px;
+   height: 25px;
+
+}
+
+
+#account-profile-child-deactivate-account-box-text,#account-profile-child-deactivate-account-verification-container-code-text {
+
+   font-size: 1.28rem;
+
+}
+
+
+#account-profile-child-deactivate-account-next-btn,#account-profile-child-deactivate-account-verification-container-btn {
+
+   font-size: 1.17rem;
+ 
+   
+}
+
+
+.account-profile-child-deactivate-account-box-list-item,#account-profile-child-deactivate-account-verification-container-box-text {
+
+letter-spacing: 0.05rem;
+font-size: 1.2rem;
+
+}
+
+
+#account-profile-child-deactivate-account-verification-container-code-text {
+
+   letter-spacing: 0.1rem;
+   
+   } 
+ 
+ 
+   #account-profile-child-deactivate-account-verification-container-resend-text {
+
+      font-size: 1.22rem;
+   
+   }
+   
+   #account-profile-child-deactivate-account-verification-container-resend-time {
+   
+      font-size: 1.05rem;
+   }     
+
+
+   #account-profile-child-deactivate-account-verification-container-code {
+
+      font-size: 1.3rem;
+      width: 15rem;
+   }
+
    }
 
  
@@ -5185,7 +5535,7 @@ font-size: 1rem;
   }
      
   
-  #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+  #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box, #account-profile-child-deactivate-account-box {
 
    width: 95%;
  
@@ -5428,6 +5778,105 @@ margin-left: 80px;
 
 } 
 
+
+.account-profile-child-switch-account-container-item-name, 
+#account-profile-child-switch-account-container-item-add-account {
+
+font-size: 1.1rem;
+letter-spacing: 0.05rem;
+}
+
+
+#account-profile-child-switch-account-container-item-active-box {
+
+   display: none;
+
+}
+
+#account-profile-child-switch-account-container-item-active-box2 {
+
+   display: flex;
+   
+}
+
+
+#account-profile-child-switch-account-container-item-active-svg2 {
+
+   width: 17px;
+   height: 17px;
+
+}
+
+
+#account-profile-child-switch-account-container-item-active-text2 {
+
+   letter-spacing: 0.05rem;
+   font-size: 1rem;
+
+}
+.account-profile-child-switch-account-container-item-image {
+
+   width: 3rem;
+   height: 3rem;
+
+}
+
+
+#account-profile-child-switch-account-container-item-add-account-icon {
+
+   width: 22px;
+   height: 22px;
+
+}
+
+
+#account-profile-child-deactivate-account-box-text,#account-profile-child-deactivate-account-verification-container-code-text {
+
+   font-size: 1.23rem;
+
+}
+
+
+#account-profile-child-deactivate-account-next-btn,#account-profile-child-deactivate-account-verification-container-btn {
+
+   font-size: 1.12rem;
+ 
+   
+}
+
+
+.account-profile-child-deactivate-account-box-list-item,#account-profile-child-deactivate-account-verification-container-box-text {
+
+letter-spacing: 0.05rem;
+font-size: 1.12rem;
+
+}
+
+
+#account-profile-child-deactivate-account-verification-container-code-text {
+
+   letter-spacing: 0.1rem;
+   
+   } 
+
+ #account-profile-child-deactivate-account-verification-container-resend-text {
+
+      font-size: 1.2rem;
+   
+   }
+   
+   #account-profile-child-deactivate-account-verification-container-resend-time {
+   
+      font-size: 1rem;
+   } 
+   
+  
+   #account-profile-child-deactivate-account-verification-container-code {
+
+      font-size: 1.2rem;
+      width: 11rem;
+   }
+
    }  
 
   
@@ -5642,7 +6091,7 @@ height: 15rem;
 }
   
   
-#account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+#account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box, #account-profile-child-deactivate-account-box {
 
    width: 95%;
  
@@ -5882,7 +6331,102 @@ font-size: 0.9rem;
   
   } 
   
+
+  .account-profile-child-switch-account-container-item-name, 
+  #account-profile-child-switch-account-container-item-add-account {
   
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  }
+  
+  #account-profile-child-switch-account-container-item-active-box {
+  
+     display: none;
+  
+  }
+  
+  #account-profile-child-switch-account-container-item-active-box2 {
+  
+     display: flex;
+     
+  }
+  
+  
+  #account-profile-child-switch-account-container-item-active-svg2 {
+  
+     width: 15px;
+     height: 15px;
+  
+  }
+  
+  
+  #account-profile-child-switch-account-container-item-active-text2 {
+  
+     letter-spacing: 0.05rem;
+     font-size: 0.8rem;
+  
+  }
+  .account-profile-child-switch-account-container-item-image {
+  
+     width: 2.7rem;
+     height: 2.7rem;
+  
+  }
+  
+  
+  #account-profile-child-switch-account-container-item-add-account-icon {
+  
+     width: 20px;
+     height: 20px;
+  
+  }
+   
+
+#account-profile-child-deactivate-account-box-text,#account-profile-child-deactivate-account-verification-container-code-text {
+
+   font-size: 1.18rem;
+
+}
+
+
+#account-profile-child-deactivate-account-next-btn,#account-profile-child-deactivate-account-verification-container-btn {
+
+   font-size: 1.1rem;
+ 
+   
+}
+
+
+.account-profile-child-deactivate-account-box-list-item,#account-profile-child-deactivate-account-verification-container-box-text {
+
+letter-spacing: 0.05rem;
+font-size: 1.08rem;
+
+}
+
+
+#account-profile-child-deactivate-account-verification-container-code-text {
+
+   letter-spacing: 0.1rem;
+   
+   } 
+   
+   #account-profile-child-deactivate-account-verification-container-resend-text {
+
+      font-size: 1.1rem;
+   
+   }
+   
+   #account-profile-child-deactivate-account-verification-container-resend-time {
+   
+      font-size: 0.9rem;
+   }  
+   
+   #account-profile-child-deactivate-account-verification-container-code {
+
+      font-size: 1.2rem;
+      width: 11rem;
+   }
    }   
 
 
@@ -5939,7 +6483,7 @@ font-size: 0.9rem;
 } 
 
 
-#account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+#account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box, #account-profile-child-deactivate-account-box {
 
    margin-top: 50px;
    margin-bottom: 50px;
@@ -5954,7 +6498,7 @@ font-size: 0.9rem;
 @media screen and (min-height: 2000px) {
 
  
-#account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+#account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box, #account-profile-child-deactivate-account-box  {
 
    min-height: 25%;
 
@@ -5967,54 +6511,59 @@ font-size: 0.9rem;
 @media screen and (max-height: 1999px) and (min-height: 1600px) {
 
  
-   #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+   #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box, #account-profile-child-deactivate-account-box {
    
       min-height: 27%;
    
    }
+
    
    }
 
  
 @media screen and (max-height: 1599px) and (min-height: 1100px) {
 
-   #account-profile-child-security-alerts-box,#account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+   #account-profile-child-security-alerts-box,#account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box,#account-profile-child-deactivate-account-box  {
    
       min-height: 35%;
    
    }
+
    
    }  
 
   
 @media screen and (max-height: 1099px) and (min-height: 900px) {
 
-   #account-profile-child-security-alerts-box,#account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+   #account-profile-child-security-alerts-box,#account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box,#account-profile-child-deactivate-account-box {
    
       min-height: 45%;
    
    }
+
    
    }   
 
 
 @media screen and (max-height: 899px) and (min-height: 700px) {
 
-   #account-profile-child-security-alerts-box,#account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+   #account-profile-child-security-alerts-box,#account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box, #account-profile-child-deactivate-account-box {
    
       min-height: 55%;
    
    }
-   
+
+ 
    }   
    
    
 @media screen and (max-height: 699px) and (min-height: 550px) {
 
- #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box {
+ #account-profile-child-security-alerts-box, #account-profile-child-manage-devices-box, #account-profile-child-2step-verification-box, #account-profile-child-switch-account-box,#account-profile-child-deactivate-account-box {
       
 min-height: 65%;
       
       }
       
       }     
+

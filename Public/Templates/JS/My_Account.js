@@ -589,8 +589,8 @@ const countryDetails = [
 
 // For the side nav height
 
-function navHeight(e) {
-console.log(e)
+function navHeight() {
+
   let widthQuery = window.matchMedia("(min-width: 800px)");
 
   if(widthQuery.matches) {
